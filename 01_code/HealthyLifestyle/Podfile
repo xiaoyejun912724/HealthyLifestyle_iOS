@@ -1,0 +1,38 @@
+platform :ios, "7.0"
+
+target "HealthyLifestyle" do
+
+pod 'EasyIOS', :git=>'https://github.com/zhuchaowe/EasyIOS.git' #必须得这样写才能更新2.2.3版本，如果仅仅写[pod 'EasyIOS']，那么将更新2.2.2版本
+pod 'EasyIOS-Extention'
+pod 'AFNetworking'
+pod 'Masonry'                       #自动布局框架
+pod 'MJRefresh'
+#pod 'FMDB'
+#pod 'HMSegmentedControl'
+#pod 'MZTimerLabel'
+#pod 'EAIntroView'
+#pod 'IQActionSheetPickerView'
+#pod 'TZImagePickerController'
+#pod 'TOWebViewController'
+#pod 'OpenSSL'                       #支付宝依赖
+#pod 'MGSwipeTableCell'
+#pod 'GrowingIO'
+
+end
+
+#pod 'UIColor+MLPFlatColors'
+#pod 'UMengAnalytics'
+#pod 'SWTableViewCell'
+#pod 'HTHorizontalSelectionList'
+#pod 'PKRevealController'            #首页中的左侧滑动控件
+#pod 'THComboBox'                  #我的报题中的下拉列表
+#pod 'ZSSRichTextEditor'             #文本编辑器
+#pod 'EAIntroView'                   #首次启动引导页
+#pod 'RTLabel'                       #WebBox依赖
+#pod 'JMessage'                      #WebBox依赖
+#pod 'SVProgressHUD'                 #WebBox依赖
+#pod 'HMSegmentedControl'            #WebBox依赖
+#pod 'libqrencode'                   #WebBox依赖
+#pod 'QBImagePickerController'       #WebBox依赖
+#pod 'SSKeychain'                    #WebBox依赖
+

@@ -1,0 +1,124 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - EasyIOS (2.3):
+    - EasyIOS/Easy (= 2.3)
+  - EasyIOS-Extention (1.2):
+    - EasyIOS-Extention/EasyExtention (= 1.2)
+  - EasyIOS-Extention/EasyExtention (1.2):
+    - IQKeyboardManager
+    - RegExCategories
+    - RMUniversalAlert
+    - TTTAttributedLabel
+    - UICKeyChainStore
+    - XAspect
+  - EasyIOS/Easy (2.3):
+    - AFNetworking
+    - FLKAutoLayout (= 0.1.1)
+    - FontIcon
+    - GCDObjC
+    - JSONModel
+    - MBProgressHUD
+    - ReactiveCocoa (= 2.4.4)
+    - SharkORM
+    - TMCache
+    - UIActivityIndicator-for-SDWebImage
+  - FLKAutoLayout (0.1.1)
+  - FontIcon (1.0)
+  - GCDObjC (0.3.0)
+  - IQKeyboardManager (3.3.7)
+  - JSONModel (1.3.0)
+  - Masonry (1.0.1)
+  - MBProgressHUD (1.0.0)
+  - MJRefresh (3.1.12)
+  - ReactiveCocoa (2.4.4):
+    - ReactiveCocoa/UI (= 2.4.4)
+  - ReactiveCocoa/Core (2.4.4):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.4.4)
+  - ReactiveCocoa/UI (2.4.4):
+    - ReactiveCocoa/Core
+  - RegExCategories (1.0)
+  - RMUniversalAlert (0.7):
+    - RMUniversalAlert/Core (= 0.7)
+  - RMUniversalAlert/Core (0.7):
+    - UIActionSheet+Blocks (>= 0.9)
+    - UIAlertController+Blocks (>= 0.9)
+    - UIAlertView+Blocks (>= 0.9)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
+  - SharkORM (2.0.8)
+  - TMCache (2.1.0)
+  - TTTAttributedLabel (1.13.4)
+  - UIActionSheet+Blocks (0.9)
+  - UIActivityIndicator-for-SDWebImage (1.2):
+    - SDWebImage (~> 3.7)
+  - UIAlertController+Blocks (0.9)
+  - UIAlertView+Blocks (0.9)
+  - UICKeyChainStore (2.1.0)
+  - XAspect (1.0.5):
+    - XAspect/Core (= 1.0.5)
+    - XAspect/Macros (= 1.0.5)
+  - XAspect/Core (1.0.5):
+    - XAspect/Macros
+  - XAspect/Macros (1.0.5)
+
+DEPENDENCIES:
+  - AFNetworking
+  - EasyIOS (from `https://github.com/zhuchaowe/EasyIOS.git`)
+  - EasyIOS-Extention
+  - Masonry
+  - MJRefresh
+
+EXTERNAL SOURCES:
+  EasyIOS:
+    :git: https://github.com/zhuchaowe/EasyIOS.git
+
+CHECKOUT OPTIONS:
+  EasyIOS:
+    :commit: 21c5755a035868dd1459ab5b652887608c57c770
+    :git: https://github.com/zhuchaowe/EasyIOS.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  EasyIOS: 169bb35c45bd329fd9620946aee6a5526d246d85
+  EasyIOS-Extention: c7e402e8b2497760955510228771512c37110aa2
+  FLKAutoLayout: 95b12c5cd9652100235140b68652f063f7437851
+  FontIcon: 24a07541244227b865e689217efd7d049ba7cc43
+  GCDObjC: 0c31898f34d8605196ac0343c65b496609d7dee6
+  IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
+  JSONModel: 81c06ecf99190a25fa6aafceea5faffa7880868a
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  ReactiveCocoa: cbe3b5eae464aa72a348a7323996b171728a9e71
+  RegExCategories: e68befacacd5bda853c88f70ec745cb2d0cfb89c
+  RMUniversalAlert: bce2ca406c24065b76665725c83e48006e8f65f8
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  SharkORM: fb34973ab26eb1c0ef8a8cb1be376be7712aa253
+  TMCache: 95ebcc9b3c7e90fb5fd8fc3036cba3aa781c9bed
+  TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
+  UIActionSheet+Blocks: e180b7dad0a721ab7f212ac9742af799008bb358
+  UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
+  UIAlertController+Blocks: b48c673ff60726da468b32ab21bbc7683512d45b
+  UIAlertView+Blocks: a46c99c5144f6c5dbc7d62fd2a0678daceec89a3
+  UICKeyChainStore: f1cbd42216a113f0165de1e733e62905b8823432
+  XAspect: db50bf487f92dbb8557a7a5365556966c8493af8
+
+PODFILE CHECKSUM: 10a5b47de4402032a8a7b3274c8870cd57801986
+
+COCOAPODS: 1.0.1
