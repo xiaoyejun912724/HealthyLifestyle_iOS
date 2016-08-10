@@ -46,7 +46,7 @@
                                                                MERIDIAN_COLUMN_NAME:[rs stringForColumn:MERIDIAN_COLUMN_NAME]}];
         [self.meridianList addObject:model];
     }
-
+    
     self.tableView.tableFooterView = [[UIView alloc] init];
     [self.tableView registerNib:[UINib nibWithNibName:@"MeridianTableViewCell" bundle:nil] forCellReuseIdentifier:kMeridianTableViewCellReuseIdentifier];
 }

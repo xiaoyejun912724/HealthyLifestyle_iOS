@@ -17,8 +17,8 @@
 }
 
 - (void)setupWithDict:(NSDictionary *)dict {
-    self.meridianId = dict[@"id"];
-    self.name = dict[@"name"];
+    self.meridianId = dict[MERIDIAN_COLUMN_ID];
+    self.name = dict[MERIDIAN_COLUMN_NAME];
 }
 
 @end

@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  HealthyLifestyle
+
+  Created by 找汽配 on 16/8/10.
+  Copyright © 2016年 HealthyLifestyle. All rights reserved.
+*/
+
+"穴位"="Acupoint";
+"我的"="Me";
+
+"按经脉浏览"="Browse with meridians";
+"按位置浏览"="Browse with position";
+"按主治症状浏览"="Browse with indication";
+"搜索"="Search";
+
+
+
+"name"="name";

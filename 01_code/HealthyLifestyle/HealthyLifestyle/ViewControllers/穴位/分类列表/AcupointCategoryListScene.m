@@ -7,13 +7,14 @@
 //
 
 #import "AcupointCategoryListScene.h"
+#import "AcupointCategoryListSceneModel.h"
 #import "AcupointCategoryTableViewCell.h"
 
 @interface AcupointCategoryListScene () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView * tableView;
 
-@property (nonatomic, strong) NSArray * categoryList;
+@property (nonatomic, strong) AcupointCategoryListSceneModel * sceneModel;
 
 @end
 
@@ -23,7 +24,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
-    self.title = @"Acupoint";
+    self.title = NSLocalizedString(@"穴位", nil);
+    self.sceneModel = [AcupointCategoryListSceneModel SceneModel];
     
     [self setupScene];
 }
@@ -42,39 +44,27 @@
 
 #pragma mark - Getter
 
-- (NSArray *)categoryList {
-    if (!_categoryList) {
-        _categoryList = @[@{@"title":@"Browse with meridians",      // 按经脉浏览
-                            @"scene":@"MeridianListScene"},
-                          @{@"title":@"Browse with position",       // 按位置浏览
-                            @"scene":@""},
-                          @{@"title":@"Browse with indication",     // 按主治症状浏览
-                            @"scene":@"FunctionListScene"},
-                          @{@"title":@"Search",
-                            @"scene":@""}];
-    }
-    return _categoryList;
-}
+
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.categoryList.count;
+    return self.sceneModel.categoryList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AcupointCategoryTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kAcupointCategoryTableViewCellReuseIdentifier forIndexPath:indexPath];
-    NSDictionary * dict = self.categoryList[indexPath.row];
-    [cell reloadData:dict[@"title"]];
+    AcupointCategoryModel * model = self.sceneModel.categoryList[indexPath.row];
+    [cell reloadData:model.title];
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary * dict = self.categoryList[indexPath.row];
-    if (dict[@"scene"]) {
-        id scene = [[NSClassFromString(dict[@"scene"]) alloc] initWithNibName:dict[@"scene"] bundle:nil];
+    AcupointCategoryModel * model = self.sceneModel.categoryList[indexPath.row];
+    if (model.viewController) {
+        id scene = [[NSClassFromString(model.viewController) alloc] initWithNibName:model.viewController bundle:nil];
         [scene setHidesBottomBarWhenPushed:YES];
         [self.navigationController pushViewController:scene animated:YES];
     }

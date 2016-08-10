@@ -6,8 +6,8 @@
 //  Copyright © 2016年 祥运. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "HLViewController.h"
 
-@interface MeScene : ViewController
+@interface MeScene : HLViewController
 
 @end

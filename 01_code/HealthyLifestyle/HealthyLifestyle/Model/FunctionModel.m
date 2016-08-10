@@ -17,8 +17,8 @@
 }
 
 - (void)setupWithDict:(NSDictionary *)dict {
-    self.functionId = dict[@"id"];
-    self.name = dict[@"name"];
+    self.functionId = dict[FUNCTION_COLUMN_ID];
+    self.name = dict[FUNCTION_COLUMN_NAME];
 }
 
 @end

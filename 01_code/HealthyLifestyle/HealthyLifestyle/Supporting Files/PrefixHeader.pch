@@ -136,10 +136,10 @@ typedef NS_ENUM(NSInteger, AcupointListType) {
 
 #define MERIDIAN_TABLE_NAME     @"Meridian"
 #define MERIDIAN_COLUMN_ID      @"id"
-#define MERIDIAN_COLUMN_NAME    @"name"
+#define MERIDIAN_COLUMN_NAME    NSLocalizedString(@"name", nil)
 #define FUNCTION_TABLE_NAME     @"Function"
 #define FUNCTION_COLUMN_ID      @"id"
-#define FUNCTION_COLUMN_NAME    @"name"
+#define FUNCTION_COLUMN_NAME    NSLocalizedString(@"name", nil)
 
 // 控制是否显示网络请求警告或错误提示
 //#ifdef DEBUG

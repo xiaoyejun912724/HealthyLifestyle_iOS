@@ -11,12 +11,9 @@
 		7BCA58AC1D5AC1C30064A20C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA58AB1D5AC1C30064A20C /* Assets.xcassets */; };
 		7BCA58B91D5AC20F0064A20C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA58B71D5AC20F0064A20C /* Info.plist */; };
 		7BCA58BA1D5AC20F0064A20C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58B81D5AC20F0064A20C /* main.m */; };
-		7BCA58C01D5AC22B0064A20C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA58BC1D5AC22B0064A20C /* LaunchScreen.storyboard */; };
-		7BCA58C11D5AC22B0064A20C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA58BE1D5AC22B0064A20C /* Main.storyboard */; };
 		7BCA58C71D5ADA2E0064A20C /* Aspect-Window.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58C61D5ADA2E0064A20C /* Aspect-Window.m */; };
 		7BCA58CC1D5ADAC00064A20C /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58CA1D5ADAC00064A20C /* TabBarController.m */; };
-		7BCA58D31D5AE1E30064A20C /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58D01D5AE1E30064A20C /* NavigationController.m */; };
-		7BCA58D41D5AE1E30064A20C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58D21D5AE1E30064A20C /* ViewController.m */; };
+		7BCA58D41D5AE1E30064A20C /* HLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58D21D5AE1E30064A20C /* HLViewController.m */; };
 		7BCA58DA1D5AE25F0064A20C /* FunctionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58D71D5AE25F0064A20C /* FunctionModel.m */; };
 		7BCA58DB1D5AE25F0064A20C /* MeridianModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58D91D5AE25F0064A20C /* MeridianModel.m */; };
 		7BCA58E01D5AE2670064A20C /* Acupoint.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA58DD1D5AE2670064A20C /* Acupoint.sqlite */; };
@@ -39,6 +36,12 @@
 		7BCA59151D5AE27B0064A20C /* MeridianListScene.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA58FF1D5AE27B0064A20C /* MeridianListScene.xib */; };
 		7BCA59161D5AE27B0064A20C /* MeridianTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA59011D5AE27B0064A20C /* MeridianTableViewCell.m */; };
 		7BCA59171D5AE27B0064A20C /* MeridianTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA59021D5AE27B0064A20C /* MeridianTableViewCell.xib */; };
+		7BCA591C1D5AFA5E0064A20C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA591E1D5AFA5E0064A20C /* Localizable.strings */; };
+		7BCA59231D5B01590064A20C /* AcupointCategoryListSceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA59221D5B01590064A20C /* AcupointCategoryListSceneModel.m */; };
+		7BCA59261D5B019B0064A20C /* HLSceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA59251D5B019B0064A20C /* HLSceneModel.m */; };
+		7BCA592A1D5B02DC0064A20C /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA59291D5B02DC0064A20C /* NavigationController.m */; };
+		7BCA592D1D5B03950064A20C /* AcupointCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA592C1D5B03950064A20C /* AcupointCategoryModel.m */; };
+		7BCA592F1D5B0D220064A20C /* Aspect-Appearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA592E1D5B0D220064A20C /* Aspect-Appearance.m */; };
 		FC77CB333847027DB6E08FEF /* libPods-HealthyLifestyle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D016E3D882AC6862B454A1F /* libPods-HealthyLifestyle.a */; };
 /* End PBXBuildFile section */
 
@@ -51,15 +54,11 @@
 		7BCA58AB1D5AC1C30064A20C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BCA58B71D5AC20F0064A20C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BCA58B81D5AC20F0064A20C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7BCA58BD1D5AC22B0064A20C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7BCA58BF1D5AC22B0064A20C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		7BCA58C61D5ADA2E0064A20C /* Aspect-Window.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Aspect-Window.m"; sourceTree = "<group>"; };
 		7BCA58C91D5ADAC00064A20C /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		7BCA58CA1D5ADAC00064A20C /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
-		7BCA58CF1D5AE1E30064A20C /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
-		7BCA58D01D5AE1E30064A20C /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
-		7BCA58D11D5AE1E30064A20C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7BCA58D21D5AE1E30064A20C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7BCA58D11D5AE1E30064A20C /* HLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLViewController.h; sourceTree = "<group>"; };
+		7BCA58D21D5AE1E30064A20C /* HLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLViewController.m; sourceTree = "<group>"; };
 		7BCA58D61D5AE25F0064A20C /* FunctionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionModel.h; sourceTree = "<group>"; };
 		7BCA58D71D5AE25F0064A20C /* FunctionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionModel.m; sourceTree = "<group>"; };
 		7BCA58D81D5AE25F0064A20C /* MeridianModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeridianModel.h; sourceTree = "<group>"; };
@@ -95,6 +94,17 @@
 		7BCA59011D5AE27B0064A20C /* MeridianTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeridianTableViewCell.m; sourceTree = "<group>"; };
 		7BCA59021D5AE27B0064A20C /* MeridianTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeridianTableViewCell.xib; sourceTree = "<group>"; };
 		7BCA59191D5AE2FF0064A20C /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		7BCA591F1D5AFA600064A20C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7BCA59201D5AFAA90064A20C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		7BCA59211D5B01590064A20C /* AcupointCategoryListSceneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcupointCategoryListSceneModel.h; sourceTree = "<group>"; };
+		7BCA59221D5B01590064A20C /* AcupointCategoryListSceneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcupointCategoryListSceneModel.m; sourceTree = "<group>"; };
+		7BCA59241D5B019B0064A20C /* HLSceneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLSceneModel.h; sourceTree = "<group>"; };
+		7BCA59251D5B019B0064A20C /* HLSceneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLSceneModel.m; sourceTree = "<group>"; };
+		7BCA59281D5B02DC0064A20C /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		7BCA59291D5B02DC0064A20C /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		7BCA592B1D5B03950064A20C /* AcupointCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcupointCategoryModel.h; sourceTree = "<group>"; };
+		7BCA592C1D5B03950064A20C /* AcupointCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcupointCategoryModel.m; sourceTree = "<group>"; };
+		7BCA592E1D5B0D220064A20C /* Aspect-Appearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Aspect-Appearance.m"; sourceTree = "<group>"; };
 		F301703D858F82859DDED8E5 /* Pods-HealthyLifestyle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyLifestyle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthyLifestyle/Pods-HealthyLifestyle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,8 +152,8 @@
 				7BCA58A21D5AC1C30064A20C /* AppDelegate.h */,
 				7BCA58A31D5AC1C30064A20C /* AppDelegate.m */,
 				7BCA58C61D5ADA2E0064A20C /* Aspect-Window.m */,
+				7BCA592E1D5B0D220064A20C /* Aspect-Appearance.m */,
 				7BCA58AB1D5AC1C30064A20C /* Assets.xcassets */,
-				7BCA58BB1D5AC22B0064A20C /* Base.lproj */,
 				7BCA58C21D5ADA1C0064A20C /* ViewControllers */,
 				7BCA58D51D5AE25F0064A20C /* Model */,
 				7BCA58DC1D5AE2670064A20C /* Data */,
@@ -156,19 +166,11 @@
 			isa = PBXGroup;
 			children = (
 				7BCA59191D5AE2FF0064A20C /* PrefixHeader.pch */,
+				7BCA591E1D5AFA5E0064A20C /* Localizable.strings */,
 				7BCA58B71D5AC20F0064A20C /* Info.plist */,
 				7BCA58B81D5AC20F0064A20C /* main.m */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		7BCA58BB1D5AC22B0064A20C /* Base.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				7BCA58BC1D5AC22B0064A20C /* LaunchScreen.storyboard */,
-				7BCA58BE1D5AC22B0064A20C /* Main.storyboard */,
-			);
-			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 		7BCA58C21D5ADA1C0064A20C /* ViewControllers */ = {
@@ -176,8 +178,9 @@
 			children = (
 				7BCA58CE1D5AE1E30064A20C /* Base */,
 				7BCA58C81D5ADAA40064A20C /* 标签栏 */,
-				7BCA58E21D5AE27A0064A20C /* 我的 */,
+				7BCA59271D5B02DC0064A20C /* 导航栏 */,
 				7BCA58E61D5AE27A0064A20C /* 穴位 */,
+				7BCA58E21D5AE27A0064A20C /* 我的 */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -194,10 +197,10 @@
 		7BCA58CE1D5AE1E30064A20C /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				7BCA58D11D5AE1E30064A20C /* ViewController.h */,
-				7BCA58D21D5AE1E30064A20C /* ViewController.m */,
-				7BCA58CF1D5AE1E30064A20C /* NavigationController.h */,
-				7BCA58D01D5AE1E30064A20C /* NavigationController.m */,
+				7BCA58D11D5AE1E30064A20C /* HLViewController.h */,
+				7BCA58D21D5AE1E30064A20C /* HLViewController.m */,
+				7BCA59241D5B019B0064A20C /* HLSceneModel.h */,
+				7BCA59251D5B019B0064A20C /* HLSceneModel.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -237,9 +240,9 @@
 			isa = PBXGroup;
 			children = (
 				7BCA58E71D5AE27A0064A20C /* 分类列表 */,
+				7BCA58FC1D5AE27B0064A20C /* 经脉列表 */,
 				7BCA58EE1D5AE27A0064A20C /* 功能列表 */,
 				7BCA58F51D5AE27B0064A20C /* 穴位列表 */,
-				7BCA58FC1D5AE27B0064A20C /* 经脉列表 */,
 			);
 			path = "穴位";
 			sourceTree = "<group>";
@@ -247,6 +250,10 @@
 		7BCA58E71D5AE27A0064A20C /* 分类列表 */ = {
 			isa = PBXGroup;
 			children = (
+				7BCA592B1D5B03950064A20C /* AcupointCategoryModel.h */,
+				7BCA592C1D5B03950064A20C /* AcupointCategoryModel.m */,
+				7BCA59211D5B01590064A20C /* AcupointCategoryListSceneModel.h */,
+				7BCA59221D5B01590064A20C /* AcupointCategoryListSceneModel.m */,
 				7BCA58E81D5AE27A0064A20C /* AcupointCategoryListScene.h */,
 				7BCA58E91D5AE27A0064A20C /* AcupointCategoryListScene.m */,
 				7BCA58EA1D5AE27A0064A20C /* AcupointCategoryListScene.xib */,
@@ -294,6 +301,15 @@
 				7BCA59021D5AE27B0064A20C /* MeridianTableViewCell.xib */,
 			);
 			path = "经脉列表";
+			sourceTree = "<group>";
+		};
+		7BCA59271D5B02DC0064A20C /* 导航栏 */ = {
+			isa = PBXGroup;
+			children = (
+				7BCA59281D5B02DC0064A20C /* NavigationController.h */,
+				7BCA59291D5B02DC0064A20C /* NavigationController.m */,
+			);
+			path = "导航栏";
 			sourceTree = "<group>";
 		};
 		B77BE05F5631C8129047452F /* Pods */ = {
@@ -348,7 +364,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				"zh-Hans",
 			);
 			mainGroup = 7BCA58931D5AC1C30064A20C;
 			productRefGroup = 7BCA589D1D5AC1C30064A20C /* Products */;
@@ -375,10 +391,9 @@
 				7BCA58E01D5AE2670064A20C /* Acupoint.sqlite in Resources */,
 				7BCA59171D5AE27B0064A20C /* MeridianTableViewCell.xib in Resources */,
 				7BCA590D1D5AE27B0064A20C /* FunctionListScene.xib in Resources */,
+				7BCA591C1D5AFA5E0064A20C /* Localizable.strings in Resources */,
 				7BCA58B91D5AC20F0064A20C /* Info.plist in Resources */,
 				7BCA58AC1D5AC1C30064A20C /* Assets.xcassets in Resources */,
-				7BCA58C11D5AC22B0064A20C /* Main.storyboard in Resources */,
-				7BCA58C01D5AC22B0064A20C /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,44 +452,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BCA58C71D5ADA2E0064A20C /* Aspect-Window.m in Sources */,
+				7BCA592F1D5B0D220064A20C /* Aspect-Appearance.m in Sources */,
+				7BCA58A41D5AC1C30064A20C /* AppDelegate.m in Sources */,
+				7BCA58BA1D5AC20F0064A20C /* main.m in Sources */,
 				7BCA58E11D5AE2670064A20C /* AppData.m in Sources */,
-				7BCA58D41D5AE1E30064A20C /* ViewController.m in Sources */,
+				7BCA58D41D5AE1E30064A20C /* HLViewController.m in Sources */,
 				7BCA59061D5AE27B0064A20C /* MeScene.m in Sources */,
 				7BCA590C1D5AE27B0064A20C /* FunctionListScene.m in Sources */,
 				7BCA59161D5AE27B0064A20C /* MeridianTableViewCell.m in Sources */,
 				7BCA58CC1D5ADAC00064A20C /* TabBarController.m in Sources */,
-				7BCA58BA1D5AC20F0064A20C /* main.m in Sources */,
-				7BCA58D31D5AE1E30064A20C /* NavigationController.m in Sources */,
 				7BCA59141D5AE27B0064A20C /* MeridianListScene.m in Sources */,
 				7BCA590A1D5AE27B0064A20C /* AcupointCategoryTableViewCell.m in Sources */,
 				7BCA59121D5AE27B0064A20C /* AcupointTableViewCell.m in Sources */,
+				7BCA59231D5B01590064A20C /* AcupointCategoryListSceneModel.m in Sources */,
 				7BCA58DB1D5AE25F0064A20C /* MeridianModel.m in Sources */,
-				7BCA58A41D5AC1C30064A20C /* AppDelegate.m in Sources */,
+				7BCA59261D5B019B0064A20C /* HLSceneModel.m in Sources */,
 				7BCA58DA1D5AE25F0064A20C /* FunctionModel.m in Sources */,
 				7BCA59101D5AE27B0064A20C /* AcupointListScene.m in Sources */,
 				7BCA59081D5AE27B0064A20C /* AcupointCategoryListScene.m in Sources */,
-				7BCA58C71D5ADA2E0064A20C /* Aspect-Window.m in Sources */,
+				7BCA592A1D5B02DC0064A20C /* NavigationController.m in Sources */,
 				7BCA590E1D5AE27B0064A20C /* FunctionTableViewCell.m in Sources */,
+				7BCA592D1D5B03950064A20C /* AcupointCategoryModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7BCA58BC1D5AC22B0064A20C /* LaunchScreen.storyboard */ = {
+		7BCA591E1D5AFA5E0064A20C /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7BCA58BD1D5AC22B0064A20C /* Base */,
+				7BCA591F1D5AFA600064A20C /* en */,
+				7BCA59201D5AFAA90064A20C /* zh-Hans */,
 			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		7BCA58BE1D5AC22B0064A20C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7BCA58BF1D5AC22B0064A20C /* Base */,
-			);
-			name = Main.storyboard;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

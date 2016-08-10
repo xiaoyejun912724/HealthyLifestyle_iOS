@@ -51,7 +51,7 @@
         _acupointNavigationController = [[NavigationController alloc] initWithRootViewController:scene];
         _acupointNavigationController.tabBarItem.image = [[UIImage imageNamed:@"icon_acupoint_1"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         _acupointNavigationController.tabBarItem.selectedImage = [UIImage imageNamed:@"icon_acupoint_1"];
-        _acupointNavigationController.tabBarItem.title = @"Acupoint";
+        _acupointNavigationController.tabBarItem.title = NSLocalizedString(@"穴位", nil);
     }
     return _acupointNavigationController;
 }
@@ -62,7 +62,7 @@
         _meNavigationController = [[NavigationController alloc] initWithRootViewController:scene];
         _meNavigationController.tabBarItem.image = [[UIImage imageNamed:@"icon_me_1"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         _meNavigationController.tabBarItem.selectedImage = [UIImage imageNamed:@"icon_me_1"];
-        _meNavigationController.tabBarItem.title = @"Me";
+        _meNavigationController.tabBarItem.title = NSLocalizedString(@"我的", nil);
     }
     return _meNavigationController;
 }
