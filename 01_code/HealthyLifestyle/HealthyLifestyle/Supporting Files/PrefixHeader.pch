@@ -1,0 +1,150 @@
+//
+//  PrefixHeader.pch
+//  EasyIOSDemo
+//
+//  Created by baiye on 15/10/1.
+//  Copyright © 2015年 baiye. All rights reserved.
+//
+
+#ifndef PrefixHeader
+#define PrefixHeader
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "Action.h"
+#import "Scene.h"
+#import "Model.h"
+#import "SceneModel.h"
+#import "SceneCollectionView.h"
+#import "SceneScrollView.h"
+#import "SceneTableView.h"
+#import "DialogUtil.h"
+#import "Request.h"
+#import "UIScrollView+CoverView.h"
+#import "TMCache.h"
+#import "AFNetworking.h"
+#import "MMPickerView.h"
+#import "SVPullToRefresh.h"
+#import "GCDObjC.h"
+#import "UIView+FLKAutoLayout.h"
+#import "UIView+EzGesture.h"
+#import "URLManager.h"
+#import "Easy-Extention.h"
+#import "Masonry.h"
+#import "FMDB.h"
+#import "AppData.h"
+
+//#define BASE_URL_HOST_NORMAL    @"www.zhaoqipei.com"
+//#define BASE_URL_HOST_CENTER    @"120.26.227.70"
+//#define BASE_URL_HOST_PREVIEW   @"www.zhaoqipei.com"
+//#define BASE_URL_HOST_SHARE     @"www.zhaoqipei.com"
+
+#define BASE_URL_HOST_NORMAL    @"120.26.227.70"
+//#define BASE_URL_HOST_NORMAL    @"10.1.6.249:8080/zhaoqipeiv2.0"
+#define BASE_URL_HOST_CENTER    @"120.26.227.70"
+#define BASE_URL_HOST_PREVIEW   @"120.26.227.70"
+#define BASE_URL_HOST_SHARE     @"www.zhaoqipeiba.com"
+
+//#define BASE_URL_HOST_NORMAL    @"10.1.6.249:8080/zhaoqipeiv2.0"
+//#define BASE_URL_HOST_CENTER    @"120.26.227.70"
+//#define BASE_URL_HOST_PREVIEW   @"10.1.6.249:8080/zhaoqipeiv2.0"
+//#define BASE_URL_HOST_SHARE     @"10.1.6.249:8080/zhaoqipeiv2.0"
+
+#define BASE_URL_NORMAL         [@"http://" stringByAppendingString:BASE_URL_HOST_NORMAL]
+#define BASE_URL_CENTER         [@"http://" stringByAppendingString:BASE_URL_HOST_CENTER]
+#define BASE_URL_PREVIEW        [@"http://" stringByAppendingString:BASE_URL_HOST_PREVIEW]
+#define BASE_URL_SHARE          [@"http://" stringByAppendingString:BASE_URL_HOST_SHARE]
+
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_RETINA ([[UIScreen mainScreen] scale] >= 2.0)
+
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+
+#define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
+#define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
+#define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
+#define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+
+#define HTTP_REQUEST_ERROR  @"请求数据失败，网络是否正常连接？"
+#define LOGOUT_ERROR    @"登录状态已失效，请重新登录"
+
+#define SEARCH_DEFAULT_PLACEHOLDER  @"请输入要搜索的关键词"
+
+#define CAPTCHA_DELAY   60
+#define PRESENT_DELAY   1.5
+
+#define COLOR_BLACK             RGB(32, 32, 32)
+#define COLOR_RED               RGB(255, 65, 130)
+#define COLOR_DARK_GRAY         RGB(96, 96, 96)
+#define COLOR_GRAY_LINE         RGB(224, 224, 224)
+#define COLOR_GRAY_BACKGROUND   RGB(245, 245, 245)
+
+
+//#define AppID           @"1076887733"
+#define AppID           @"1111161478"
+#define UmengAppKey     @"5755168967e58e6cec00097b"
+#define TencentAppID    @"1105344967"
+#define TencentAppKey   @"LE02TXvsLaFtMV4f"
+#define WXAppID         @"wx4e279f0c9dc1750a"
+#define WXAppSecret     @"634c39ab456f0930b40a003f73e88716"
+//#define WXAppID         @"wx2213dada57f30182"
+//#define WXAppSecret     @"f81813662776c123b853fca47948c73f"
+//#define WXAppID         @"wx2213dada57f30182"
+//#define WXAppSecret     @"f81813662776c123b853fca47948c73f"
+#define WBAppID         @"1795022022"
+#define WBAppSecret     @"54f30928175f58b2c74600492e4b1f62"
+#define AlipayAppId     @"2016051701408691"
+#define AlipayAppSecret @"3c5ff700153e4e57a3aebdd6ebe04e10"
+#define AlipayPrivateKey    @"MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAM68t12/IIXHfRBgDjh7DaJg+zyUyspKUhHRIizqiEvaE6oUtINSJ+itYdoJJpUFzivQuk4HwqReam1ixSHm9PPRwRN/ti3K4MHHVic+W3AebOy1502857EKVcOA7Qy3JtTM3Ua812iJmZDBbLGEPf/KZ0qOsMoOBCz2EsM1TmnbAgMBAAECgYB6MKI0P3XqfAjYN93P1jMtySJVISBmxdyR+Ui4wXoDUwaSXSCACXvbEzclloj+RWshDIJBAmcxnThMJLedHROjQzgB5Pwjlrq1mcS0f4Z3TbsGGtjyCIrDzU8wJzmkRFBKMa3LveYN/YwwSjwbtLBxN7EVBs5lVns57GocRhQuoQJBAPxQJ/3zTJSbKLsOf2N7Jpzf/VE/Qoqstd9m6AFbYmkcymDFPq8XrgjKRU5SWJL9v3CdjiLUYxk0SdNuPKYY5osCQQDRwhI8WLqHw/4zywwytBgEOMHbo1ok69Ke9fxIaw1at94W1nQ+xqK7seEMYg/rt+AEVOCbPPcouoz53WeidUPxAkB7Z+EHjlYoYPM8+kxIJdWu6McHU/+BwBN8XuKet0mcy54YUqDkFpriZbwcIJ591mop9IWud1641yA8rzAutQMdAkEAgCvkVLerEzax6BgUlg7x9fJwkrNYa+MlyjhpNh8kA+ECdlYIpiteWO6yo4xwSgsLedobfQBdzqdfaXbe0qhxIQJAZvxSkykorS36sxOFz/i5DAG4vD9SdeFxFGpbyW5uQp+jcOkVJEklsKtdX/O5IwhWtABUZWHexgnMWY7yNQ3Jnw=="
+#define AlipayScheme    @"ZhaoQiPeiSeller"
+
+static const NSInteger kRecvGetMessageReqAlertTag = 1000;
+static const NSInteger kProfileAppIdAlertTag = 2000;
+static const NSInteger kProfileUserNameAlertTag = 3000;
+static const NSInteger kBizWebviewAppIdAlerttag = 4000;
+static const NSInteger kBizWebviewTousernameAlertTag = 6000;
+static const NSInteger kCertificationBackAlertTag = 10000;
+static const NSInteger kPhotoAlertTag = 10100;
+static const NSInteger kRemoveGoodsFromCategoryAlertTag = 10200;
+static const NSInteger kCertificateAlertTag = 10210;
+static const NSInteger kOpenShopAlertTag = 10211;
+static const NSInteger kDeleteBankCardAlertTag = 10212;
+static const NSInteger kDeleteGoodsAlertTag = 10213;
+static const NSInteger kDeleteCustomerAlertTag = 10214;
+static const NSInteger kRegisterTag = 10215;
+
+
+static NSString * const kUITableViewCellReuseIdentifier = @"UITableViewCell";
+static NSString * const kUICollectionViewCellReuseIdentifier = @"UICollectionViewCell";
+static NSString * const kUICollectionReusableViewReuseIdentifier = @"UICollectionReusableView";
+
+static NSString * const kAlipayDidCompleteNotification = @"AlipayDidComplete";     // 支付宝支付已完成
+
+// 推送
+static NSString * const DidReceiveRemoteNotification = @"DidReceiveRemoteNotification";
+static NSString * const PushSceneNotification = @"PushScene";
+
+typedef NS_ENUM(NSInteger, AcupointListType) {
+    AcupointListTypeNone,
+    AcupointListTypeMeridian,       // 经脉列表
+};
+
+#define MERIDIAN_TABLE_NAME     @"Meridian"
+#define MERIDIAN_COLUMN_ID      @"id"
+#define MERIDIAN_COLUMN_NAME    @"name"
+#define FUNCTION_TABLE_NAME     @"Function"
+#define FUNCTION_COLUMN_ID      @"id"
+#define FUNCTION_COLUMN_NAME    @"name"
+
+// 控制是否显示网络请求警告或错误提示
+//#ifdef DEBUG
+#define PRESENT_WARN
+#define PRESENT_ERROR
+//#endif
+
+#endif /* PrefixHeader */

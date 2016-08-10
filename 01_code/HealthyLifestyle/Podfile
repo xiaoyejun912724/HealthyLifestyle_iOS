@@ -7,7 +7,7 @@ pod 'EasyIOS-Extention'
 pod 'AFNetworking'
 pod 'Masonry'                       #自动布局框架
 pod 'MJRefresh'
-#pod 'FMDB'
+pod 'FMDB'
 #pod 'HMSegmentedControl'
 #pod 'MZTimerLabel'
 #pod 'EAIntroView'
