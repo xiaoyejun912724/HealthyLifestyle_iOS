@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B3C1A961D5EB26F008E784B /* HLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C1A951D5EB26F008E784B /* HLTableViewCell.m */; };
 		7BCA58A41D5AC1C30064A20C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58A31D5AC1C30064A20C /* AppDelegate.m */; };
 		7BCA58AC1D5AC1C30064A20C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA58AB1D5AC1C30064A20C /* Assets.xcassets */; };
 		7BCA58B91D5AC20F0064A20C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA58B71D5AC20F0064A20C /* Info.plist */; };
@@ -48,6 +49,8 @@
 /* Begin PBXFileReference section */
 		0D016E3D882AC6862B454A1F /* libPods-HealthyLifestyle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HealthyLifestyle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6283F4761CAB592CFAE710D6 /* Pods-HealthyLifestyle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyLifestyle.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthyLifestyle/Pods-HealthyLifestyle.release.xcconfig"; sourceTree = "<group>"; };
+		7B3C1A941D5EB26F008E784B /* HLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTableViewCell.h; sourceTree = "<group>"; };
+		7B3C1A951D5EB26F008E784B /* HLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTableViewCell.m; sourceTree = "<group>"; };
 		7BCA589C1D5AC1C30064A20C /* HealthyLifestyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthyLifestyle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCA58A21D5AC1C30064A20C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7BCA58A31D5AC1C30064A20C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -197,6 +200,8 @@
 		7BCA58CE1D5AE1E30064A20C /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				7B3C1A941D5EB26F008E784B /* HLTableViewCell.h */,
+				7B3C1A951D5EB26F008E784B /* HLTableViewCell.m */,
 				7BCA58D11D5AE1E30064A20C /* HLViewController.h */,
 				7BCA58D21D5AE1E30064A20C /* HLViewController.m */,
 				7BCA59241D5B019B0064A20C /* HLSceneModel.h */,
@@ -454,6 +459,7 @@
 			files = (
 				7BCA58C71D5ADA2E0064A20C /* Aspect-Window.m in Sources */,
 				7BCA592F1D5B0D220064A20C /* Aspect-Appearance.m in Sources */,
+				7B3C1A961D5EB26F008E784B /* HLTableViewCell.m in Sources */,
 				7BCA58A41D5AC1C30064A20C /* AppDelegate.m in Sources */,
 				7BCA58BA1D5AC20F0064A20C /* main.m in Sources */,
 				7BCA58E11D5AE2670064A20C /* AppData.m in Sources */,
