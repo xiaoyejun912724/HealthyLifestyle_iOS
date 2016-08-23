@@ -43,7 +43,7 @@ PODS:
   - FontIcon (1.0)
   - GCDObjC (0.3.0)
   - IQKeyboardManager (3.3.7)
-  - JSONModel (1.3.0)
+  - JSONModel (1.4.0)
   - Masonry (1.0.1)
   - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.12)
@@ -106,7 +106,7 @@ SPEC CHECKSUMS:
   FontIcon: 24a07541244227b865e689217efd7d049ba7cc43
   GCDObjC: 0c31898f34d8605196ac0343c65b496609d7dee6
   IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
-  JSONModel: 81c06ecf99190a25fa6aafceea5faffa7880868a
+  JSONModel: 58fe3f8c29ff95ed94e7ee7dde87e807f5da5371
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
