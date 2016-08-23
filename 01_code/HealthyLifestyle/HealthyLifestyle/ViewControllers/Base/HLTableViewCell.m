@@ -45,7 +45,7 @@
 
 - (void)initTableViewCell {
     _lineStyle = HLTableViewCellLineStyleNone;
-    _lineColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0f];
+    _lineColor = [UIColor colorWithRed:225/255.0f green:225/255.0f blue:225/255.0f alpha:1.0f];
     _lineEdgeInsets = UIEdgeInsetsZero;
 }
 
