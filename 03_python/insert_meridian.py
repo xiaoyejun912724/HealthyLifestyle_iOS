@@ -2,6 +2,8 @@
 
 import sqlite3
 
+print('running insert_meridian.py')
+
 path = "../04_database/Acupoint.db"
 connect = sqlite3.connect(path)
 
@@ -21,6 +23,6 @@ for data in list:
     sql = 'INSERT INTO "Meridian" ("cnname") VALUES ("' + data["cnname"] + '")'
     connect.execute(sql);
 connect.commit();
-print("insert data success")
+print("insert table Meridian success")
 
 connect.close();

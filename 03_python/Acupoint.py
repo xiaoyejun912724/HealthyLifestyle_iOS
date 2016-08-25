@@ -2,6 +2,7 @@
 
 import urllib
 import urllib.request
+import urllib.error
 import sys
 import re
 
@@ -12,7 +13,7 @@ import re
 class Acupoint:
     listURL = 'http://www.a-hospital.com/w/'
     detailURL = 'http://www.a-hospital.com/w/%E9%92%88%E7%81%B8%E5%AD%A6/'
-    removeTags = re.compile('<.*?>|</.*?>')
+    removeTags = re.compile('<.*?>|\[.*?\]|（.*?）')
     removeSpaces = re.compile('\s')
     
 #    def __init__(self):
@@ -26,8 +27,15 @@ class Acupoint:
     #获取页面
     def getPage(self, url):
         request = urllib.request.Request(url)
-        response = urllib.request.urlopen(request)
-        return response.read().decode('utf-8')
+        try:
+            response = urllib.request.urlopen(request)
+            return response.read().decode('utf-8')
+        except urllib.error.URLError as e:
+            if hasattr(e, 'code'):
+                print('连接网页失败，错误原因：', e.code)
+            if hasattr(e, 'reason'):
+                print('连接网页失败，错误原因：', e.reason)
+            return None
 
     #获取穴位列表
     def getAcupointList(self, page):
@@ -45,7 +53,7 @@ class Acupoint:
                 for i in a:
                     i = re.sub(self.removeTags, "", i)
                     i = re.sub(self.removeSpaces, "", i)
-                    newitem.append(i.strip())
+                    newitem.append(i)
                 newitems.append(newitem)
         return newitems
 
@@ -58,7 +66,19 @@ class Acupoint:
         for item in items:
             item = re.sub(self.removeTags, "", item)
             item = re.sub(self.removeSpaces, "", item)
-            detail += item.strip()
+            detail += item
+        return detail
+
+    #获取定位
+    def getPosition(self, detail):
+        reg = r'［定位］([^［]*)'
+        pattern = re.compile(reg, re.S)
+        items = re.findall(pattern, detail)
+        detail = ''
+        for item in items:
+            item = re.sub(self.removeTags, "", item)
+            item = re.sub(self.removeSpaces, "", item)
+            detail += item
         return detail
 
     #获取主治
@@ -70,7 +90,7 @@ class Acupoint:
         for item in items:
             item = re.sub(self.removeTags, "", item)
             item = re.sub(self.removeSpaces, "", item)
-            detail += item.strip();
+            detail += item
         return detail
 
     #获取针灸法
@@ -82,7 +102,7 @@ class Acupoint:
         for item in items:
             item = re.sub(self.removeTags, "", item)
             item = re.sub(self.removeSpaces, "", item)
-            detail += item.strip();
+            detail += item
         return detail
 
     #获取配伍
@@ -94,7 +114,7 @@ class Acupoint:
         for item in items:
             item = re.sub(self.removeTags, "", item)
             item = re.sub(self.removeSpaces, "", item)
-            detail += item.strip();
+            detail += item
         return detail
 
 
