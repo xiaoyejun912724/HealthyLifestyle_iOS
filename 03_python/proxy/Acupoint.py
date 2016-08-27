@@ -3,11 +3,14 @@
 import urllib
 import urllib.request
 import urllib.error
-import socket
 import random
 import time
 import sys
 import re
+
+
+
+
 
 class Acupoint:
     listURL = 'http://www.a-hospital.com/w/'
@@ -16,8 +19,7 @@ class Acupoint:
     removeSpaces = re.compile('\s')
     replaceSemicolons = re.compile(';')
     
-    def __init__(self):
-        pass
+#    def __init__(self):
 
     def getListURL(self, meridian):
         return self.listURL + urllib.parse.quote(meridian)
@@ -26,13 +28,22 @@ class Acupoint:
         return self.detailURL + urllib.parse.quote(acupoint)
     
     #获取页面
-    def getPage(self, url):
-#        socket.setdefaulttimeout(10)
+    def getPage(self, url, proxy):
+        # 添加代理
+        proxy_handler = urllib.request.ProxyHandler({'http':proxy});
+        proxy_auth_handler = urllib.request.ProxyBasicAuthHandler();
+        opener = urllib.request.build_opener(proxy_handler, proxy_auth_handler);
+        # 添加头信息
+        opener.addheaders = [('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36')]
+#        opener.addheaders = {'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36',
+#                             'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+#                             'Accept-Language':'zh-CN,zh;q=0.8,en;q=0.6',
+#                             'Connection':'keep-alive',
+#                             'Host':'www.a-hospital.com'}
         try:
-            time.sleep(2)
+            time.sleep(1)
             # 数据请求
-            
-            response = urllib.request.urlopen(url = url, timeout = 200)
+            response = opener.open(url);
             return response.read().decode('utf-8')
         except urllib.error.URLError as e:
             code = ''
@@ -71,9 +82,9 @@ class Acupoint:
         items = re.findall(pattern, page)
         detail = ''
         for item in items:
-            item = re.sub(self.removeTags, '', item)
-            item = re.sub(self.removeSpaces, '', item)
-            item = re.sub(self.replaceSemicolons, '；', item)
+            item = re.sub(self.removeTags, "", item)
+            item = re.sub(self.removeSpaces, "", item)
+            item = re.sub(self.replaceSemicolons, "；", item)
             detail += item
         return detail
 

@@ -3,7 +3,6 @@
 import urllib
 import urllib.request
 import urllib.error
-import socket
 import random
 import time
 import sys
@@ -27,12 +26,11 @@ class Acupoint:
     
     #获取页面
     def getPage(self, url):
-#        socket.setdefaulttimeout(10)
+        request = urllib.request.Request(url)
         try:
             time.sleep(2)
             # 数据请求
-            
-            response = urllib.request.urlopen(url = url, timeout = 200)
+            response = urllib.request.urlopen(request);
             return response.read().decode('utf-8')
         except urllib.error.URLError as e:
             code = ''
@@ -71,9 +69,9 @@ class Acupoint:
         items = re.findall(pattern, page)
         detail = ''
         for item in items:
-            item = re.sub(self.removeTags, '', item)
-            item = re.sub(self.removeSpaces, '', item)
-            item = re.sub(self.replaceSemicolons, '；', item)
+            item = re.sub(self.removeTags, "", item)
+            item = re.sub(self.removeSpaces, "", item)
+            item = re.sub(self.replaceSemicolons, "；", item)
             detail += item
         return detail
 

@@ -6,21 +6,25 @@ path = "../04_database/Acupoint.db"
 connect = sqlite3.connect(path)
 print("open database success")
 
+#position       位置
+#indication     主治
+#cooperation    配伍
+#acupuncture    针灸法
 sql =   'CREATE TABLE IF NOT EXISTS "Acupoint" (' +\
             '"id" INTEGER PRIMARY KEY AUTOINCREMENT, ' +\
             '"merdian_id" INTEGER DEFAULT 0, ' +\
             '"function_id" INTEGER DEFAULT 0, ' +\
             '"code" VARCHAR(16), ' +\
             '"pinyin" VARCHAR(64), ' +\
-            '"cnname" VARCHAR(64), ' +\
+            '"cn_name" VARCHAR(64), ' +\
             '"position" TEXT, ' +\
-            '"cnposition" TEXT, ' +\
-            '"attend" TEXT, ' +\
-            '"cnattend" TEXT, ' +\
+            '"cn_position" TEXT, ' +\
+            '"indication" TEXT, ' +\
+            '"cn_indication" TEXT, ' +\
             '"cooperation" TEXT, ' +\
-            '"cncooperation" TEXT, ' +\
+            '"cn_cooperation" TEXT, ' +\
             '"acupuncture" TEXT, ' +\
-            '"cnacupuncture" TEXT, ' +\
+            '"cn_acupuncture" TEXT, ' +\
             '"description" TEXT, ' +\
             '"url" TEXT' +\
         ')'
