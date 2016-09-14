@@ -27,11 +27,9 @@ class Acupoint:
     
     #获取页面
     def getPage(self, url):
-#        socket.setdefaulttimeout(10)
         try:
             time.sleep(2)
             # 数据请求
-            
             response = urllib.request.urlopen(url = url, timeout = 200)
             return response.read().decode('utf-8')
         except urllib.error.URLError as e:
@@ -66,15 +64,17 @@ class Acupoint:
 
     #获取穴位详情
     def getAcupointDetail(self, page):
-        reg = r'</table>\n<p>(.*)?</p>*\n<table id="toc" class="toc">'
+        reg = r'</table>\n<p>(.*)?</p>*\n(<table id="toc" class="toc">|<div id="ggad-top">)'
         pattern = re.compile(reg, re.S)
         items = re.findall(pattern, page)
+
         detail = ''
         for item in items:
-            item = re.sub(self.removeTags, '', item)
-            item = re.sub(self.removeSpaces, '', item)
-            item = re.sub(self.replaceSemicolons, '；', item)
-            detail += item
+            for i in item:
+                i = re.sub(self.removeTags, '', i)
+                i = re.sub(self.removeSpaces, '', i)
+                i = re.sub(self.replaceSemicolons, '；', i)
+                detail += i
         return detail
 
     #获取定位

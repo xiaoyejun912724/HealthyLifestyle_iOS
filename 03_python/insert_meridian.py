@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#2. 填入经脉数据
 
 import sqlite3
 

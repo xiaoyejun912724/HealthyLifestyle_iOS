@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#1. 创建正式数据库
 
 import sqlite3
 
@@ -12,7 +12,7 @@ print("open database success")
 #acupuncture    针灸法
 sql =   'CREATE TABLE IF NOT EXISTS "Acupoint" (' +\
             '"id" INTEGER PRIMARY KEY AUTOINCREMENT, ' +\
-            '"merdian_id" INTEGER DEFAULT 0, ' +\
+            '"meridian_id" INTEGER DEFAULT 0, ' +\
             '"function_id" INTEGER DEFAULT 0, ' +\
             '"code" VARCHAR(16), ' +\
             '"pinyin" VARCHAR(64), ' +\
@@ -24,9 +24,7 @@ sql =   'CREATE TABLE IF NOT EXISTS "Acupoint" (' +\
             '"cooperation" TEXT, ' +\
             '"cn_cooperation" TEXT, ' +\
             '"acupuncture" TEXT, ' +\
-            '"cn_acupuncture" TEXT, ' +\
-            '"description" TEXT, ' +\
-            '"url" TEXT' +\
+            '"cn_acupuncture" TEXT' +\
         ')'
 connect.execute(sql);
 

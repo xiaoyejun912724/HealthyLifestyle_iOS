@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#3. 创建缓存数据库
 
 import sqlite3
 import urllib
