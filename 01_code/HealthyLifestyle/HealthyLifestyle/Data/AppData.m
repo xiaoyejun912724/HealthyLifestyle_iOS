@@ -9,9 +9,6 @@
 #import "AppData.h"
 #import "FMDatabase.h"
 
-#define DATA_FILE @"Acupoint.sqlite"
-
-
 @interface AppData ()
 
 
@@ -38,7 +35,7 @@ DEF_SINGLETON(AppData)
 }
 
 - (void)openDatabase {
-    NSString * filePath = [[NSBundle mainBundle] pathForResource:@"Acupoint" ofType:@"sqlite"];
+    NSString * filePath = [[NSBundle mainBundle] pathForResource:@"Acupoint" ofType:@"db"];
     self.database = [FMDatabase databaseWithPath:filePath];
     if ([self.database open]) {
         NSLog(@"success to open database.");

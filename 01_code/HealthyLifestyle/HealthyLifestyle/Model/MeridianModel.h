@@ -10,7 +10,7 @@
 
 @interface MeridianModel : NSObject
 
-@property (nonatomic, copy) NSString * meridianId;
+@property (nonatomic, copy) NSString * meridianID;
 @property (nonatomic, copy) NSString * name;
 
 + (instancetype)modelWithDict:(NSDictionary *)dict;

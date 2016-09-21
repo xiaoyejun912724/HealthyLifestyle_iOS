@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B2C4F311D92761F001F0D30 /* AcupointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C4F301D92761F001F0D30 /* AcupointModel.m */; };
+		7B2C4F331D927B4A001F0D30 /* Acupoint.db in Resources */ = {isa = PBXBuildFile; fileRef = 7B2C4F321D927B4A001F0D30 /* Acupoint.db */; };
+		7B2C4F381D92941A001F0D30 /* AcupointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C4F361D92941A001F0D30 /* AcupointViewController.m */; };
+		7B2C4F391D92941A001F0D30 /* AcupointViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B2C4F371D92941A001F0D30 /* AcupointViewController.xib */; };
 		7B3C1A961D5EB26F008E784B /* HLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C1A951D5EB26F008E784B /* HLTableViewCell.m */; };
 		7BCA58A41D5AC1C30064A20C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58A31D5AC1C30064A20C /* AppDelegate.m */; };
 		7BCA58AC1D5AC1C30064A20C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA58AB1D5AC1C30064A20C /* Assets.xcassets */; };
-		7BCA58B91D5AC20F0064A20C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA58B71D5AC20F0064A20C /* Info.plist */; };
 		7BCA58BA1D5AC20F0064A20C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58B81D5AC20F0064A20C /* main.m */; };
 		7BCA58C71D5ADA2E0064A20C /* Aspect-Window.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58C61D5ADA2E0064A20C /* Aspect-Window.m */; };
 		7BCA58CC1D5ADAC00064A20C /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58CA1D5ADAC00064A20C /* TabBarController.m */; };
 		7BCA58D41D5AE1E30064A20C /* HLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58D21D5AE1E30064A20C /* HLViewController.m */; };
 		7BCA58DA1D5AE25F0064A20C /* FunctionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58D71D5AE25F0064A20C /* FunctionModel.m */; };
 		7BCA58DB1D5AE25F0064A20C /* MeridianModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58D91D5AE25F0064A20C /* MeridianModel.m */; };
-		7BCA58E01D5AE2670064A20C /* Acupoint.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA58DD1D5AE2670064A20C /* Acupoint.sqlite */; };
 		7BCA58E11D5AE2670064A20C /* AppData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58DF1D5AE2670064A20C /* AppData.m */; };
 		7BCA59061D5AE27B0064A20C /* MeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58E41D5AE27A0064A20C /* MeScene.m */; };
 		7BCA59071D5AE27B0064A20C /* MeScene.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA58E51D5AE27A0064A20C /* MeScene.xib */; };
@@ -49,6 +51,12 @@
 /* Begin PBXFileReference section */
 		0D016E3D882AC6862B454A1F /* libPods-HealthyLifestyle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HealthyLifestyle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6283F4761CAB592CFAE710D6 /* Pods-HealthyLifestyle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyLifestyle.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthyLifestyle/Pods-HealthyLifestyle.release.xcconfig"; sourceTree = "<group>"; };
+		7B2C4F2F1D92761F001F0D30 /* AcupointModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcupointModel.h; sourceTree = "<group>"; };
+		7B2C4F301D92761F001F0D30 /* AcupointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcupointModel.m; sourceTree = "<group>"; };
+		7B2C4F321D927B4A001F0D30 /* Acupoint.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Acupoint.db; sourceTree = "<group>"; };
+		7B2C4F351D92941A001F0D30 /* AcupointViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcupointViewController.h; sourceTree = "<group>"; };
+		7B2C4F361D92941A001F0D30 /* AcupointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcupointViewController.m; sourceTree = "<group>"; };
+		7B2C4F371D92941A001F0D30 /* AcupointViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AcupointViewController.xib; sourceTree = "<group>"; };
 		7B3C1A941D5EB26F008E784B /* HLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTableViewCell.h; sourceTree = "<group>"; };
 		7B3C1A951D5EB26F008E784B /* HLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTableViewCell.m; sourceTree = "<group>"; };
 		7BCA589C1D5AC1C30064A20C /* HealthyLifestyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthyLifestyle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +74,6 @@
 		7BCA58D71D5AE25F0064A20C /* FunctionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionModel.m; sourceTree = "<group>"; };
 		7BCA58D81D5AE25F0064A20C /* MeridianModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeridianModel.h; sourceTree = "<group>"; };
 		7BCA58D91D5AE25F0064A20C /* MeridianModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeridianModel.m; sourceTree = "<group>"; };
-		7BCA58DD1D5AE2670064A20C /* Acupoint.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Acupoint.sqlite; sourceTree = "<group>"; };
 		7BCA58DE1D5AE2670064A20C /* AppData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppData.h; sourceTree = "<group>"; };
 		7BCA58DF1D5AE2670064A20C /* AppData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppData.m; sourceTree = "<group>"; };
 		7BCA58E31D5AE27A0064A20C /* MeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeScene.h; sourceTree = "<group>"; };
@@ -129,6 +136,16 @@
 				0D016E3D882AC6862B454A1F /* libPods-HealthyLifestyle.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B2C4F341D9293FE001F0D30 /* 穴位详情 */ = {
+			isa = PBXGroup;
+			children = (
+				7B2C4F351D92941A001F0D30 /* AcupointViewController.h */,
+				7B2C4F361D92941A001F0D30 /* AcupointViewController.m */,
+				7B2C4F371D92941A001F0D30 /* AcupointViewController.xib */,
+			);
+			path = "穴位详情";
 			sourceTree = "<group>";
 		};
 		7BCA58931D5AC1C30064A20C = {
@@ -217,6 +234,8 @@
 				7BCA58D71D5AE25F0064A20C /* FunctionModel.m */,
 				7BCA58D81D5AE25F0064A20C /* MeridianModel.h */,
 				7BCA58D91D5AE25F0064A20C /* MeridianModel.m */,
+				7B2C4F2F1D92761F001F0D30 /* AcupointModel.h */,
+				7B2C4F301D92761F001F0D30 /* AcupointModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -224,7 +243,7 @@
 		7BCA58DC1D5AE2670064A20C /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				7BCA58DD1D5AE2670064A20C /* Acupoint.sqlite */,
+				7B2C4F321D927B4A001F0D30 /* Acupoint.db */,
 				7BCA58DE1D5AE2670064A20C /* AppData.h */,
 				7BCA58DF1D5AE2670064A20C /* AppData.m */,
 			);
@@ -248,6 +267,7 @@
 				7BCA58FC1D5AE27B0064A20C /* 经脉列表 */,
 				7BCA58EE1D5AE27A0064A20C /* 功能列表 */,
 				7BCA58F51D5AE27B0064A20C /* 穴位列表 */,
+				7B2C4F341D9293FE001F0D30 /* 穴位详情 */,
 			);
 			path = "穴位";
 			sourceTree = "<group>";
@@ -355,11 +375,12 @@
 		7BCA58941D5AC1C30064A20C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = HealthyLifestyle;
 				TargetAttributes = {
 					7BCA589B1D5AC1C30064A20C = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = LSKJ46UNM6;
 					};
 				};
 			};
@@ -392,12 +413,12 @@
 				7BCA59071D5AE27B0064A20C /* MeScene.xib in Resources */,
 				7BCA59111D5AE27B0064A20C /* AcupointListScene.xib in Resources */,
 				7BCA590B1D5AE27B0064A20C /* AcupointCategoryTableViewCell.xib in Resources */,
+				7B2C4F391D92941A001F0D30 /* AcupointViewController.xib in Resources */,
+				7B2C4F331D927B4A001F0D30 /* Acupoint.db in Resources */,
 				7BCA59151D5AE27B0064A20C /* MeridianListScene.xib in Resources */,
-				7BCA58E01D5AE2670064A20C /* Acupoint.sqlite in Resources */,
 				7BCA59171D5AE27B0064A20C /* MeridianTableViewCell.xib in Resources */,
 				7BCA590D1D5AE27B0064A20C /* FunctionListScene.xib in Resources */,
 				7BCA591C1D5AFA5E0064A20C /* Localizable.strings in Resources */,
-				7BCA58B91D5AC20F0064A20C /* Info.plist in Resources */,
 				7BCA58AC1D5AC1C30064A20C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +493,7 @@
 				7BCA590A1D5AE27B0064A20C /* AcupointCategoryTableViewCell.m in Sources */,
 				7BCA59121D5AE27B0064A20C /* AcupointTableViewCell.m in Sources */,
 				7BCA59231D5B01590064A20C /* AcupointCategoryListSceneModel.m in Sources */,
+				7B2C4F381D92941A001F0D30 /* AcupointViewController.m in Sources */,
 				7BCA58DB1D5AE25F0064A20C /* MeridianModel.m in Sources */,
 				7BCA59261D5B019B0064A20C /* HLSceneModel.m in Sources */,
 				7BCA58DA1D5AE25F0064A20C /* FunctionModel.m in Sources */,
@@ -479,6 +501,7 @@
 				7BCA59081D5AE27B0064A20C /* AcupointCategoryListScene.m in Sources */,
 				7BCA592A1D5B02DC0064A20C /* NavigationController.m in Sources */,
 				7BCA590E1D5AE27B0064A20C /* FunctionTableViewCell.m in Sources */,
+				7B2C4F311D92761F001F0D30 /* AcupointModel.m in Sources */,
 				7BCA592D1D5B03950064A20C /* AcupointCategoryModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +525,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -512,8 +536,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -546,6 +572,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -556,8 +583,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -585,9 +614,11 @@
 			baseConfigurationReference = F301703D858F82859DDED8E5 /* Pods-HealthyLifestyle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "compiler-default";
+				DEVELOPMENT_TEAM = LSKJ46UNM6;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HealthyLifestyle/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/HealthyLifestyle/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HealthyLifestyle.HealthyLifestyle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -599,9 +630,11 @@
 			baseConfigurationReference = 6283F4761CAB592CFAE710D6 /* Pods-HealthyLifestyle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "compiler-default";
+				DEVELOPMENT_TEAM = LSKJ46UNM6;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HealthyLifestyle/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/HealthyLifestyle/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HealthyLifestyle.HealthyLifestyle;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -28,10 +28,10 @@ sql =   'CREATE TABLE IF NOT EXISTS "Acupoint" (' +\
         ')'
 connect.execute(sql);
 
-sql = 'CREATE TABLE IF NOT EXISTS "Function" ("id" INTEGER PRIMARY KEY AUTOINCREMENT, "name" VARCHAR(64), "cnname" VARCHAR(64))'
+sql = 'CREATE TABLE IF NOT EXISTS "Function" ("id" INTEGER PRIMARY KEY AUTOINCREMENT, "name" VARCHAR(64), "cn_name" VARCHAR(64))'
 connect.execute(sql);
 
-sql = 'CREATE TABLE IF NOT EXISTS "Meridian" ("id" INTEGER PRIMARY KEY AUTOINCREMENT, "name" VARCHAR(64), "cnname" VARCHAR(64), "treat" TEXT, "cntreat" TEXT)'
+sql = 'CREATE TABLE IF NOT EXISTS "Meridian" ("id" INTEGER PRIMARY KEY AUTOINCREMENT, "name" VARCHAR(64), "cn_name" VARCHAR(64), "indication" TEXT, "cn_indication" TEXT)'
 connect.execute(sql);
 
 print("create table success")

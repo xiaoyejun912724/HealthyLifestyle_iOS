@@ -19,7 +19,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        [self initTableViewCell];
+        [self initCell];
     }
     return self;
 }
@@ -28,7 +28,7 @@
     [super awakeFromNib];
     // Initialization code
     
-    [self initTableViewCell];
+    [self initCell];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -43,7 +43,7 @@
     [self reloadLineFrame];
 }
 
-- (void)initTableViewCell {
+- (void)initCell {
     _lineStyle = HLTableViewCellLineStyleNone;
     _lineColor = [UIColor colorWithRed:225/255.0f green:225/255.0f blue:225/255.0f alpha:1.0f];
     _lineEdgeInsets = UIEdgeInsetsZero;

@@ -7,6 +7,7 @@
 //
 
 #import "MeridianListScene.h"
+#import "AcupointListScene.h"
 #import "MeridianTableViewCell.h"
 #import "MeridianModel.h"
 
@@ -24,7 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
-    self.title = @"Meridian";
+    self.title = NSLocalizedString(@"经脉", nil);
 
     [self setupScene];
 }
@@ -67,12 +68,17 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary * dict = self.meridianList[indexPath.row];
-    if (dict[@"scene"]) {
-        id scene = [[NSClassFromString(dict[@"scene"]) alloc] initWithNibName:@"AcupointCategoryListScene" bundle:nil];
-        [scene setHidesBottomBarWhenPushed:YES];
-        [self.navigationController pushViewController:scene animated:YES];
-    }
+//    NSDictionary * dict = self.meridianList[indexPath.row];
+//    if (dict[@"scene"]) {
+//        id scene = [[NSClassFromString(dict[@"scene"]) alloc] initWithNibName:@"AcupointCategoryListScene" bundle:nil];
+//        [scene setHidesBottomBarWhenPushed:YES];
+//        [self.navigationController pushViewController:scene animated:YES];
+//    }
+    MeridianModel * model = self.meridianList[indexPath.row];
+    AcupointListScene * controller = [[AcupointListScene alloc] initWithNibName:@"AcupointListScene" bundle:nil];
+    controller.type = AcupointListTypeMeridian;
+    controller.meridianID = model.meridianID;
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 

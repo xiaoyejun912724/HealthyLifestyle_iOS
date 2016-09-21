@@ -10,7 +10,7 @@
 #import "AcupointTableViewCell.h"
 #import "FMDB.h"
 #import "AppData.h"
-#import "MeridianModel.h"
+#import "AcupointModel.h"
 
 
 
@@ -28,7 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
-    self.title = @"Acupoint";
+    self.title = NSLocalizedString(@"穴位", nil);
     
     [self setupScene];
 }
@@ -44,18 +44,20 @@
     self.acupointList = [NSMutableArray array];
 
     if (self.type == AcupointListTypeMeridian) {
-        
-        NSString * query = [NSString stringWithFormat:@"SELECT * FROM '%@'", MERIDIAN_TABLE_NAME];
+        NSString * query = [NSString stringWithFormat:@"SELECT * FROM '%@' WHERE \"meridian_id\" = \"%@\"", ACUPOINT_TABLE_NAME, self.meridianID];
         FMResultSet * rs = [[AppData sharedInstance].database executeQuery:query];
         while ([rs next]) {
-            MeridianModel * model = [MeridianModel modelWithDict:@{MERIDIAN_COLUMN_ID:[rs stringForColumn:MERIDIAN_COLUMN_ID],
-                                                                   MERIDIAN_COLUMN_NAME:[rs stringForColumn:MERIDIAN_COLUMN_NAME]}];
+            AcupointModel * model = [AcupointModel modelWithDict:@{ACUPOINT_COLUMN_ID:[rs stringForColumn:ACUPOINT_COLUMN_ID],
+                                                                   ACUPOINT_COLUMN_NAME:[rs stringForColumn:ACUPOINT_COLUMN_NAME],
+                                                                   ACUPOINT_COLUMN_PINYIN:[rs stringForColumn:ACUPOINT_COLUMN_PINYIN],
+                                                                   ACUPOINT_COLUMN_CODE:[rs stringForColumn:ACUPOINT_COLUMN_CODE],
+                                                                   ACUPOINT_COLUMN_POSITION:[rs stringForColumn:ACUPOINT_COLUMN_POSITION],
+                                                                   ACUPOINT_COLUMN_INDICATION:[rs stringForColumn:ACUPOINT_COLUMN_INDICATION],
+                                                                   ACUPOINT_COLUMN_COOPERATION:[rs stringForColumn:ACUPOINT_COLUMN_COOPERATION],
+                                                                   ACUPOINT_COLUMN_ACUPUNCTURE:[rs stringForColumn:ACUPOINT_COLUMN_ACUPUNCTURE]}];
             [self.acupointList addObject:model];
         }
     }
-    
-    
-    
     
     self.tableView.tableFooterView = [[UIView alloc] init];
     [self.tableView registerNib:[UINib nibWithNibName:@"AcupointTableViewCell" bundle:nil] forCellReuseIdentifier:kAcupointTableViewCellReuseIdentifier];
@@ -68,21 +70,19 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    AcupointModel * model = self.acupointList[indexPath.row];
     AcupointTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kAcupointTableViewCellReuseIdentifier forIndexPath:indexPath];
-    NSDictionary * dict = self.acupointList[indexPath.row];
-    [cell reloadData:dict];
+    [cell reloadData:model];
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary * dict = self.acupointList[indexPath.row];
-    if (dict[@"scene"]) {
-        id scene = [[NSClassFromString(dict[@"scene"]) alloc] initWithNibName:@"AcupointCategoryListScene" bundle:nil];
-        [scene setHidesBottomBarWhenPushed:YES];
-        [self.navigationController pushViewController:scene animated:YES];
-    }
+    AcupointModel * model = self.acupointList[indexPath.row];
+    
+    
+    
 }
 
 

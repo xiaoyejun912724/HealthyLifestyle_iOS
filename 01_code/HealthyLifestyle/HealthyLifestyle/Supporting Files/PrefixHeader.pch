@@ -140,6 +140,15 @@ typedef NS_ENUM(NSInteger, AcupointListType) {
 #define FUNCTION_TABLE_NAME     @"Function"
 #define FUNCTION_COLUMN_ID      @"id"
 #define FUNCTION_COLUMN_NAME    NSLocalizedString(@"name", nil)
+#define ACUPOINT_TABLE_NAME     @"Acupoint"
+#define ACUPOINT_COLUMN_ID      @"id"
+#define ACUPOINT_COLUMN_NAME    @"cn_name"
+#define ACUPOINT_COLUMN_PINYIN  @"pinyin"
+#define ACUPOINT_COLUMN_CODE    @"code"
+#define ACUPOINT_COLUMN_POSITION    NSLocalizedString(@"position", nil)
+#define ACUPOINT_COLUMN_INDICATION  NSLocalizedString(@"indication", nil)
+#define ACUPOINT_COLUMN_COOPERATION NSLocalizedString(@"cooperation", nil)
+#define ACUPOINT_COLUMN_ACUPUNCTURE NSLocalizedString(@"acupuncture", nil)
 
 // 控制是否显示网络请求警告或错误提示
 //#ifdef DEBUG

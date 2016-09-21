@@ -11,5 +11,7 @@
 @interface AcupointListScene : HLViewController
 
 @property (nonatomic, assign) AcupointListType type;
+@property (nonatomic, copy) NSString * meridianID;
+
 
 @end

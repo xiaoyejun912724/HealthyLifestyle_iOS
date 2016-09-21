@@ -6,6 +6,7 @@
   Copyright © 2016年 HealthyLifestyle. All rights reserved.
 */
 
+"经脉"="经验";
 "穴位"="穴位";
 "我的"="我的";
 
@@ -16,9 +17,11 @@
 
 
 
-
-"name"="cnname";
-
+"name"          = "cn_name";
+"position"      = "cn_position";
+"indication"    = "cn_indication";
+"cooperation"   = "cn_cooperation";
+"acupuncture"   = "cn_acupuncture";
 
 
 

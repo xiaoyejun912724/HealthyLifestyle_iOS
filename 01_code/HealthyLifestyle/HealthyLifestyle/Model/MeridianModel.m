@@ -17,8 +17,12 @@
 }
 
 - (void)setupWithDict:(NSDictionary *)dict {
-    self.meridianId = dict[MERIDIAN_COLUMN_ID];
-    self.name = dict[MERIDIAN_COLUMN_NAME];
+    if (dict[MERIDIAN_COLUMN_ID] && dict[MERIDIAN_COLUMN_ID] != [NSNull null]) {
+        self.meridianID = dict[MERIDIAN_COLUMN_ID];
+    }
+    if (dict[MERIDIAN_COLUMN_NAME] && dict[MERIDIAN_COLUMN_NAME] != [NSNull null]) {
+        self.name = dict[MERIDIAN_COLUMN_NAME];
+    }
 }
 
 @end

@@ -6,6 +6,7 @@
   Copyright © 2016年 HealthyLifestyle. All rights reserved.
 */
 
+"经脉"="Meridian";
 "穴位"="Acupoint";
 "我的"="Me";
 
@@ -16,4 +17,10 @@
 
 
 
-"name"="name";
+"name"          = "name";
+"position"      = "position";
+"indication"    = "indication";
+"cooperation"   = "cooperation";
+"acupuncture"   = "acupuncture";
+
+

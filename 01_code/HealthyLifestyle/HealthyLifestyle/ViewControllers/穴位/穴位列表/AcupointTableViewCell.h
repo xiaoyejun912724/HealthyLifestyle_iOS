@@ -6,8 +6,10 @@
 //  Copyright © 2016年 祥运. All rights reserved.
 //
 
+#import "HLTableViewCell.h"
+
 static NSString * const kAcupointTableViewCellReuseIdentifier = @"AcupointTableViewCell";
 
-@interface AcupointTableViewCell : EzTableViewCell
+@interface AcupointTableViewCell : HLTableViewCell
 
 @end

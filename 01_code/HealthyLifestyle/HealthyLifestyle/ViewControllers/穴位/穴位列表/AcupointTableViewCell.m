@@ -7,12 +7,15 @@
 //
 
 #import "AcupointTableViewCell.h"
+#import "AcupointModel.h"
 
 @interface AcupointTableViewCell ()
 
 @property (weak, nonatomic) IBOutlet UILabel * titleLabel;
-
-@property (nonatomic, weak) UIView * bottomLineView;
+@property (weak, nonatomic) IBOutlet UILabel * positionLabel;
+@property (weak, nonatomic) IBOutlet UILabel * indicationLabel;
+@property (weak, nonatomic) IBOutlet UILabel * cooperationLabel;
+@property (weak, nonatomic) IBOutlet UILabel * acupunctureLabel;
 
 @end
 
@@ -21,6 +24,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    
+    self.lineStyle = HLTableViewCellLineStyleFooter;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -29,27 +34,20 @@
     // Configure the view for the selected state
 }
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    
-    self.bottomLineView.frame = CGRectMake(0,
-                                           CGRectGetHeight(self.bottomLineView.superview.frame) - 0.5,
-                                           CGRectGetWidth(self.bottomLineView.superview.frame),
-                                           0.5);
-}
-
 - (void)reloadData:(id)entity {
-    self.titleLabel.text = entity;
-}
-
-- (UIView *)bottomLineView {
-    if (!_bottomLineView) {
-        UIView * bottomLineView = [[UIView alloc] init];
-        bottomLineView.backgroundColor = COLOR_GRAY_LINE;
-        _bottomLineView = bottomLineView;
-        [self addSubview:bottomLineView];
+    AcupointModel * model = entity;
+    
+    NSArray * languages = [NSLocale preferredLanguages];
+    if ([[languages firstObject] rangeOfString:@"zh-Hans"].location != NSNotFound) {
+        self.titleLabel.text = model.cnName;
+    } else {
+        self.titleLabel.text = [NSString stringWithFormat:@"%@ %@", model.code, model.pinyin];
     }
-    return _bottomLineView;
+    
+    self.positionLabel.text = [NSString stringWithFormat:@"［定位］%@", model.position];
+    self.indicationLabel.text = [NSString stringWithFormat:@"［主治］%@", model.indication];
+    self.cooperationLabel.text = [NSString stringWithFormat:@"［配伍］%@", model.cooperation];
+    self.acupunctureLabel.text = [NSString stringWithFormat:@"［针灸］%@", model.acupuncture];
 }
 
 @end
