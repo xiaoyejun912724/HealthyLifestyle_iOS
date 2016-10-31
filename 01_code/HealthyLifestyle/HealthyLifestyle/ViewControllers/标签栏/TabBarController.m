@@ -13,8 +13,8 @@
 
 @interface TabBarController ()
 
-@property (nonatomic, strong) NavigationController * acupointNavigationController;
-@property (nonatomic, strong) NavigationController * meNavigationController;
+@property (nonatomic, strong) NavigationController * navigation_controller_1;
+@property (nonatomic, strong) NavigationController * navigation_controller_2;
 
 @end
 
@@ -35,36 +35,34 @@
 #pragma mark - Setup
 
 - (void)setupTabBar {
-    NSArray * viewControllers = @[self.acupointNavigationController,
-                                  self.meNavigationController];
-    [self setViewControllers:viewControllers];
-    
     self.tabBar.tintColor = COLOR_RED;                  // 图片选中时的颜色
     
+    [self setViewControllers:@[self.navigation_controller_1,
+                               self.navigation_controller_2]];
 }
 
 #pragma mark - Getter
 
-- (NavigationController *)acupointNavigationController {
-    if (!_acupointNavigationController) {
+- (NavigationController *)navigation_controller_1 {
+    if (!_navigation_controller_1) {
         AcupointCategoryListScene * scene = [[AcupointCategoryListScene alloc] initWithNibName:@"AcupointCategoryListScene" bundle:nil];
-        _acupointNavigationController = [[NavigationController alloc] initWithRootViewController:scene];
-        _acupointNavigationController.tabBarItem.image = [[UIImage imageNamed:@"icon_acupoint_1"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        _acupointNavigationController.tabBarItem.selectedImage = [UIImage imageNamed:@"icon_acupoint_1"];
-        _acupointNavigationController.tabBarItem.title = NSLocalizedString(@"穴位", nil);
+        _navigation_controller_1 = [[NavigationController alloc] initWithRootViewController:scene];
+        _navigation_controller_1.tabBarItem.image = [[UIImage imageNamed:@"icon_acupoint_1"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        _navigation_controller_1.tabBarItem.selectedImage = [UIImage imageNamed:@"icon_acupoint_1"];
+        _navigation_controller_1.tabBarItem.title = NSLocalizedString(@"穴位", nil);
     }
-    return _acupointNavigationController;
+    return _navigation_controller_1;
 }
 
-- (NavigationController *)meNavigationController {
-    if (!_meNavigationController) {
+- (NavigationController *)navigation_controller_2 {
+    if (!_navigation_controller_2) {
         MeScene * scene = [[MeScene alloc] initWithNibName:@"MeScene" bundle:nil];
-        _meNavigationController = [[NavigationController alloc] initWithRootViewController:scene];
-        _meNavigationController.tabBarItem.image = [[UIImage imageNamed:@"icon_me_1"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        _meNavigationController.tabBarItem.selectedImage = [UIImage imageNamed:@"icon_me_1"];
-        _meNavigationController.tabBarItem.title = NSLocalizedString(@"我的", nil);
+        _navigation_controller_2 = [[NavigationController alloc] initWithRootViewController:scene];
+        _navigation_controller_2.tabBarItem.image = [[UIImage imageNamed:@"icon_me_1"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        _navigation_controller_2.tabBarItem.selectedImage = [UIImage imageNamed:@"icon_me_1"];
+        _navigation_controller_2.tabBarItem.title = NSLocalizedString(@"我的", nil);
     }
-    return _meNavigationController;
+    return _navigation_controller_2;
 }
 
 /*

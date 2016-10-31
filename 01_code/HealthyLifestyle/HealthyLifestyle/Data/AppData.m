@@ -27,21 +27,12 @@ DEF_SINGLETON(AppData)
 }
 
 - (void)dealloc {
-    [self.database close];
+    [self.databaseQueue close];
 }
 
 - (void)setupData {
-    [self openDatabase];
-}
-
-- (void)openDatabase {
     NSString * filePath = [[NSBundle mainBundle] pathForResource:@"Acupoint" ofType:@"db"];
-    self.database = [FMDatabase databaseWithPath:filePath];
-    if ([self.database open]) {
-        NSLog(@"success to open database.");
-    } else {
-        NSLog(@"Could not open database.");
-    }
+    self.databaseQueue = [FMDatabaseQueue databaseQueueWithPath:filePath];
 }
 
 @end

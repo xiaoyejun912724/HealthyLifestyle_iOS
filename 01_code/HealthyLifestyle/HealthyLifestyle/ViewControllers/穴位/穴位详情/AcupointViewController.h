@@ -8,6 +8,10 @@
 
 #import "HLViewController.h"
 
+@class AcupointModel;
+
 @interface AcupointViewController : HLViewController
+
+@property (nonatomic, weak) AcupointModel * acupointModel;
 
 @end

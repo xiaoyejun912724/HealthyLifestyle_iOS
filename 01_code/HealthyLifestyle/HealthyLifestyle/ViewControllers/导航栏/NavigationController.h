@@ -6,8 +6,8 @@
 //  Copyright © 2016年 祥运. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "HLNavigationController.h"
 
-@interface NavigationController : UINavigationController
+@interface NavigationController : HLNavigationController
 
 @end

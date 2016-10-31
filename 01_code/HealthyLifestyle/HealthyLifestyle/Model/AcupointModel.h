@@ -16,7 +16,7 @@
 @property (nonatomic, copy) NSString * code;
 @property (nonatomic, copy) NSString * position;
 @property (nonatomic, copy) NSString * indication;
-@property (nonatomic, copy) NSString * cooperation;
+@property (nonatomic, copy) NSString * compatibility;
 @property (nonatomic, copy) NSString * acupuncture;
 
 + (instancetype)modelWithDict:(NSDictionary *)dict;

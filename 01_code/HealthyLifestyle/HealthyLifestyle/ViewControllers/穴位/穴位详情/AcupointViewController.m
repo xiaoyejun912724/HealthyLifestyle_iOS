@@ -7,8 +7,18 @@
 //
 
 #import "AcupointViewController.h"
+#import "AcupointModel.h"
 
 @interface AcupointViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel * indicationTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel * indicationLabel;
+@property (weak, nonatomic) IBOutlet UILabel * positionTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel * positionLabel;
+@property (weak, nonatomic) IBOutlet UILabel * compatibilityTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel * compatibilityLabel;
+@property (weak, nonatomic) IBOutlet UILabel * acupunctureTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel * acupunctureLabel;
 
 @end
 
@@ -17,11 +27,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+
+    NSArray * languages = [NSLocale preferredLanguages];
+    if ([[languages firstObject] rangeOfString:@"zh-Hans"].location != NSNotFound) {
+        self.title = self.acupointModel.cnName;
+    } else {
+        self.title = [NSString stringWithFormat:@"%@ %@", self.acupointModel.code, self.acupointModel.pinyin];
+    }
+    
+    [self setupView];
+    [self setupData];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Setup
+
+- (void)setupView {
+    
+}
+
+- (void)setupData {
+    self.indicationTitleLabel.text = [NSString stringWithFormat:@"【%@】", NSLocalizedString(@"主治", nil)];
+    self.positionTitleLabel.text = [NSString stringWithFormat:@"【%@】", NSLocalizedString(@"位置", nil)];
+    self.compatibilityTitleLabel.text = [NSString stringWithFormat:@"【%@】", NSLocalizedString(@"配伍", nil)];
+    self.acupunctureTitleLabel.text = [NSString stringWithFormat:@"【%@】", NSLocalizedString(@"艾灸", nil)];
+    self.indicationLabel.text = self.acupointModel.indication;
+    self.positionLabel.text = self.acupointModel.position;
+    self.compatibilityLabel.text = self.acupointModel.compatibility;
+    self.acupunctureLabel.text = self.acupointModel.acupuncture;
 }
 
 /*

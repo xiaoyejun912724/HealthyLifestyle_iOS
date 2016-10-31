@@ -15,12 +15,15 @@
 "按主治症状浏览"="Browse with indication";
 "搜索"="Search";
 
-
+"主治"="Indication";
+"位置"="Location";
+"配伍"="Compatibility";
+"艾灸"="Acupuncture";
 
 "name"          = "name";
 "position"      = "position";
 "indication"    = "indication";
-"cooperation"   = "cooperation";
+"compatibility" = "compatibility";
 "acupuncture"   = "acupuncture";
 
 

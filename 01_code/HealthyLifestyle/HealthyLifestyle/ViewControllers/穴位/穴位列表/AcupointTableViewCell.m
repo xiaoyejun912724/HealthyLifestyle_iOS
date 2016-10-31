@@ -46,7 +46,7 @@
     
     self.positionLabel.text = [NSString stringWithFormat:@"［定位］%@", model.position];
     self.indicationLabel.text = [NSString stringWithFormat:@"［主治］%@", model.indication];
-    self.cooperationLabel.text = [NSString stringWithFormat:@"［配伍］%@", model.cooperation];
+    self.cooperationLabel.text = [NSString stringWithFormat:@"［配伍］%@", model.compatibility];
     self.acupunctureLabel.text = [NSString stringWithFormat:@"［针灸］%@", model.acupuncture];
 }
 

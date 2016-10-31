@@ -21,8 +21,8 @@ sql =   'CREATE TABLE IF NOT EXISTS "Acupoint" (' +\
             '"cn_position" TEXT, ' +\
             '"indication" TEXT, ' +\
             '"cn_indication" TEXT, ' +\
-            '"cooperation" TEXT, ' +\
-            '"cn_cooperation" TEXT, ' +\
+            '"compatibility" TEXT, ' +\
+            '"cn_compatibility" TEXT, ' +\
             '"acupuncture" TEXT, ' +\
             '"cn_acupuncture" TEXT' +\
         ')'

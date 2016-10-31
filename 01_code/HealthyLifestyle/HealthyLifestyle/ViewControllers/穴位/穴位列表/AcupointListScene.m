@@ -7,18 +7,15 @@
 //
 
 #import "AcupointListScene.h"
+#import "AcupointViewController.h"
 #import "AcupointTableViewCell.h"
-#import "FMDB.h"
-#import "AppData.h"
-#import "AcupointModel.h"
+#import "AcupointListSceneModel.h"
 
-
-
-@interface AcupointListScene () <UITableViewDataSource, UITableViewDelegate>
+@interface AcupointListScene () <UITableViewDataSource, UITableViewDelegate, AcupointListSceneModelDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView * tableView;
 
-@property (nonatomic, strong) NSMutableArray * acupointList;
+@property (nonatomic, strong) AcupointListSceneModel * sceneModel;
 
 @end
 
@@ -29,8 +26,12 @@
     // Do any additional setup after loading the view from its nib.
 
     self.title = NSLocalizedString(@"穴位", nil);
+    self.sceneModel = [AcupointListSceneModel SceneModel];
+    self.sceneModel.delegate = self;
     
     [self setupScene];
+    
+    [self.sceneModel queryAcupointsWithMeridianID:self.meridianID];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,24 +42,6 @@
 #pragma mark - Setup
 
 - (void)setupScene {
-    self.acupointList = [NSMutableArray array];
-
-    if (self.type == AcupointListTypeMeridian) {
-        NSString * query = [NSString stringWithFormat:@"SELECT * FROM '%@' WHERE \"meridian_id\" = \"%@\"", ACUPOINT_TABLE_NAME, self.meridianID];
-        FMResultSet * rs = [[AppData sharedInstance].database executeQuery:query];
-        while ([rs next]) {
-            AcupointModel * model = [AcupointModel modelWithDict:@{ACUPOINT_COLUMN_ID:[rs stringForColumn:ACUPOINT_COLUMN_ID],
-                                                                   ACUPOINT_COLUMN_NAME:[rs stringForColumn:ACUPOINT_COLUMN_NAME],
-                                                                   ACUPOINT_COLUMN_PINYIN:[rs stringForColumn:ACUPOINT_COLUMN_PINYIN],
-                                                                   ACUPOINT_COLUMN_CODE:[rs stringForColumn:ACUPOINT_COLUMN_CODE],
-                                                                   ACUPOINT_COLUMN_POSITION:[rs stringForColumn:ACUPOINT_COLUMN_POSITION],
-                                                                   ACUPOINT_COLUMN_INDICATION:[rs stringForColumn:ACUPOINT_COLUMN_INDICATION],
-                                                                   ACUPOINT_COLUMN_COOPERATION:[rs stringForColumn:ACUPOINT_COLUMN_COOPERATION],
-                                                                   ACUPOINT_COLUMN_ACUPUNCTURE:[rs stringForColumn:ACUPOINT_COLUMN_ACUPUNCTURE]}];
-            [self.acupointList addObject:model];
-        }
-    }
-    
     self.tableView.tableFooterView = [[UIView alloc] init];
     [self.tableView registerNib:[UINib nibWithNibName:@"AcupointTableViewCell" bundle:nil] forCellReuseIdentifier:kAcupointTableViewCellReuseIdentifier];
 }
@@ -66,11 +49,11 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.acupointList.count;
+    return self.sceneModel.acupointList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    AcupointModel * model = self.acupointList[indexPath.row];
+    AcupointModel * model = self.sceneModel.acupointList[indexPath.row];
     AcupointTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kAcupointTableViewCellReuseIdentifier forIndexPath:indexPath];
     [cell reloadData:model];
     return cell;
@@ -79,15 +62,17 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    AcupointModel * model = self.acupointList[indexPath.row];
-    
-    
-    
+    AcupointModel * model = self.sceneModel.acupointList[indexPath.row];
+    AcupointViewController * controller = [[AcupointViewController alloc] initWithNibName:@"AcupointViewController" bundle:nil];
+    controller.acupointModel = model;
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
+#pragma mark - AcupointListSceneModelDelegate
 
-
-
+- (void)acupointListSceneModelDidQueryAcupoints {
+    [self.tableView reloadData];
+}
 
 /*
 #pragma mark - Navigation

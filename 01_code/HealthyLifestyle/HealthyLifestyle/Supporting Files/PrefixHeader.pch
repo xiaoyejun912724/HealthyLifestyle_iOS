@@ -147,7 +147,7 @@ typedef NS_ENUM(NSInteger, AcupointListType) {
 #define ACUPOINT_COLUMN_CODE    @"code"
 #define ACUPOINT_COLUMN_POSITION    NSLocalizedString(@"position", nil)
 #define ACUPOINT_COLUMN_INDICATION  NSLocalizedString(@"indication", nil)
-#define ACUPOINT_COLUMN_COOPERATION NSLocalizedString(@"cooperation", nil)
+#define ACUPOINT_COLUMN_COMPATIBILITY NSLocalizedString(@"compatibility", nil)
 #define ACUPOINT_COLUMN_ACUPUNCTURE NSLocalizedString(@"acupuncture", nil)
 
 // 控制是否显示网络请求警告或错误提示

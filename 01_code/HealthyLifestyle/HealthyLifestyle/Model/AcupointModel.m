@@ -35,8 +35,8 @@
     if (dict[ACUPOINT_COLUMN_INDICATION] && dict[ACUPOINT_COLUMN_INDICATION] != [NSNull null]) {
         self.indication = dict[ACUPOINT_COLUMN_INDICATION];
     }
-    if (dict[ACUPOINT_COLUMN_COOPERATION] && dict[ACUPOINT_COLUMN_COOPERATION] != [NSNull null]) {
-        self.cooperation = dict[ACUPOINT_COLUMN_COOPERATION];
+    if (dict[ACUPOINT_COLUMN_COMPATIBILITY] && dict[ACUPOINT_COLUMN_COMPATIBILITY] != [NSNull null]) {
+        self.compatibility = dict[ACUPOINT_COLUMN_COMPATIBILITY];
     }
     if (dict[ACUPOINT_COLUMN_ACUPUNCTURE] && dict[ACUPOINT_COLUMN_ACUPUNCTURE] != [NSNull null]) {
         self.acupuncture = dict[ACUPOINT_COLUMN_ACUPUNCTURE];

@@ -6,7 +6,7 @@
   Copyright © 2016年 HealthyLifestyle. All rights reserved.
 */
 
-"经脉"="经验";
+"经脉"="经脉";
 "穴位"="穴位";
 "我的"="我的";
 
@@ -15,13 +15,13 @@
 "按主治症状浏览"="按主治症状浏览";
 "搜索"="搜索";
 
-
+"主治"="主治";
+"位置"="位置";
+"配伍"="配伍";
+"艾灸"="艾灸";
 
 "name"          = "cn_name";
 "position"      = "cn_position";
 "indication"    = "cn_indication";
-"cooperation"   = "cn_cooperation";
+"compatibility" = "cn_compatibility";
 "acupuncture"   = "cn_acupuncture";
-
-
-

@@ -12,6 +12,14 @@
 		7B2C4F381D92941A001F0D30 /* AcupointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C4F361D92941A001F0D30 /* AcupointViewController.m */; };
 		7B2C4F391D92941A001F0D30 /* AcupointViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B2C4F371D92941A001F0D30 /* AcupointViewController.xib */; };
 		7B3C1A961D5EB26F008E784B /* HLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C1A951D5EB26F008E784B /* HLTableViewCell.m */; };
+		7B58C3011DC71FCC0061E46D /* MeridianListSceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B58C3001DC71FCC0061E46D /* MeridianListSceneModel.m */; };
+		7B58C3071DC725CB0061E46D /* AcupointListSceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B58C3061DC725CB0061E46D /* AcupointListSceneModel.m */; };
+		7B58C30A1DC733D90061E46D /* HLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B58C3091DC733D90061E46D /* HLNavigationController.m */; };
+		7B58C3141DC74CC20061E46D /* FunctionListScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B58C30D1DC74CC20061E46D /* FunctionListScene.m */; };
+		7B58C3151DC74CC20061E46D /* FunctionListScene.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B58C30E1DC74CC20061E46D /* FunctionListScene.xib */; };
+		7B58C3161DC74CC20061E46D /* FunctionListSceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B58C3101DC74CC20061E46D /* FunctionListSceneModel.m */; };
+		7B58C3171DC74CC20061E46D /* FunctionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B58C3121DC74CC20061E46D /* FunctionTableViewCell.m */; };
+		7B58C3181DC74CC20061E46D /* FunctionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B58C3131DC74CC20061E46D /* FunctionTableViewCell.xib */; };
 		7BCA58A41D5AC1C30064A20C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58A31D5AC1C30064A20C /* AppDelegate.m */; };
 		7BCA58AC1D5AC1C30064A20C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA58AB1D5AC1C30064A20C /* Assets.xcassets */; };
 		7BCA58BA1D5AC20F0064A20C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58B81D5AC20F0064A20C /* main.m */; };
@@ -27,10 +35,6 @@
 		7BCA59091D5AE27B0064A20C /* AcupointCategoryListScene.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA58EA1D5AE27A0064A20C /* AcupointCategoryListScene.xib */; };
 		7BCA590A1D5AE27B0064A20C /* AcupointCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58EC1D5AE27A0064A20C /* AcupointCategoryTableViewCell.m */; };
 		7BCA590B1D5AE27B0064A20C /* AcupointCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA58ED1D5AE27A0064A20C /* AcupointCategoryTableViewCell.xib */; };
-		7BCA590C1D5AE27B0064A20C /* FunctionListScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58F01D5AE27B0064A20C /* FunctionListScene.m */; };
-		7BCA590D1D5AE27B0064A20C /* FunctionListScene.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA58F11D5AE27B0064A20C /* FunctionListScene.xib */; };
-		7BCA590E1D5AE27B0064A20C /* FunctionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58F31D5AE27B0064A20C /* FunctionTableViewCell.m */; };
-		7BCA590F1D5AE27B0064A20C /* FunctionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA58F41D5AE27B0064A20C /* FunctionTableViewCell.xib */; };
 		7BCA59101D5AE27B0064A20C /* AcupointListScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58F71D5AE27B0064A20C /* AcupointListScene.m */; };
 		7BCA59111D5AE27B0064A20C /* AcupointListScene.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA58F81D5AE27B0064A20C /* AcupointListScene.xib */; };
 		7BCA59121D5AE27B0064A20C /* AcupointTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58FA1D5AE27B0064A20C /* AcupointTableViewCell.m */; };
@@ -59,6 +63,20 @@
 		7B2C4F371D92941A001F0D30 /* AcupointViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AcupointViewController.xib; sourceTree = "<group>"; };
 		7B3C1A941D5EB26F008E784B /* HLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTableViewCell.h; sourceTree = "<group>"; };
 		7B3C1A951D5EB26F008E784B /* HLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTableViewCell.m; sourceTree = "<group>"; };
+		7B58C2FF1DC71FCC0061E46D /* MeridianListSceneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeridianListSceneModel.h; sourceTree = "<group>"; };
+		7B58C3001DC71FCC0061E46D /* MeridianListSceneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeridianListSceneModel.m; sourceTree = "<group>"; };
+		7B58C3051DC725CB0061E46D /* AcupointListSceneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcupointListSceneModel.h; sourceTree = "<group>"; };
+		7B58C3061DC725CB0061E46D /* AcupointListSceneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcupointListSceneModel.m; sourceTree = "<group>"; };
+		7B58C3081DC733D90061E46D /* HLNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLNavigationController.h; sourceTree = "<group>"; };
+		7B58C3091DC733D90061E46D /* HLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLNavigationController.m; sourceTree = "<group>"; };
+		7B58C30C1DC74CC20061E46D /* FunctionListScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionListScene.h; sourceTree = "<group>"; };
+		7B58C30D1DC74CC20061E46D /* FunctionListScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionListScene.m; sourceTree = "<group>"; };
+		7B58C30E1DC74CC20061E46D /* FunctionListScene.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunctionListScene.xib; sourceTree = "<group>"; };
+		7B58C30F1DC74CC20061E46D /* FunctionListSceneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionListSceneModel.h; sourceTree = "<group>"; };
+		7B58C3101DC74CC20061E46D /* FunctionListSceneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionListSceneModel.m; sourceTree = "<group>"; };
+		7B58C3111DC74CC20061E46D /* FunctionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionTableViewCell.h; sourceTree = "<group>"; };
+		7B58C3121DC74CC20061E46D /* FunctionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionTableViewCell.m; sourceTree = "<group>"; };
+		7B58C3131DC74CC20061E46D /* FunctionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunctionTableViewCell.xib; sourceTree = "<group>"; };
 		7BCA589C1D5AC1C30064A20C /* HealthyLifestyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthyLifestyle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCA58A21D5AC1C30064A20C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7BCA58A31D5AC1C30064A20C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -85,12 +103,6 @@
 		7BCA58EB1D5AE27A0064A20C /* AcupointCategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcupointCategoryTableViewCell.h; sourceTree = "<group>"; };
 		7BCA58EC1D5AE27A0064A20C /* AcupointCategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcupointCategoryTableViewCell.m; sourceTree = "<group>"; };
 		7BCA58ED1D5AE27A0064A20C /* AcupointCategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AcupointCategoryTableViewCell.xib; sourceTree = "<group>"; };
-		7BCA58EF1D5AE27B0064A20C /* FunctionListScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionListScene.h; sourceTree = "<group>"; };
-		7BCA58F01D5AE27B0064A20C /* FunctionListScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionListScene.m; sourceTree = "<group>"; };
-		7BCA58F11D5AE27B0064A20C /* FunctionListScene.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunctionListScene.xib; sourceTree = "<group>"; };
-		7BCA58F21D5AE27B0064A20C /* FunctionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionTableViewCell.h; sourceTree = "<group>"; };
-		7BCA58F31D5AE27B0064A20C /* FunctionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionTableViewCell.m; sourceTree = "<group>"; };
-		7BCA58F41D5AE27B0064A20C /* FunctionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunctionTableViewCell.xib; sourceTree = "<group>"; };
 		7BCA58F61D5AE27B0064A20C /* AcupointListScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcupointListScene.h; sourceTree = "<group>"; };
 		7BCA58F71D5AE27B0064A20C /* AcupointListScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcupointListScene.m; sourceTree = "<group>"; };
 		7BCA58F81D5AE27B0064A20C /* AcupointListScene.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AcupointListScene.xib; sourceTree = "<group>"; };
@@ -146,6 +158,21 @@
 				7B2C4F371D92941A001F0D30 /* AcupointViewController.xib */,
 			);
 			path = "穴位详情";
+			sourceTree = "<group>";
+		};
+		7B58C30B1DC74CC20061E46D /* 功能列表 */ = {
+			isa = PBXGroup;
+			children = (
+				7B58C30C1DC74CC20061E46D /* FunctionListScene.h */,
+				7B58C30D1DC74CC20061E46D /* FunctionListScene.m */,
+				7B58C30E1DC74CC20061E46D /* FunctionListScene.xib */,
+				7B58C30F1DC74CC20061E46D /* FunctionListSceneModel.h */,
+				7B58C3101DC74CC20061E46D /* FunctionListSceneModel.m */,
+				7B58C3111DC74CC20061E46D /* FunctionTableViewCell.h */,
+				7B58C3121DC74CC20061E46D /* FunctionTableViewCell.m */,
+				7B58C3131DC74CC20061E46D /* FunctionTableViewCell.xib */,
+			);
+			path = "功能列表";
 			sourceTree = "<group>";
 		};
 		7BCA58931D5AC1C30064A20C = {
@@ -221,6 +248,8 @@
 				7B3C1A951D5EB26F008E784B /* HLTableViewCell.m */,
 				7BCA58D11D5AE1E30064A20C /* HLViewController.h */,
 				7BCA58D21D5AE1E30064A20C /* HLViewController.m */,
+				7B58C3081DC733D90061E46D /* HLNavigationController.h */,
+				7B58C3091DC733D90061E46D /* HLNavigationController.m */,
 				7BCA59241D5B019B0064A20C /* HLSceneModel.h */,
 				7BCA59251D5B019B0064A20C /* HLSceneModel.m */,
 			);
@@ -265,7 +294,7 @@
 			children = (
 				7BCA58E71D5AE27A0064A20C /* 分类列表 */,
 				7BCA58FC1D5AE27B0064A20C /* 经脉列表 */,
-				7BCA58EE1D5AE27A0064A20C /* 功能列表 */,
+				7B58C30B1DC74CC20061E46D /* 功能列表 */,
 				7BCA58F51D5AE27B0064A20C /* 穴位列表 */,
 				7B2C4F341D9293FE001F0D30 /* 穴位详情 */,
 			);
@@ -289,22 +318,11 @@
 			path = "分类列表";
 			sourceTree = "<group>";
 		};
-		7BCA58EE1D5AE27A0064A20C /* 功能列表 */ = {
-			isa = PBXGroup;
-			children = (
-				7BCA58EF1D5AE27B0064A20C /* FunctionListScene.h */,
-				7BCA58F01D5AE27B0064A20C /* FunctionListScene.m */,
-				7BCA58F11D5AE27B0064A20C /* FunctionListScene.xib */,
-				7BCA58F21D5AE27B0064A20C /* FunctionTableViewCell.h */,
-				7BCA58F31D5AE27B0064A20C /* FunctionTableViewCell.m */,
-				7BCA58F41D5AE27B0064A20C /* FunctionTableViewCell.xib */,
-			);
-			path = "功能列表";
-			sourceTree = "<group>";
-		};
 		7BCA58F51D5AE27B0064A20C /* 穴位列表 */ = {
 			isa = PBXGroup;
 			children = (
+				7B58C3051DC725CB0061E46D /* AcupointListSceneModel.h */,
+				7B58C3061DC725CB0061E46D /* AcupointListSceneModel.m */,
 				7BCA58F61D5AE27B0064A20C /* AcupointListScene.h */,
 				7BCA58F71D5AE27B0064A20C /* AcupointListScene.m */,
 				7BCA58F81D5AE27B0064A20C /* AcupointListScene.xib */,
@@ -318,6 +336,8 @@
 		7BCA58FC1D5AE27B0064A20C /* 经脉列表 */ = {
 			isa = PBXGroup;
 			children = (
+				7B58C2FF1DC71FCC0061E46D /* MeridianListSceneModel.h */,
+				7B58C3001DC71FCC0061E46D /* MeridianListSceneModel.m */,
 				7BCA58FD1D5AE27B0064A20C /* MeridianListScene.h */,
 				7BCA58FE1D5AE27B0064A20C /* MeridianListScene.m */,
 				7BCA58FF1D5AE27B0064A20C /* MeridianListScene.xib */,
@@ -409,7 +429,6 @@
 			files = (
 				7BCA59131D5AE27B0064A20C /* AcupointTableViewCell.xib in Resources */,
 				7BCA59091D5AE27B0064A20C /* AcupointCategoryListScene.xib in Resources */,
-				7BCA590F1D5AE27B0064A20C /* FunctionTableViewCell.xib in Resources */,
 				7BCA59071D5AE27B0064A20C /* MeScene.xib in Resources */,
 				7BCA59111D5AE27B0064A20C /* AcupointListScene.xib in Resources */,
 				7BCA590B1D5AE27B0064A20C /* AcupointCategoryTableViewCell.xib in Resources */,
@@ -417,8 +436,9 @@
 				7B2C4F331D927B4A001F0D30 /* Acupoint.db in Resources */,
 				7BCA59151D5AE27B0064A20C /* MeridianListScene.xib in Resources */,
 				7BCA59171D5AE27B0064A20C /* MeridianTableViewCell.xib in Resources */,
-				7BCA590D1D5AE27B0064A20C /* FunctionListScene.xib in Resources */,
 				7BCA591C1D5AFA5E0064A20C /* Localizable.strings in Resources */,
+				7B58C3151DC74CC20061E46D /* FunctionListScene.xib in Resources */,
+				7B58C3181DC74CC20061E46D /* FunctionTableViewCell.xib in Resources */,
 				7BCA58AC1D5AC1C30064A20C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,25 +502,29 @@
 				7BCA592F1D5B0D220064A20C /* Aspect-Appearance.m in Sources */,
 				7B3C1A961D5EB26F008E784B /* HLTableViewCell.m in Sources */,
 				7BCA58A41D5AC1C30064A20C /* AppDelegate.m in Sources */,
+				7B58C3161DC74CC20061E46D /* FunctionListSceneModel.m in Sources */,
 				7BCA58BA1D5AC20F0064A20C /* main.m in Sources */,
+				7B58C3011DC71FCC0061E46D /* MeridianListSceneModel.m in Sources */,
 				7BCA58E11D5AE2670064A20C /* AppData.m in Sources */,
 				7BCA58D41D5AE1E30064A20C /* HLViewController.m in Sources */,
+				7B58C3071DC725CB0061E46D /* AcupointListSceneModel.m in Sources */,
 				7BCA59061D5AE27B0064A20C /* MeScene.m in Sources */,
-				7BCA590C1D5AE27B0064A20C /* FunctionListScene.m in Sources */,
+				7B58C3141DC74CC20061E46D /* FunctionListScene.m in Sources */,
 				7BCA59161D5AE27B0064A20C /* MeridianTableViewCell.m in Sources */,
 				7BCA58CC1D5ADAC00064A20C /* TabBarController.m in Sources */,
 				7BCA59141D5AE27B0064A20C /* MeridianListScene.m in Sources */,
 				7BCA590A1D5AE27B0064A20C /* AcupointCategoryTableViewCell.m in Sources */,
 				7BCA59121D5AE27B0064A20C /* AcupointTableViewCell.m in Sources */,
 				7BCA59231D5B01590064A20C /* AcupointCategoryListSceneModel.m in Sources */,
+				7B58C3171DC74CC20061E46D /* FunctionTableViewCell.m in Sources */,
 				7B2C4F381D92941A001F0D30 /* AcupointViewController.m in Sources */,
 				7BCA58DB1D5AE25F0064A20C /* MeridianModel.m in Sources */,
+				7B58C30A1DC733D90061E46D /* HLNavigationController.m in Sources */,
 				7BCA59261D5B019B0064A20C /* HLSceneModel.m in Sources */,
 				7BCA58DA1D5AE25F0064A20C /* FunctionModel.m in Sources */,
 				7BCA59101D5AE27B0064A20C /* AcupointListScene.m in Sources */,
 				7BCA59081D5AE27B0064A20C /* AcupointCategoryListScene.m in Sources */,
 				7BCA592A1D5B02DC0064A20C /* NavigationController.m in Sources */,
-				7BCA590E1D5AE27B0064A20C /* FunctionTableViewCell.m in Sources */,
 				7B2C4F311D92761F001F0D30 /* AcupointModel.m in Sources */,
 				7BCA592D1D5B03950064A20C /* AcupointCategoryModel.m in Sources */,
 			);

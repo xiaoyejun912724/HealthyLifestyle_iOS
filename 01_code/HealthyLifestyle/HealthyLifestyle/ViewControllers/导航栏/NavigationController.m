@@ -16,21 +16,20 @@
 
 @implementation NavigationController
 
-- (instancetype)initWithRootViewController:(UIViewController *)rootViewController {
-    self = [super initWithRootViewController:rootViewController];
-    if (self) {
-        NSDictionary * normalDict = @{NSFontAttributeName:[UIFont systemFontOfSize:12],
-                                      NSForegroundColorAttributeName:COLOR_DARK_GRAY};
-        NSDictionary * selectedDict = @{NSForegroundColorAttributeName:COLOR_RED};
-        [self.tabBarItem setTitleTextAttributes:normalDict forState:UIControlStateNormal];
-        [self.tabBarItem setTitleTextAttributes:selectedDict forState:UIControlStateSelected];
-    }
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    // 设置导航栏背景颜色
+//    self.navigationBar.barTintColor = THEME_LIGHTBLUE;
+    
+    // 设置导航栏文字颜色
+    self.navigationBar.tintColor = [UIColor blackColor];
+    
+    // 设置导航栏标题样式
+//    NSDictionary * dict = @{NSFontAttributeName:[UIFont boldSystemFontOfSize:18],
+//                            NSForegroundColorAttributeName:[UIColor whiteColor]};
+//    self.navigationBar.titleTextAttributes = dict;
 }
 
 - (void)didReceiveMemoryWarning {

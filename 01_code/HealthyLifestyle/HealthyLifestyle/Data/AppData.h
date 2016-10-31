@@ -7,13 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class FMDatabase;
+#import "FMDatabaseQueue.h"
 
 @interface AppData : NSObject
 
 AS_SINGLETON(AppData)
 
-@property (nonatomic, strong) FMDatabase * database;
+@property (nonatomic, strong) FMDatabaseQueue * databaseQueue;
 
 @end
