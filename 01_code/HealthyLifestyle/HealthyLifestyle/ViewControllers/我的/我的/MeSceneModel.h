@@ -9,8 +9,8 @@
 #import "HLSceneModel.h"
 #import "ControllerModel.h"
 
-@interface AcupointCategoryListSceneModel : HLSceneModel
+@interface MeSceneModel : HLSceneModel
 
-@property (nonatomic, strong) NSArray<ControllerModel *> * categoryList;
+@property (nonatomic, strong) NSArray<ControllerModel *> * controllerList;
 
 @end

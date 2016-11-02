@@ -9,6 +9,7 @@
 #import "FunctionListScene.h"
 #import "FunctionTableViewCell.h"
 #import "FunctionListSceneModel.h"
+#import "XYEnum.h"
 
 @interface FunctionListScene () <UITableViewDataSource, UITableViewDelegate, FunctionListSceneModelDelegate>
 
@@ -28,6 +29,7 @@
     self.sceneModel = [FunctionListSceneModel SceneModel];
     self.sceneModel.delegate = self;
     
+    [self setupNavigationItem];
     [self setupScene];
     
     [self.sceneModel queryFunctions];
@@ -39,6 +41,10 @@
 }
 
 #pragma mark - Setup
+
+- (void)setupNavigationItem {
+    [self addMoreButtonItemWithActionTypes:@[@(HLNavigationSelectActionTypeSearch)]];
+}
 
 - (void)setupScene {
     self.tableView.tableFooterView = [[UIView alloc] init];

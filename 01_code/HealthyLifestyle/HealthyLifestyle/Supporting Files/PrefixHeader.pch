@@ -80,9 +80,9 @@
 
 #define COLOR_BLACK             RGB(32, 32, 32)
 #define COLOR_RED               RGB(255, 65, 130)
-#define COLOR_DARK_GRAY         RGB(96, 96, 96)
-#define COLOR_GRAY_LINE         RGB(224, 224, 224)
-#define COLOR_GRAY_BACKGROUND   RGB(245, 245, 245)
+#define COLOR_LIGHT_GRAY        RGB(245, 245, 245)
+#define COLOR_GRAY              RGB(225, 225, 225)
+#define COLOR_DARK_GRAY         RGB(200, 200, 200)
 
 
 //#define AppID           @"1076887733"
@@ -129,10 +129,8 @@ static NSString * const kAlipayDidCompleteNotification = @"AlipayDidComplete";  
 static NSString * const DidReceiveRemoteNotification = @"DidReceiveRemoteNotification";
 static NSString * const PushSceneNotification = @"PushScene";
 
-typedef NS_ENUM(NSInteger, AcupointListType) {
-    AcupointListTypeNone,
-    AcupointListTypeMeridian,       // 经脉列表
-};
+// Notification
+static NSString * const DidSearchAcupointNotification = @"DidSearchAcupointNotification";           // 已搜索穴位
 
 #define MERIDIAN_TABLE_NAME     @"Meridian"
 #define MERIDIAN_COLUMN_ID      @"id"

@@ -10,6 +10,7 @@
 #import "AcupointViewController.h"
 #import "AcupointTableViewCell.h"
 #import "AcupointListSceneModel.h"
+#import "XYEnum.h"
 
 @interface AcupointListScene () <UITableViewDataSource, UITableViewDelegate, AcupointListSceneModelDelegate>
 
@@ -29,6 +30,7 @@
     self.sceneModel = [AcupointListSceneModel SceneModel];
     self.sceneModel.delegate = self;
     
+    [self setupNavigationItem];
     [self setupScene];
     
     [self.sceneModel queryAcupointsWithMeridianID:self.meridianID];
@@ -40,6 +42,10 @@
 }
 
 #pragma mark - Setup
+
+- (void)setupNavigationItem {
+    [self addMoreButtonItemWithActionTypes:@[@(HLNavigationSelectActionTypeSearch)]];
+}
 
 - (void)setupScene {
     self.tableView.tableFooterView = [[UIView alloc] init];

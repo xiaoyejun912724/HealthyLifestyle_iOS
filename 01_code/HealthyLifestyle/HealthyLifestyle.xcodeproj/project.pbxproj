@@ -12,6 +12,16 @@
 		7B2C4F381D92941A001F0D30 /* AcupointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C4F361D92941A001F0D30 /* AcupointViewController.m */; };
 		7B2C4F391D92941A001F0D30 /* AcupointViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B2C4F371D92941A001F0D30 /* AcupointViewController.xib */; };
 		7B3C1A961D5EB26F008E784B /* HLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C1A951D5EB26F008E784B /* HLTableViewCell.m */; };
+		7B51D5311DC86B20009D23A9 /* XYListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B51D52E1DC86B20009D23A9 /* XYListView.m */; };
+		7B51D5321DC86B20009D23A9 /* XYListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B51D5301DC86B20009D23A9 /* XYListViewCell.m */; };
+		7B51D5501DC889D9009D23A9 /* HLNavigationSelectAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B51D54A1DC889D9009D23A9 /* HLNavigationSelectAction.m */; };
+		7B51D5511DC889D9009D23A9 /* HLNavigationSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B51D54C1DC889D9009D23A9 /* HLNavigationSelectView.m */; };
+		7B51D5521DC889D9009D23A9 /* HLNavigationSelectViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B51D54E1DC889D9009D23A9 /* HLNavigationSelectViewCell.m */; };
+		7B51D5531DC889D9009D23A9 /* HLNavigationSelectViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B51D54F1DC889D9009D23A9 /* HLNavigationSelectViewCell.xib */; };
+		7B51D5561DC889EA009D23A9 /* HLNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B51D5551DC889EA009D23A9 /* HLNavigationView.m */; };
+		7B51D55B1DC89C87009D23A9 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B51D5591DC89C87009D23A9 /* SearchViewController.m */; };
+		7B51D55C1DC89C87009D23A9 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B51D55A1DC89C87009D23A9 /* SearchViewController.xib */; };
+		7B51D5601DC89E21009D23A9 /* XYEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B51D55F1DC89E21009D23A9 /* XYEnum.m */; };
 		7B58C3011DC71FCC0061E46D /* MeridianListSceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B58C3001DC71FCC0061E46D /* MeridianListSceneModel.m */; };
 		7B58C3071DC725CB0061E46D /* AcupointListSceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B58C3061DC725CB0061E46D /* AcupointListSceneModel.m */; };
 		7B58C30A1DC733D90061E46D /* HLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B58C3091DC733D90061E46D /* HLNavigationController.m */; };
@@ -20,6 +30,20 @@
 		7B58C3161DC74CC20061E46D /* FunctionListSceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B58C3101DC74CC20061E46D /* FunctionListSceneModel.m */; };
 		7B58C3171DC74CC20061E46D /* FunctionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B58C3121DC74CC20061E46D /* FunctionTableViewCell.m */; };
 		7B58C3181DC74CC20061E46D /* FunctionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B58C3131DC74CC20061E46D /* FunctionTableViewCell.xib */; };
+		7B6DF4991DC9826E009B5840 /* ControllerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6DF4981DC9826E009B5840 /* ControllerModel.m */; };
+		7B6DF4C31DC996C5009B5840 /* MeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6DF4B31DC996C5009B5840 /* MeScene.m */; };
+		7B6DF4C41DC996C5009B5840 /* MeScene.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6DF4B41DC996C5009B5840 /* MeScene.xib */; };
+		7B6DF4C51DC996C5009B5840 /* MeSceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6DF4B61DC996C5009B5840 /* MeSceneModel.m */; };
+		7B6DF4C61DC996C5009B5840 /* MeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6DF4B81DC996C5009B5840 /* MeTableViewCell.m */; };
+		7B6DF4C71DC996C5009B5840 /* MeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6DF4B91DC996C5009B5840 /* MeTableViewCell.xib */; };
+		7B6DF4C81DC996C5009B5840 /* FavoriteSceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6DF4BC1DC996C5009B5840 /* FavoriteSceneModel.m */; };
+		7B6DF4C91DC996C5009B5840 /* FavoriteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6DF4BE1DC996C5009B5840 /* FavoriteTableViewCell.m */; };
+		7B6DF4CA1DC996C5009B5840 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6DF4BF1DC996C5009B5840 /* FavoriteTableViewCell.xib */; };
+		7B6DF4CB1DC996C5009B5840 /* FavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6DF4C11DC996C5009B5840 /* FavoriteViewController.m */; };
+		7B6DF4CC1DC996C5009B5840 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6DF4C21DC996C5009B5840 /* FavoriteViewController.xib */; };
+		7B6DF4CF1DC9BE2F009B5840 /* SearchSceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6DF4CE1DC9BE2F009B5840 /* SearchSceneModel.m */; };
+		7B6DF4D31DC9C26E009B5840 /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6DF4D11DC9C26E009B5840 /* SearchTableViewCell.m */; };
+		7B6DF4D41DC9C26E009B5840 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6DF4D21DC9C26E009B5840 /* SearchTableViewCell.xib */; };
 		7BCA58A41D5AC1C30064A20C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58A31D5AC1C30064A20C /* AppDelegate.m */; };
 		7BCA58AC1D5AC1C30064A20C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA58AB1D5AC1C30064A20C /* Assets.xcassets */; };
 		7BCA58BA1D5AC20F0064A20C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58B81D5AC20F0064A20C /* main.m */; };
@@ -29,8 +53,6 @@
 		7BCA58DA1D5AE25F0064A20C /* FunctionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58D71D5AE25F0064A20C /* FunctionModel.m */; };
 		7BCA58DB1D5AE25F0064A20C /* MeridianModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58D91D5AE25F0064A20C /* MeridianModel.m */; };
 		7BCA58E11D5AE2670064A20C /* AppData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58DF1D5AE2670064A20C /* AppData.m */; };
-		7BCA59061D5AE27B0064A20C /* MeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58E41D5AE27A0064A20C /* MeScene.m */; };
-		7BCA59071D5AE27B0064A20C /* MeScene.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA58E51D5AE27A0064A20C /* MeScene.xib */; };
 		7BCA59081D5AE27B0064A20C /* AcupointCategoryListScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58E91D5AE27A0064A20C /* AcupointCategoryListScene.m */; };
 		7BCA59091D5AE27B0064A20C /* AcupointCategoryListScene.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA58EA1D5AE27A0064A20C /* AcupointCategoryListScene.xib */; };
 		7BCA590A1D5AE27B0064A20C /* AcupointCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58EC1D5AE27A0064A20C /* AcupointCategoryTableViewCell.m */; };
@@ -47,7 +69,6 @@
 		7BCA59231D5B01590064A20C /* AcupointCategoryListSceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA59221D5B01590064A20C /* AcupointCategoryListSceneModel.m */; };
 		7BCA59261D5B019B0064A20C /* HLSceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA59251D5B019B0064A20C /* HLSceneModel.m */; };
 		7BCA592A1D5B02DC0064A20C /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA59291D5B02DC0064A20C /* NavigationController.m */; };
-		7BCA592D1D5B03950064A20C /* AcupointCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA592C1D5B03950064A20C /* AcupointCategoryModel.m */; };
 		7BCA592F1D5B0D220064A20C /* Aspect-Appearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA592E1D5B0D220064A20C /* Aspect-Appearance.m */; };
 		FC77CB333847027DB6E08FEF /* libPods-HealthyLifestyle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D016E3D882AC6862B454A1F /* libPods-HealthyLifestyle.a */; };
 /* End PBXBuildFile section */
@@ -63,6 +84,24 @@
 		7B2C4F371D92941A001F0D30 /* AcupointViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AcupointViewController.xib; sourceTree = "<group>"; };
 		7B3C1A941D5EB26F008E784B /* HLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTableViewCell.h; sourceTree = "<group>"; };
 		7B3C1A951D5EB26F008E784B /* HLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTableViewCell.m; sourceTree = "<group>"; };
+		7B51D52D1DC86B20009D23A9 /* XYListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYListView.h; sourceTree = "<group>"; };
+		7B51D52E1DC86B20009D23A9 /* XYListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYListView.m; sourceTree = "<group>"; };
+		7B51D52F1DC86B20009D23A9 /* XYListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYListViewCell.h; sourceTree = "<group>"; };
+		7B51D5301DC86B20009D23A9 /* XYListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYListViewCell.m; sourceTree = "<group>"; };
+		7B51D5491DC889D9009D23A9 /* HLNavigationSelectAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLNavigationSelectAction.h; sourceTree = "<group>"; };
+		7B51D54A1DC889D9009D23A9 /* HLNavigationSelectAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLNavigationSelectAction.m; sourceTree = "<group>"; };
+		7B51D54B1DC889D9009D23A9 /* HLNavigationSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLNavigationSelectView.h; sourceTree = "<group>"; };
+		7B51D54C1DC889D9009D23A9 /* HLNavigationSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLNavigationSelectView.m; sourceTree = "<group>"; };
+		7B51D54D1DC889D9009D23A9 /* HLNavigationSelectViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLNavigationSelectViewCell.h; sourceTree = "<group>"; };
+		7B51D54E1DC889D9009D23A9 /* HLNavigationSelectViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLNavigationSelectViewCell.m; sourceTree = "<group>"; };
+		7B51D54F1DC889D9009D23A9 /* HLNavigationSelectViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLNavigationSelectViewCell.xib; sourceTree = "<group>"; };
+		7B51D5541DC889EA009D23A9 /* HLNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLNavigationView.h; sourceTree = "<group>"; };
+		7B51D5551DC889EA009D23A9 /* HLNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLNavigationView.m; sourceTree = "<group>"; };
+		7B51D5581DC89C87009D23A9 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		7B51D5591DC89C87009D23A9 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		7B51D55A1DC89C87009D23A9 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		7B51D55E1DC89E21009D23A9 /* XYEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYEnum.h; sourceTree = "<group>"; };
+		7B51D55F1DC89E21009D23A9 /* XYEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYEnum.m; sourceTree = "<group>"; };
 		7B58C2FF1DC71FCC0061E46D /* MeridianListSceneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeridianListSceneModel.h; sourceTree = "<group>"; };
 		7B58C3001DC71FCC0061E46D /* MeridianListSceneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeridianListSceneModel.m; sourceTree = "<group>"; };
 		7B58C3051DC725CB0061E46D /* AcupointListSceneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcupointListSceneModel.h; sourceTree = "<group>"; };
@@ -77,6 +116,29 @@
 		7B58C3111DC74CC20061E46D /* FunctionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionTableViewCell.h; sourceTree = "<group>"; };
 		7B58C3121DC74CC20061E46D /* FunctionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionTableViewCell.m; sourceTree = "<group>"; };
 		7B58C3131DC74CC20061E46D /* FunctionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunctionTableViewCell.xib; sourceTree = "<group>"; };
+		7B6DF4971DC9826E009B5840 /* ControllerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerModel.h; sourceTree = "<group>"; };
+		7B6DF4981DC9826E009B5840 /* ControllerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllerModel.m; sourceTree = "<group>"; };
+		7B6DF4B21DC996C5009B5840 /* MeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeScene.h; sourceTree = "<group>"; };
+		7B6DF4B31DC996C5009B5840 /* MeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeScene.m; sourceTree = "<group>"; };
+		7B6DF4B41DC996C5009B5840 /* MeScene.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeScene.xib; sourceTree = "<group>"; };
+		7B6DF4B51DC996C5009B5840 /* MeSceneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeSceneModel.h; sourceTree = "<group>"; };
+		7B6DF4B61DC996C5009B5840 /* MeSceneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeSceneModel.m; sourceTree = "<group>"; };
+		7B6DF4B71DC996C5009B5840 /* MeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeTableViewCell.h; sourceTree = "<group>"; };
+		7B6DF4B81DC996C5009B5840 /* MeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeTableViewCell.m; sourceTree = "<group>"; };
+		7B6DF4B91DC996C5009B5840 /* MeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeTableViewCell.xib; sourceTree = "<group>"; };
+		7B6DF4BB1DC996C5009B5840 /* FavoriteSceneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteSceneModel.h; sourceTree = "<group>"; };
+		7B6DF4BC1DC996C5009B5840 /* FavoriteSceneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteSceneModel.m; sourceTree = "<group>"; };
+		7B6DF4BD1DC996C5009B5840 /* FavoriteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteTableViewCell.h; sourceTree = "<group>"; };
+		7B6DF4BE1DC996C5009B5840 /* FavoriteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteTableViewCell.m; sourceTree = "<group>"; };
+		7B6DF4BF1DC996C5009B5840 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
+		7B6DF4C01DC996C5009B5840 /* FavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteViewController.h; sourceTree = "<group>"; };
+		7B6DF4C11DC996C5009B5840 /* FavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteViewController.m; sourceTree = "<group>"; };
+		7B6DF4C21DC996C5009B5840 /* FavoriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
+		7B6DF4CD1DC9BE2F009B5840 /* SearchSceneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchSceneModel.h; sourceTree = "<group>"; };
+		7B6DF4CE1DC9BE2F009B5840 /* SearchSceneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchSceneModel.m; sourceTree = "<group>"; };
+		7B6DF4D01DC9C26E009B5840 /* SearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
+		7B6DF4D11DC9C26E009B5840 /* SearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
+		7B6DF4D21DC9C26E009B5840 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		7BCA589C1D5AC1C30064A20C /* HealthyLifestyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthyLifestyle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCA58A21D5AC1C30064A20C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7BCA58A31D5AC1C30064A20C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -94,9 +156,6 @@
 		7BCA58D91D5AE25F0064A20C /* MeridianModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeridianModel.m; sourceTree = "<group>"; };
 		7BCA58DE1D5AE2670064A20C /* AppData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppData.h; sourceTree = "<group>"; };
 		7BCA58DF1D5AE2670064A20C /* AppData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppData.m; sourceTree = "<group>"; };
-		7BCA58E31D5AE27A0064A20C /* MeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeScene.h; sourceTree = "<group>"; };
-		7BCA58E41D5AE27A0064A20C /* MeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeScene.m; sourceTree = "<group>"; };
-		7BCA58E51D5AE27A0064A20C /* MeScene.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeScene.xib; sourceTree = "<group>"; };
 		7BCA58E81D5AE27A0064A20C /* AcupointCategoryListScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcupointCategoryListScene.h; sourceTree = "<group>"; };
 		7BCA58E91D5AE27A0064A20C /* AcupointCategoryListScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcupointCategoryListScene.m; sourceTree = "<group>"; };
 		7BCA58EA1D5AE27A0064A20C /* AcupointCategoryListScene.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AcupointCategoryListScene.xib; sourceTree = "<group>"; };
@@ -124,8 +183,6 @@
 		7BCA59251D5B019B0064A20C /* HLSceneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLSceneModel.m; sourceTree = "<group>"; };
 		7BCA59281D5B02DC0064A20C /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		7BCA59291D5B02DC0064A20C /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
-		7BCA592B1D5B03950064A20C /* AcupointCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcupointCategoryModel.h; sourceTree = "<group>"; };
-		7BCA592C1D5B03950064A20C /* AcupointCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcupointCategoryModel.m; sourceTree = "<group>"; };
 		7BCA592E1D5B0D220064A20C /* Aspect-Appearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Aspect-Appearance.m"; sourceTree = "<group>"; };
 		F301703D858F82859DDED8E5 /* Pods-HealthyLifestyle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyLifestyle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthyLifestyle/Pods-HealthyLifestyle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +217,67 @@
 			path = "穴位详情";
 			sourceTree = "<group>";
 		};
+		7B51D52B1DC86B20009D23A9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7B51D55D1DC89E21009D23A9 /* XYEnum */,
+				7B51D52C1DC86B20009D23A9 /* XYListView */,
+				7B51D5481DC889D9009D23A9 /* HLNavigationView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7B51D52C1DC86B20009D23A9 /* XYListView */ = {
+			isa = PBXGroup;
+			children = (
+				7B51D52D1DC86B20009D23A9 /* XYListView.h */,
+				7B51D52E1DC86B20009D23A9 /* XYListView.m */,
+				7B51D52F1DC86B20009D23A9 /* XYListViewCell.h */,
+				7B51D5301DC86B20009D23A9 /* XYListViewCell.m */,
+			);
+			path = XYListView;
+			sourceTree = "<group>";
+		};
+		7B51D5481DC889D9009D23A9 /* HLNavigationView */ = {
+			isa = PBXGroup;
+			children = (
+				7B51D5541DC889EA009D23A9 /* HLNavigationView.h */,
+				7B51D5551DC889EA009D23A9 /* HLNavigationView.m */,
+				7B51D5491DC889D9009D23A9 /* HLNavigationSelectAction.h */,
+				7B51D54A1DC889D9009D23A9 /* HLNavigationSelectAction.m */,
+				7B51D54B1DC889D9009D23A9 /* HLNavigationSelectView.h */,
+				7B51D54C1DC889D9009D23A9 /* HLNavigationSelectView.m */,
+				7B51D54D1DC889D9009D23A9 /* HLNavigationSelectViewCell.h */,
+				7B51D54E1DC889D9009D23A9 /* HLNavigationSelectViewCell.m */,
+				7B51D54F1DC889D9009D23A9 /* HLNavigationSelectViewCell.xib */,
+			);
+			path = HLNavigationView;
+			sourceTree = "<group>";
+		};
+		7B51D5571DC89C75009D23A9 /* 搜索 */ = {
+			isa = PBXGroup;
+			children = (
+				7B6DF4CD1DC9BE2F009B5840 /* SearchSceneModel.h */,
+				7B6DF4CE1DC9BE2F009B5840 /* SearchSceneModel.m */,
+				7B51D5581DC89C87009D23A9 /* SearchViewController.h */,
+				7B51D5591DC89C87009D23A9 /* SearchViewController.m */,
+				7B51D55A1DC89C87009D23A9 /* SearchViewController.xib */,
+				7B6DF4D01DC9C26E009B5840 /* SearchTableViewCell.h */,
+				7B6DF4D11DC9C26E009B5840 /* SearchTableViewCell.m */,
+				7B6DF4D21DC9C26E009B5840 /* SearchTableViewCell.xib */,
+			);
+			path = "搜索";
+			sourceTree = "<group>";
+		};
+		7B51D55D1DC89E21009D23A9 /* XYEnum */ = {
+			isa = PBXGroup;
+			children = (
+				7B51D55E1DC89E21009D23A9 /* XYEnum.h */,
+				7B51D55F1DC89E21009D23A9 /* XYEnum.m */,
+			);
+			path = XYEnum;
+			sourceTree = "<group>";
+		};
 		7B58C30B1DC74CC20061E46D /* 功能列表 */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +291,45 @@
 				7B58C3131DC74CC20061E46D /* FunctionTableViewCell.xib */,
 			);
 			path = "功能列表";
+			sourceTree = "<group>";
+		};
+		7B6DF4B01DC996C5009B5840 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				7B6DF4B11DC996C5009B5840 /* 我的 */,
+				7B6DF4BA1DC996C5009B5840 /* 收藏 */,
+			);
+			path = "我的";
+			sourceTree = "<group>";
+		};
+		7B6DF4B11DC996C5009B5840 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				7B6DF4B21DC996C5009B5840 /* MeScene.h */,
+				7B6DF4B31DC996C5009B5840 /* MeScene.m */,
+				7B6DF4B41DC996C5009B5840 /* MeScene.xib */,
+				7B6DF4B51DC996C5009B5840 /* MeSceneModel.h */,
+				7B6DF4B61DC996C5009B5840 /* MeSceneModel.m */,
+				7B6DF4B71DC996C5009B5840 /* MeTableViewCell.h */,
+				7B6DF4B81DC996C5009B5840 /* MeTableViewCell.m */,
+				7B6DF4B91DC996C5009B5840 /* MeTableViewCell.xib */,
+			);
+			path = "我的";
+			sourceTree = "<group>";
+		};
+		7B6DF4BA1DC996C5009B5840 /* 收藏 */ = {
+			isa = PBXGroup;
+			children = (
+				7B6DF4BB1DC996C5009B5840 /* FavoriteSceneModel.h */,
+				7B6DF4BC1DC996C5009B5840 /* FavoriteSceneModel.m */,
+				7B6DF4BD1DC996C5009B5840 /* FavoriteTableViewCell.h */,
+				7B6DF4BE1DC996C5009B5840 /* FavoriteTableViewCell.m */,
+				7B6DF4BF1DC996C5009B5840 /* FavoriteTableViewCell.xib */,
+				7B6DF4C01DC996C5009B5840 /* FavoriteViewController.h */,
+				7B6DF4C11DC996C5009B5840 /* FavoriteViewController.m */,
+				7B6DF4C21DC996C5009B5840 /* FavoriteViewController.xib */,
+			);
+			path = "收藏";
 			sourceTree = "<group>";
 		};
 		7BCA58931D5AC1C30064A20C = {
@@ -202,6 +359,7 @@
 				7BCA592E1D5B0D220064A20C /* Aspect-Appearance.m */,
 				7BCA58AB1D5AC1C30064A20C /* Assets.xcassets */,
 				7BCA58C21D5ADA1C0064A20C /* ViewControllers */,
+				7B51D52B1DC86B20009D23A9 /* Views */,
 				7BCA58D51D5AE25F0064A20C /* Model */,
 				7BCA58DC1D5AE2670064A20C /* Data */,
 				7BCA58B61D5AC20F0064A20C /* Supporting Files */,
@@ -227,7 +385,7 @@
 				7BCA58C81D5ADAA40064A20C /* 标签栏 */,
 				7BCA59271D5B02DC0064A20C /* 导航栏 */,
 				7BCA58E61D5AE27A0064A20C /* 穴位 */,
-				7BCA58E21D5AE27A0064A20C /* 我的 */,
+				7B6DF4B01DC996C5009B5840 /* 我的 */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -259,6 +417,8 @@
 		7BCA58D51D5AE25F0064A20C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7B6DF4971DC9826E009B5840 /* ControllerModel.h */,
+				7B6DF4981DC9826E009B5840 /* ControllerModel.m */,
 				7BCA58D61D5AE25F0064A20C /* FunctionModel.h */,
 				7BCA58D71D5AE25F0064A20C /* FunctionModel.m */,
 				7BCA58D81D5AE25F0064A20C /* MeridianModel.h */,
@@ -279,16 +439,6 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		7BCA58E21D5AE27A0064A20C /* 我的 */ = {
-			isa = PBXGroup;
-			children = (
-				7BCA58E31D5AE27A0064A20C /* MeScene.h */,
-				7BCA58E41D5AE27A0064A20C /* MeScene.m */,
-				7BCA58E51D5AE27A0064A20C /* MeScene.xib */,
-			);
-			path = "我的";
-			sourceTree = "<group>";
-		};
 		7BCA58E61D5AE27A0064A20C /* 穴位 */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +447,7 @@
 				7B58C30B1DC74CC20061E46D /* 功能列表 */,
 				7BCA58F51D5AE27B0064A20C /* 穴位列表 */,
 				7B2C4F341D9293FE001F0D30 /* 穴位详情 */,
+				7B51D5571DC89C75009D23A9 /* 搜索 */,
 			);
 			path = "穴位";
 			sourceTree = "<group>";
@@ -304,8 +455,6 @@
 		7BCA58E71D5AE27A0064A20C /* 分类列表 */ = {
 			isa = PBXGroup;
 			children = (
-				7BCA592B1D5B03950064A20C /* AcupointCategoryModel.h */,
-				7BCA592C1D5B03950064A20C /* AcupointCategoryModel.m */,
 				7BCA59211D5B01590064A20C /* AcupointCategoryListSceneModel.h */,
 				7BCA59221D5B01590064A20C /* AcupointCategoryListSceneModel.m */,
 				7BCA58E81D5AE27A0064A20C /* AcupointCategoryListScene.h */,
@@ -429,13 +578,19 @@
 			files = (
 				7BCA59131D5AE27B0064A20C /* AcupointTableViewCell.xib in Resources */,
 				7BCA59091D5AE27B0064A20C /* AcupointCategoryListScene.xib in Resources */,
-				7BCA59071D5AE27B0064A20C /* MeScene.xib in Resources */,
 				7BCA59111D5AE27B0064A20C /* AcupointListScene.xib in Resources */,
+				7B51D5531DC889D9009D23A9 /* HLNavigationSelectViewCell.xib in Resources */,
 				7BCA590B1D5AE27B0064A20C /* AcupointCategoryTableViewCell.xib in Resources */,
 				7B2C4F391D92941A001F0D30 /* AcupointViewController.xib in Resources */,
+				7B6DF4C41DC996C5009B5840 /* MeScene.xib in Resources */,
 				7B2C4F331D927B4A001F0D30 /* Acupoint.db in Resources */,
+				7B6DF4D41DC9C26E009B5840 /* SearchTableViewCell.xib in Resources */,
+				7B6DF4CC1DC996C5009B5840 /* FavoriteViewController.xib in Resources */,
+				7B51D55C1DC89C87009D23A9 /* SearchViewController.xib in Resources */,
+				7B6DF4C71DC996C5009B5840 /* MeTableViewCell.xib in Resources */,
 				7BCA59151D5AE27B0064A20C /* MeridianListScene.xib in Resources */,
 				7BCA59171D5AE27B0064A20C /* MeridianTableViewCell.xib in Resources */,
+				7B6DF4CA1DC996C5009B5840 /* FavoriteTableViewCell.xib in Resources */,
 				7BCA591C1D5AFA5E0064A20C /* Localizable.strings in Resources */,
 				7B58C3151DC74CC20061E46D /* FunctionListScene.xib in Resources */,
 				7B58C3181DC74CC20061E46D /* FunctionTableViewCell.xib in Resources */,
@@ -498,35 +653,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B6DF4CB1DC996C5009B5840 /* FavoriteViewController.m in Sources */,
 				7BCA58C71D5ADA2E0064A20C /* Aspect-Window.m in Sources */,
+				7B51D5311DC86B20009D23A9 /* XYListView.m in Sources */,
+				7B51D5521DC889D9009D23A9 /* HLNavigationSelectViewCell.m in Sources */,
+				7B51D5511DC889D9009D23A9 /* HLNavigationSelectView.m in Sources */,
+				7B6DF4D31DC9C26E009B5840 /* SearchTableViewCell.m in Sources */,
 				7BCA592F1D5B0D220064A20C /* Aspect-Appearance.m in Sources */,
 				7B3C1A961D5EB26F008E784B /* HLTableViewCell.m in Sources */,
+				7B6DF4991DC9826E009B5840 /* ControllerModel.m in Sources */,
 				7BCA58A41D5AC1C30064A20C /* AppDelegate.m in Sources */,
+				7B6DF4CF1DC9BE2F009B5840 /* SearchSceneModel.m in Sources */,
 				7B58C3161DC74CC20061E46D /* FunctionListSceneModel.m in Sources */,
 				7BCA58BA1D5AC20F0064A20C /* main.m in Sources */,
 				7B58C3011DC71FCC0061E46D /* MeridianListSceneModel.m in Sources */,
 				7BCA58E11D5AE2670064A20C /* AppData.m in Sources */,
 				7BCA58D41D5AE1E30064A20C /* HLViewController.m in Sources */,
 				7B58C3071DC725CB0061E46D /* AcupointListSceneModel.m in Sources */,
-				7BCA59061D5AE27B0064A20C /* MeScene.m in Sources */,
+				7B6DF4C81DC996C5009B5840 /* FavoriteSceneModel.m in Sources */,
 				7B58C3141DC74CC20061E46D /* FunctionListScene.m in Sources */,
 				7BCA59161D5AE27B0064A20C /* MeridianTableViewCell.m in Sources */,
+				7B51D5501DC889D9009D23A9 /* HLNavigationSelectAction.m in Sources */,
 				7BCA58CC1D5ADAC00064A20C /* TabBarController.m in Sources */,
 				7BCA59141D5AE27B0064A20C /* MeridianListScene.m in Sources */,
 				7BCA590A1D5AE27B0064A20C /* AcupointCategoryTableViewCell.m in Sources */,
 				7BCA59121D5AE27B0064A20C /* AcupointTableViewCell.m in Sources */,
 				7BCA59231D5B01590064A20C /* AcupointCategoryListSceneModel.m in Sources */,
+				7B6DF4C51DC996C5009B5840 /* MeSceneModel.m in Sources */,
+				7B51D55B1DC89C87009D23A9 /* SearchViewController.m in Sources */,
 				7B58C3171DC74CC20061E46D /* FunctionTableViewCell.m in Sources */,
 				7B2C4F381D92941A001F0D30 /* AcupointViewController.m in Sources */,
+				7B51D5601DC89E21009D23A9 /* XYEnum.m in Sources */,
+				7B6DF4C31DC996C5009B5840 /* MeScene.m in Sources */,
 				7BCA58DB1D5AE25F0064A20C /* MeridianModel.m in Sources */,
+				7B6DF4C61DC996C5009B5840 /* MeTableViewCell.m in Sources */,
+				7B51D5321DC86B20009D23A9 /* XYListViewCell.m in Sources */,
 				7B58C30A1DC733D90061E46D /* HLNavigationController.m in Sources */,
 				7BCA59261D5B019B0064A20C /* HLSceneModel.m in Sources */,
+				7B51D5561DC889EA009D23A9 /* HLNavigationView.m in Sources */,
+				7B6DF4C91DC996C5009B5840 /* FavoriteTableViewCell.m in Sources */,
 				7BCA58DA1D5AE25F0064A20C /* FunctionModel.m in Sources */,
 				7BCA59101D5AE27B0064A20C /* AcupointListScene.m in Sources */,
 				7BCA59081D5AE27B0064A20C /* AcupointCategoryListScene.m in Sources */,
 				7BCA592A1D5B02DC0064A20C /* NavigationController.m in Sources */,
 				7B2C4F311D92761F001F0D30 /* AcupointModel.m in Sources */,
-				7BCA592D1D5B03950064A20C /* AcupointCategoryModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

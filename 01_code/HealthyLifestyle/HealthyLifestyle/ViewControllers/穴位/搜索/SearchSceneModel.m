@@ -6,10 +6,10 @@
 //  Copyright © 2016年 祥运. All rights reserved.
 //
 
-#import "AcupointListSceneModel.h"
+#import "SearchSceneModel.h"
 #import "AppData.h"
 
-@implementation AcupointListSceneModel
+@implementation SearchSceneModel
 
 - (void)loadSceneModel {
     [super loadSceneModel];
@@ -25,11 +25,11 @@
     return [mArray copy];
 }
 
-- (void)queryAcupointsWithMeridianID:(NSString *)meridianID {
+- (void)queryAcupointsWithKeyword:(NSString *)keyword {
     [[AppData sharedInstance].databaseQueue inDatabase:^(FMDatabase *db) {
         if ([db open]) {
             self.acupointList = [NSMutableArray array];
-            NSString * query = [NSString stringWithFormat:@"SELECT * FROM `%@` WHERE `meridian_id` = '%@'", ACUPOINT_TABLE_NAME, meridianID];
+            NSString * query = [NSString stringWithFormat:@"SELECT * FROM `%@` WHERE `cn_name` LIKE '%%%@%%'", ACUPOINT_TABLE_NAME, keyword];
             FMResultSet * rs = [db executeQuery:query];
             while ([rs next]) {
                 AcupointModel * model = [AcupointModel modelWithDict:@{ACUPOINT_COLUMN_ID:[rs stringForColumn:ACUPOINT_COLUMN_ID],
@@ -42,8 +42,8 @@
                                                                        ACUPOINT_COLUMN_ACUPUNCTURE:[rs stringForColumn:ACUPOINT_COLUMN_ACUPUNCTURE]}];
                 [self.acupointList addObject:model];
             }
-            if (self.delegate && [self.delegate respondsToSelector:@selector(acupointListSceneModelDidQueryAcupoints)]) {
-                [self.delegate acupointListSceneModelDidQueryAcupoints];
+            if (self.delegate && [self.delegate respondsToSelector:@selector(searchSceneModelDidQueryAcupoints)]) {
+                [self.delegate searchSceneModelDidQueryAcupoints];
             }
         };
     }];

@@ -10,4 +10,12 @@
 
 @interface HLViewController : UIViewController
 
+#pragma mark - Navigation
+
+- (void)addMoreButtonItemWithActionTypes:(NSArray *)actionTypes;
+
+#pragma mark - Alert
+
+- (void)presentAlertWithTitle:(NSString *)title message:(NSString *)message dismissAfterDelay:(NSTimeInterval)delay completion:(void(^)())completion;
+
 @end

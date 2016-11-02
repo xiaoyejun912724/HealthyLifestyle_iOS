@@ -13,14 +13,14 @@
 - (void)loadSceneModel {
     [super loadSceneModel];
 
-    self.categoryList = @[[AcupointCategoryModel modelWithDict:@{@"title":NSLocalizedString(@"按经脉浏览", nil),
-                                                                 @"view_controller":@"MeridianListScene"}],
-                          [AcupointCategoryModel modelWithDict:@{@"title":NSLocalizedString(@"按位置浏览", nil),
-                                                                 @"view_controller":@""}],
-                          [AcupointCategoryModel modelWithDict:@{@"title":NSLocalizedString(@"按主治症状浏览", nil),
-                                                                 @"view_controller":@"FunctionListScene"}],
-                          [AcupointCategoryModel modelWithDict:@{@"title":NSLocalizedString(@"搜索", nil),
-                                                                 @"view_controller":@""}]];
+    self.categoryList = @[[ControllerModel modelWithDict:@{@"title":NSLocalizedString(@"按经脉浏览", nil),
+                                                           @"controller":@"MeridianListScene"}],
+                          [ControllerModel modelWithDict:@{@"title":NSLocalizedString(@"按位置浏览", nil),
+                                                           @"controller":@""}],
+                          [ControllerModel modelWithDict:@{@"title":NSLocalizedString(@"按主治症状浏览", nil),
+                                                           @"controller":@"FunctionListScene"}],
+                          [ControllerModel modelWithDict:@{@"title":NSLocalizedString(@"搜索", nil),
+                                                           @"controller":@""}]];
 }
 
 @end

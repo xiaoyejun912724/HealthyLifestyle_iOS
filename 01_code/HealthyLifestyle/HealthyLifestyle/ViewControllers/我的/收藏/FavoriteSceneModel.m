@@ -6,30 +6,21 @@
 //  Copyright © 2016年 祥运. All rights reserved.
 //
 
-#import "AcupointListSceneModel.h"
-#import "AppData.h"
+#import "FavoriteSceneModel.h"
 
-@implementation AcupointListSceneModel
+@implementation FavoriteSceneModel
 
 - (void)loadSceneModel {
     [super loadSceneModel];
-    
+
 }
 
-- (NSArray *)acupointListWithData:(id)data {
-    NSMutableArray * mArray = [NSMutableArray arrayWithCapacity:[data count]];
-    [data enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        AcupointModel * model = [AcupointModel modelWithDict:obj];
-        [mArray addObject:model];
-    }];
-    return [mArray copy];
-}
-
-- (void)queryAcupointsWithMeridianID:(NSString *)meridianID {
+- (void)queryAcupointsWithIDList:(NSArray *)idList {
+    NSLog(@"%@", idList);
     [[AppData sharedInstance].databaseQueue inDatabase:^(FMDatabase *db) {
         if ([db open]) {
-            self.acupointList = [NSMutableArray array];
-            NSString * query = [NSString stringWithFormat:@"SELECT * FROM `%@` WHERE `meridian_id` = '%@'", ACUPOINT_TABLE_NAME, meridianID];
+            NSMutableDictionary * mDict = [NSMutableDictionary dictionary];
+            NSString * query = [NSString stringWithFormat:@"SELECT * FROM `%@` WHERE `%@` IN (%@)", ACUPOINT_TABLE_NAME, ACUPOINT_COLUMN_ID, [idList componentsJoinedByString:@","]];
             FMResultSet * rs = [db executeQuery:query];
             while ([rs next]) {
                 AcupointModel * model = [AcupointModel modelWithDict:@{ACUPOINT_COLUMN_ID:[rs stringForColumn:ACUPOINT_COLUMN_ID],
@@ -40,10 +31,15 @@
                                                                        ACUPOINT_COLUMN_INDICATION:[rs stringForColumn:ACUPOINT_COLUMN_INDICATION],
                                                                        ACUPOINT_COLUMN_COMPATIBILITY:[rs stringForColumn:ACUPOINT_COLUMN_COMPATIBILITY],
                                                                        ACUPOINT_COLUMN_ACUPUNCTURE:[rs stringForColumn:ACUPOINT_COLUMN_ACUPUNCTURE]}];
-                [self.acupointList addObject:model];
+                [mDict setObject:model forKey:model.acupointID];
             }
-            if (self.delegate && [self.delegate respondsToSelector:@selector(acupointListSceneModelDidQueryAcupoints)]) {
-                [self.delegate acupointListSceneModelDidQueryAcupoints];
+            NSMutableArray * mArray = [NSMutableArray arrayWithCapacity:mDict.count];
+            [idList enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                [mArray addObject:mDict[obj]];
+            }];
+            self.acupointList = mArray;
+            if (self.delegate && [self.delegate respondsToSelector:@selector(favoriteSceneModelDidQueryAcupoints)]) {
+                [self.delegate favoriteSceneModelDidQueryAcupoints];
             }
         };
     }];

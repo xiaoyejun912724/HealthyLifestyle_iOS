@@ -8,8 +8,10 @@
 
 #import "AcupointViewController.h"
 #import "AcupointModel.h"
+#import "XYEnum.h"
+#import "HLNavigationView.h"
 
-@interface AcupointViewController ()
+@interface AcupointViewController () <HLNavigationViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel * indicationTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel * indicationLabel;
@@ -35,6 +37,7 @@
         self.title = [NSString stringWithFormat:@"%@ %@", self.acupointModel.code, self.acupointModel.pinyin];
     }
     
+    [self setupNavigationItem];
     [self setupView];
     [self setupData];
 }
@@ -45,6 +48,10 @@
 }
 
 #pragma mark - Setup
+
+- (void)setupNavigationItem {
+    [self addMoreButtonItemWithActionTypes:@[@(HLNavigationSelectActionTypeCollect), @(HLNavigationSelectActionTypeSearch)]];
+}
 
 - (void)setupView {
     
@@ -59,6 +66,26 @@
     self.positionLabel.text = self.acupointModel.position;
     self.compatibilityLabel.text = self.acupointModel.compatibility;
     self.acupunctureLabel.text = self.acupointModel.acupuncture;
+}
+
+#pragma mark - HLNavigationViewDelegate
+
+- (void)navigationViewDidCollect {
+    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    NSMutableArray * favorites = nil;
+    NSArray * array = [defaults objectForKey:@"Favorite"];
+    if (array) {
+        favorites = [array mutableCopy];
+    } else {
+        favorites = [NSMutableArray array];
+    }
+    if (![favorites containsObject:self.acupointModel.acupointID]) {
+        [favorites insertObject:self.acupointModel.acupointID atIndex:0];
+        [defaults setObject:favorites forKey:@"Favorite"];
+        [self presentAlertWithTitle:@"收藏成功" message:nil dismissAfterDelay:PRESENT_DELAY completion:nil];
+    } else {
+        [self presentAlertWithTitle:@"该穴位已收藏" message:nil dismissAfterDelay:PRESENT_DELAY completion:nil];
+    }
 }
 
 /*

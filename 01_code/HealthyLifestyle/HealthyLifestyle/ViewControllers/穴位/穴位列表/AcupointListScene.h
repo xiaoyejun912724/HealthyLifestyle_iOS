@@ -8,6 +8,8 @@
 
 #import "HLViewController.h"
 
+typedef NS_ENUM(NSInteger, AcupointListType);
+
 @interface AcupointListScene : HLViewController
 
 @property (nonatomic, assign) AcupointListType type;

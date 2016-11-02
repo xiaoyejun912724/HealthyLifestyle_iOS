@@ -1,35 +1,33 @@
 //
-//  AcupointCategoryListScene.m
+//  MeScene.m
 //  HealthyLifestyle
 //
 //  Created by 找汽配 on 16/7/2.
 //  Copyright © 2016年 祥运. All rights reserved.
 //
 
-#import "AcupointCategoryListScene.h"
-#import "AcupointCategoryListSceneModel.h"
-#import "AcupointCategoryTableViewCell.h"
-#import "XYEnum.h"
+#import "MeScene.h"
+#import "MeSceneModel.h"
+#import "MeTableViewCell.h"
 
-@interface AcupointCategoryListScene () <UITableViewDataSource, UITableViewDelegate>
+@interface MeScene () <UITableViewDataSource, UITableViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView * tableView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (nonatomic, strong) AcupointCategoryListSceneModel * sceneModel;
+@property (nonatomic, strong) MeSceneModel * sceneModel;
 
 @end
 
-@implementation AcupointCategoryListScene
+@implementation MeScene
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
-    self.title = NSLocalizedString(@"穴位", nil);
-    self.sceneModel = [AcupointCategoryListSceneModel SceneModel];
+    self.title = NSLocalizedString(@"我的", nil);
+    self.sceneModel = [MeSceneModel SceneModel];
     
-    [self setupNavigationItem];
-    [self setupScene];
+    [self setupView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,28 +37,20 @@
 
 #pragma mark - Setup
 
-- (void)setupNavigationItem {
-    [self addMoreButtonItemWithActionTypes:@[@(HLNavigationSelectActionTypeSearch)]];
-}
-
-- (void)setupScene {
+- (void)setupView {
     self.tableView.tableFooterView = [[UIView alloc] init];
-    [self.tableView registerNib:[UINib nibWithNibName:@"AcupointCategoryTableViewCell" bundle:nil] forCellReuseIdentifier:kAcupointCategoryTableViewCellReuseIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:@"MeTableViewCell" bundle:nil] forCellReuseIdentifier:kMeTableViewCellReuseIdentifier];
 }
-
-#pragma mark - Getter
-
-
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.sceneModel.categoryList.count;
+    return self.sceneModel.controllerList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    AcupointCategoryTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kAcupointCategoryTableViewCellReuseIdentifier forIndexPath:indexPath];
-    ControllerModel * model = self.sceneModel.categoryList[indexPath.row];
+    MeTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kMeTableViewCellReuseIdentifier forIndexPath:indexPath];
+    ControllerModel * model = self.sceneModel.controllerList[indexPath.row];
     [cell reloadData:model.title];
     return cell;
 }
@@ -68,13 +58,14 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    ControllerModel * model = self.sceneModel.categoryList[indexPath.row];
+    ControllerModel * model = self.sceneModel.controllerList[indexPath.row];
     if (model.controller) {
         id scene = [[NSClassFromString(model.controller) alloc] initWithNibName:model.controller bundle:nil];
         [scene setHidesBottomBarWhenPushed:YES];
         [self.navigationController pushViewController:scene animated:YES];
     }
 }
+
 
 
 
