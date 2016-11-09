@@ -41,13 +41,13 @@
     if ([[languages firstObject] rangeOfString:@"zh-Hans"].location != NSNotFound) {
         self.titleLabel.text = model.cnName;
     } else {
-        self.titleLabel.text = [NSString stringWithFormat:@"%@ %@", model.code, model.pinyin];
+        self.titleLabel.text = [NSString stringWithFormat:@"%@ %@", model.code ?: @"", model.pinyin ?: @""];
     }
     
-    self.positionLabel.text = [NSString stringWithFormat:@"［定位］%@", model.position];
-    self.indicationLabel.text = [NSString stringWithFormat:@"［主治］%@", model.indication];
-    self.cooperationLabel.text = [NSString stringWithFormat:@"［配伍］%@", model.compatibility];
-    self.acupunctureLabel.text = [NSString stringWithFormat:@"［针灸］%@", model.acupuncture];
+    self.positionLabel.text = [NSString stringWithFormat:@"［定位］%@", model.position ?: @""];
+    self.indicationLabel.text = [NSString stringWithFormat:@"［主治］%@", model.indication ?: @""];
+    self.cooperationLabel.text = [NSString stringWithFormat:@"［配伍］%@", model.compatibility ?: @""];
+    self.acupunctureLabel.text = [NSString stringWithFormat:@"［针灸］%@", model.acupuncture ?: @""];
 }
 
 @end
