@@ -10,21 +10,22 @@ print("open database success")
 #indication     主治
 #cooperation    配伍
 #acupuncture    针灸法
-sql =   'CREATE TABLE IF NOT EXISTS "Acupoint" (' +\
-            '"id" INTEGER PRIMARY KEY AUTOINCREMENT, ' +\
-            '"meridian_id" INTEGER DEFAULT 0, ' +\
-            '"function_id" INTEGER DEFAULT 0, ' +\
-            '"code" VARCHAR(16), ' +\
-            '"pinyin" VARCHAR(64), ' +\
-            '"cn_name" VARCHAR(64), ' +\
-            '"position" TEXT, ' +\
-            '"cn_position" TEXT, ' +\
-            '"indication" TEXT, ' +\
-            '"cn_indication" TEXT, ' +\
-            '"compatibility" TEXT, ' +\
-            '"cn_compatibility" TEXT, ' +\
-            '"acupuncture" TEXT, ' +\
-            '"cn_acupuncture" TEXT' +\
+sql =   'CREATE TABLE IF NOT EXISTS `Acupoint` (' +\
+            '`id` INTEGER PRIMARY KEY AUTOINCREMENT, ' +\
+            '`meridian_id` INTEGER DEFAULT 0, ' +\
+            '`position_id` INTEGER DEFAULT 0, ' +\
+            '`function_id` INTEGER DEFAULT 0, ' +\
+            '`code` VARCHAR(16), ' +\
+            '`pinyin` VARCHAR(64), ' +\
+            '`cn_name` VARCHAR(64), ' +\
+            '`position` TEXT, ' +\
+            '`cn_position` TEXT, ' +\
+            '`indication` TEXT, ' +\
+            '`cn_indication` TEXT, ' +\
+            '`compatibility` TEXT, ' +\
+            '`cn_compatibility` TEXT, ' +\
+            '`acupuncture` TEXT, ' +\
+            '`cn_acupuncture` TEXT' +\
         ')'
 connect.execute(sql);
 

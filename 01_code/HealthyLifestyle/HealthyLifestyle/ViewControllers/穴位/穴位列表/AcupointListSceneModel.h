@@ -17,6 +17,8 @@
 @property (nonatomic, weak) id<AcupointListSceneModelDelegate> delegate;
 
 - (void)queryAcupointsWithMeridianID:(NSString *)meridianID;
+- (void)queryAcupointsWithPositionID:(NSString *)positionID;
+- (void)queryAcupointsWithFunctionID:(NSString *)functionID;
 
 @end
 

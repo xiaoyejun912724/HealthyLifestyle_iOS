@@ -28,6 +28,7 @@
 - (void)queryFunctions {
     [[AppData sharedInstance].databaseQueue inDatabase:^(FMDatabase *db) {
         if ([db open]) {
+            self.functionList = [NSMutableArray array];
             NSString * query = [NSString stringWithFormat:@"SELECT * FROM `%@`", FUNCTION_TABLE_NAME];
             FMResultSet * rs = [db executeQuery:query];
             while ([rs next]) {

@@ -6,34 +6,34 @@
 //  Copyright © 2016年 祥运. All rights reserved.
 //
 
-#import "MeridianListScene.h"
+#import "PositionListViewController.h"
 #import "AcupointListScene.h"
-#import "MeridianTableViewCell.h"
-#import "MeridianListSceneModel.h"
+#import "PositionTableViewCell.h"
+#import "PositionListSceneModel.h"
 #import "XYEnum.h"
 
-@interface MeridianListScene () <UITableViewDataSource, UITableViewDelegate, MeridianListSceneModelDelegate>
+@interface PositionListViewController () <UITableViewDataSource, UITableViewDelegate, PositionListSceneModelDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView * tableView;
 
-@property (nonatomic, strong) MeridianListSceneModel * sceneModel;
+@property (nonatomic, strong) PositionListSceneModel * sceneModel;
 
 @end
 
-@implementation MeridianListScene
+@implementation PositionListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
-    self.title = NSLocalizedString(@"经脉", nil);
-    self.sceneModel = [MeridianListSceneModel SceneModel];
+    self.title = NSLocalizedString(@"位置", nil);
+    self.sceneModel = [PositionListSceneModel SceneModel];
     self.sceneModel.delegate = self;
 
     [self setupNavigationItem];
     [self setupScene];
     
-    [self.sceneModel queryMeridians];
+    [self.sceneModel queryPositions];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,18 +49,18 @@
 
 - (void)setupScene {
     self.tableView.tableFooterView = [[UIView alloc] init];
-    [self.tableView registerNib:[UINib nibWithNibName:@"MeridianTableViewCell" bundle:nil] forCellReuseIdentifier:kMeridianTableViewCellReuseIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:@"MeridianTableViewCell" bundle:nil] forCellReuseIdentifier:kPositionTableViewCellReuseIdentifier];
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.sceneModel.meridianList.count;
+    return self.sceneModel.positionList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MeridianTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kMeridianTableViewCellReuseIdentifier forIndexPath:indexPath];
-    MeridianModel * model = self.sceneModel.meridianList[indexPath.row];
+    PositionTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kPositionTableViewCellReuseIdentifier forIndexPath:indexPath];
+    PositionModel * model = self.sceneModel.positionList[indexPath.row];
     [cell reloadData:model];
     return cell;
 }
@@ -68,17 +68,17 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    MeridianModel * model = self.sceneModel.meridianList[indexPath.row];
+    PositionModel * model = self.sceneModel.positionList[indexPath.row];
     AcupointListScene * controller = [[AcupointListScene alloc] initWithNibName:@"AcupointListScene" bundle:nil];
-    controller.type = AcupointListTypeMeridian;
-    controller.meridianID = model.meridianID;
+    controller.type = AcupointListTypePosition;
+    controller.positionID = model.positionID;
     controller.title = model.name;
     [self.navigationController pushViewController:controller animated:YES];
 }
 
-#pragma mark - MeridianListSceneModelDelegate
+#pragma mark - PositionListSceneModelDelegate
 
-- (void)meridianListSceneModelDidQueryMeridians {
+- (void)positionListSceneModelDidQueryPositions {
     [self.tableView reloadData];
 }
 

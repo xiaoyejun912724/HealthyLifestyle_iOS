@@ -11,6 +11,8 @@
 typedef NS_ENUM(NSInteger, AcupointListType) {
     AcupointListTypeNone,
     AcupointListTypeMeridian,       // 经脉列表
+    AcupointListTypePosition,       // 位置列表
+    AcupointListTypeFunction,       // 功能列表
 };
 
 typedef NS_ENUM(NSInteger, HLNavigationSelectActionType) {

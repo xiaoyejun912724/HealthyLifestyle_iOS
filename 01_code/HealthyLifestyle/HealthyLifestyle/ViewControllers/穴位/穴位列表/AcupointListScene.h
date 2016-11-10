@@ -14,6 +14,7 @@ typedef NS_ENUM(NSInteger, AcupointListType);
 
 @property (nonatomic, assign) AcupointListType type;
 @property (nonatomic, copy) NSString * meridianID;
-
+@property (nonatomic, copy) NSString * positionID;
+@property (nonatomic, copy) NSString * functionID;
 
 @end

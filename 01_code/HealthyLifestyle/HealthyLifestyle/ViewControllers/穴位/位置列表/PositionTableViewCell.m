@@ -6,16 +6,16 @@
 //  Copyright © 2016年 祥运. All rights reserved.
 //
 
-#import "FavoriteTableViewCell.h"
-#import "AcupointModel.h"
+#import "PositionTableViewCell.h"
+#import "PositionModel.h"
 
-@interface FavoriteTableViewCell ()
+@interface PositionTableViewCell ()
 
 @property (weak, nonatomic) IBOutlet UILabel * titleLabel;
 
 @end
 
-@implementation FavoriteTableViewCell
+@implementation PositionTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -29,8 +29,8 @@
 }
 
 - (void)reloadData:(id)entity {
-    AcupointModel * model = entity;
-    self.titleLabel.text = model.cnName;
+    PositionModel * model = entity;
+    self.titleLabel.text = model.name;
 }
 
 @end

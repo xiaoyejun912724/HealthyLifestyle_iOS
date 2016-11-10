@@ -20,6 +20,24 @@
     if (dict[ACUPOINT_COLUMN_ID] && dict[ACUPOINT_COLUMN_ID] != [NSNull null]) {
         self.acupointID = dict[ACUPOINT_COLUMN_ID];
     }
+    if (dict[ACUPOINT_COLUMN_MERIDIANID] && dict[ACUPOINT_COLUMN_MERIDIANID] != [NSNull null]) {
+        self.meridianID = dict[ACUPOINT_COLUMN_MERIDIANID];
+    }
+    if (dict[ACUPOINT_COLUMN_MERIDIANNAME] && dict[ACUPOINT_COLUMN_MERIDIANNAME] != [NSNull null]) {
+        self.meridianName = dict[ACUPOINT_COLUMN_MERIDIANNAME];
+    }
+    if (dict[ACUPOINT_COLUMN_POSITIONID] && dict[ACUPOINT_COLUMN_POSITIONID] != [NSNull null]) {
+        self.positionID = dict[ACUPOINT_COLUMN_POSITIONID];
+    }
+    if (dict[ACUPOINT_COLUMN_POSITIONNAME] && dict[ACUPOINT_COLUMN_POSITIONNAME] != [NSNull null]) {
+        self.positionName = dict[ACUPOINT_COLUMN_POSITIONNAME];
+    }
+    if (dict[ACUPOINT_COLUMN_FUNCTIONID] && dict[ACUPOINT_COLUMN_FUNCTIONID] != [NSNull null]) {
+        self.functionID = dict[ACUPOINT_COLUMN_FUNCTIONID];
+    }
+    if (dict[ACUPOINT_COLUMN_FUNCTIONNAME] && dict[ACUPOINT_COLUMN_FUNCTIONNAME] != [NSNull null]) {
+        self.functionName = dict[ACUPOINT_COLUMN_FUNCTIONNAME];
+    }
     if (dict[ACUPOINT_COLUMN_NAME] && dict[ACUPOINT_COLUMN_NAME] != [NSNull null]) {
         self.cnName = dict[ACUPOINT_COLUMN_NAME];
     }

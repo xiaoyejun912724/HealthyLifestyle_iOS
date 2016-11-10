@@ -7,6 +7,7 @@
 //
 
 #import "FunctionListScene.h"
+#import "AcupointListScene.h"
 #import "FunctionTableViewCell.h"
 #import "FunctionListSceneModel.h"
 #import "XYEnum.h"
@@ -25,7 +26,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
-    self.title = @"Function";
+    self.title = NSLocalizedString(@"功能", nil);
     self.sceneModel = [FunctionListSceneModel SceneModel];
     self.sceneModel.delegate = self;
     
@@ -67,12 +68,12 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NSDictionary * dict = self.functionList[indexPath.row];
-//    if (dict[@"scene"]) {
-//        id scene = [[NSClassFromString(dict[@"scene"]) alloc] initWithNibName:@"AcupointCategoryListScene" bundle:nil];
-//        [scene setHidesBottomBarWhenPushed:YES];
-//        [self.navigationController pushViewController:scene animated:YES];
-//    }
+    FunctionModel * model = self.sceneModel.functionList[indexPath.row];
+    AcupointListScene * controller = [[AcupointListScene alloc] initWithNibName:@"AcupointListScene" bundle:nil];
+    controller.type = AcupointListTypeFunction;
+    controller.functionID = model.functionID;
+    controller.title = model.name;
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 #pragma mark - FunctionListSceneModelDelegate

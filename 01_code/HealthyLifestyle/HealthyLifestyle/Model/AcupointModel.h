@@ -11,6 +11,12 @@
 @interface AcupointModel : NSObject
 
 @property (nonatomic, copy) NSString * acupointID;
+@property (nonatomic, copy) NSString * meridianID;
+@property (nonatomic, copy) NSString * meridianName;
+@property (nonatomic, copy) NSString * positionID;
+@property (nonatomic, copy) NSString * positionName;
+@property (nonatomic, copy) NSString * functionID;
+@property (nonatomic, copy) NSString * functionName;
 @property (nonatomic, copy) NSString * cnName;
 @property (nonatomic, copy) NSString * pinyin;
 @property (nonatomic, copy) NSString * code;

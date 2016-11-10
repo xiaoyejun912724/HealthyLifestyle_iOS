@@ -17,8 +17,12 @@
 }
 
 - (void)setupWithDict:(NSDictionary *)dict {
-    self.functionId = dict[FUNCTION_COLUMN_ID];
-    self.name = dict[FUNCTION_COLUMN_NAME];
+    if (dict[FUNCTION_COLUMN_ID] && dict[FUNCTION_COLUMN_ID] != [NSNull null]) {
+        self.functionID = dict[FUNCTION_COLUMN_ID];
+    }
+    if (dict[FUNCTION_COLUMN_NAME] && dict[FUNCTION_COLUMN_NAME] != [NSNull null]) {
+        self.name = dict[FUNCTION_COLUMN_NAME];
+    }
 }
 
 @end

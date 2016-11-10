@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FunctionModel : NSObject
+@interface PositionModel : NSObject
 
-@property (nonatomic, copy) NSString * functionID;
+@property (nonatomic, copy) NSString * positionID;
 @property (nonatomic, copy) NSString * name;
 
 + (instancetype)modelWithDict:(NSDictionary *)dict;

@@ -26,14 +26,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
-    self.title = NSLocalizedString(@"穴位", nil);
+    if (!self.title) {
+        self.title = NSLocalizedString(@"穴位", nil);
+    }
     self.sceneModel = [AcupointListSceneModel SceneModel];
     self.sceneModel.delegate = self;
     
     [self setupNavigationItem];
     [self setupScene];
     
-    [self.sceneModel queryAcupointsWithMeridianID:self.meridianID];
+    if (self.type == AcupointListTypeMeridian) {
+        [self.sceneModel queryAcupointsWithMeridianID:self.meridianID];
+    } else if (self.type == AcupointListTypePosition) {
+        [self.sceneModel queryAcupointsWithPositionID:self.positionID];
+    } else if (self.type == AcupointListTypeFunction) {
+        [self.sceneModel queryAcupointsWithFunctionID:self.functionID];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

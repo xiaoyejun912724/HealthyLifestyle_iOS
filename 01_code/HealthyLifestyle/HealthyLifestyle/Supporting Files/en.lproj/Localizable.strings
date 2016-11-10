@@ -7,12 +7,14 @@
 */
 
 "经脉"="Meridian";
+"位置"="Position";
+"功能"="Function";
 "穴位"="Acupoint";
 "我的"="Me";
 
 "按经脉浏览"="Browse with meridians";
 "按位置浏览"="Browse with position";
-"按主治症状浏览"="Browse with indication";
+"按功能浏览"="Browse with function";
 "搜索"="Search";
 
 "主治"="Indication";
@@ -20,6 +22,9 @@
 "配伍"="Compatibility";
 "艾灸"="Acupuncture";
 
+"meridian_name" = "meridian_name";
+"position_name" = "position_name";
+"function_name" = "function_name";
 "name"          = "name";
 "position"      = "position";
 "indication"    = "indication";

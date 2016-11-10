@@ -6,8 +6,10 @@
 //  Copyright © 2016年 祥运. All rights reserved.
 //
 
+#import "HLTableViewCell.h"
+
 static NSString * const kFunctionTableViewCellReuseIdentifier = @"FunctionTableViewCell";
 
-@interface FunctionTableViewCell : EzTableViewCell
+@interface FunctionTableViewCell : HLTableViewCell
 
 @end

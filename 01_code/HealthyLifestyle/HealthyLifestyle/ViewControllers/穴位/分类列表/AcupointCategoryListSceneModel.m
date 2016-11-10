@@ -15,13 +15,10 @@
 
     self.categoryList = @[[ControllerModel modelWithDict:@{@"title":NSLocalizedString(@"按经脉浏览", nil),
                                                            @"controller":@"MeridianListScene"}],
-//                          [ControllerModel modelWithDict:@{@"title":NSLocalizedString(@"按位置浏览", nil),
-//                                                           @"controller":@""}],
-//                          [ControllerModel modelWithDict:@{@"title":NSLocalizedString(@"按主治症状浏览", nil),
-//                                                           @"controller":@"FunctionListScene"}],
-//                          [ControllerModel modelWithDict:@{@"title":NSLocalizedString(@"搜索", nil),
-//                                                           @"controller":@""}]
-                          ];
+                          [ControllerModel modelWithDict:@{@"title":NSLocalizedString(@"按位置浏览", nil),
+                                                           @"controller":@"PositionListViewController"}],
+                          [ControllerModel modelWithDict:@{@"title":NSLocalizedString(@"按功能浏览", nil),
+                                                           @"controller":@"FunctionListScene"}]];
 }
 
 @end

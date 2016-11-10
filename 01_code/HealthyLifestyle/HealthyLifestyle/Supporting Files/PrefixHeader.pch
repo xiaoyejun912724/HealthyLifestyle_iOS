@@ -135,11 +135,20 @@ static NSString * const DidSearchAcupointNotification = @"DidSearchAcupointNotif
 #define MERIDIAN_TABLE_NAME     @"Meridian"
 #define MERIDIAN_COLUMN_ID      @"id"
 #define MERIDIAN_COLUMN_NAME    NSLocalizedString(@"name", nil)
+#define POSITION_TABLE_NAME     @"Position"
+#define POSITION_COLUMN_ID      @"id"
+#define POSITION_COLUMN_NAME    NSLocalizedString(@"name", nil)
 #define FUNCTION_TABLE_NAME     @"Function"
 #define FUNCTION_COLUMN_ID      @"id"
 #define FUNCTION_COLUMN_NAME    NSLocalizedString(@"name", nil)
 #define ACUPOINT_TABLE_NAME     @"Acupoint"
 #define ACUPOINT_COLUMN_ID      @"id"
+#define ACUPOINT_COLUMN_MERIDIANID      @"meridian_id"
+#define ACUPOINT_COLUMN_MERIDIANNAME    NSLocalizedString(@"meridian_name", nil)
+#define ACUPOINT_COLUMN_POSITIONID      @"position_id"
+#define ACUPOINT_COLUMN_POSITIONNAME    NSLocalizedString(@"position_name", nil)
+#define ACUPOINT_COLUMN_FUNCTIONID      @"function_id"
+#define ACUPOINT_COLUMN_FUNCTIONNAME    NSLocalizedString(@"function_name", nil)
 #define ACUPOINT_COLUMN_NAME    @"cn_name"
 #define ACUPOINT_COLUMN_PINYIN  @"pinyin"
 #define ACUPOINT_COLUMN_CODE    @"code"

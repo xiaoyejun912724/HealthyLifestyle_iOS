@@ -7,12 +7,14 @@
 */
 
 "经脉"="经脉";
+"位置"="位置";
+"功能"="功能";
 "穴位"="穴位";
 "我的"="我的";
 
 "按经脉浏览"="按经脉浏览";
 "按位置浏览"="按位置浏览";
-"按主治症状浏览"="按主治症状浏览";
+"按功能浏览"="按功能浏览";
 "搜索"="搜索";
 
 "主治"="主治";
@@ -20,8 +22,13 @@
 "配伍"="配伍";
 "艾灸"="艾灸";
 
+"meridian_name" = "meridian_cn_name";
+"position_name" = "position_cn_name";
+"function_name" = "function_cn_name";
 "name"          = "cn_name";
 "position"      = "cn_position";
 "indication"    = "cn_indication";
 "compatibility" = "cn_compatibility";
 "acupuncture"   = "cn_acupuncture";
+
+

@@ -13,6 +13,10 @@
 
 @interface AcupointViewController () <HLNavigationViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UITextView * meridian_text_view;
+@property (weak, nonatomic) IBOutlet UITextView * position_text_view;
+@property (weak, nonatomic) IBOutlet UITextView * function_text_view;
+
 @property (weak, nonatomic) IBOutlet UILabel * indicationTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel * indicationLabel;
 @property (weak, nonatomic) IBOutlet UILabel * positionTitleLabel;
@@ -58,6 +62,16 @@
 }
 
 - (void)setupData {
+    NSDictionary * options = @{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType};
+    NSString * str = [NSString stringWithFormat:@"<font size=\"4\">经脉：<a href=\"HealthyLifestyle://www.baidu.com\" style=\"text-decoration:none;\">%@</a></font>", self.acupointModel.meridianName ?: @""];
+    NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:[str dataUsingEncoding:NSUnicodeStringEncoding] options:options documentAttributes:nil error:nil];
+    self.meridian_text_view.attributedText = attrStr;
+    str = [NSString stringWithFormat:@"<font size=\"4\">位置：<a href=\"HealthyLifestyle://www.baidu.com\" style=\"text-decoration:none;\">%@</a></font>", self.acupointModel.positionName ?: @""];
+    attrStr = [[NSAttributedString alloc] initWithData:[str dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType} documentAttributes:nil error:nil];
+    self.position_text_view.attributedText = attrStr;
+    str = [NSString stringWithFormat:@"<font size=\"4\">功效：<a href=\"HealthyLifestyle://www.baidu.com\" style=\"text-decoration:none;\">%@</a></font>", self.acupointModel.functionName ?: @""];
+    attrStr = [[NSAttributedString alloc] initWithData:[str dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType} documentAttributes:nil error:nil];
+    self.function_text_view.attributedText = attrStr;
     self.indicationTitleLabel.text = [NSString stringWithFormat:@"【%@】", NSLocalizedString(@"主治", nil)];
     self.positionTitleLabel.text = [NSString stringWithFormat:@"【%@】", NSLocalizedString(@"位置", nil)];
     self.compatibilityTitleLabel.text = [NSString stringWithFormat:@"【%@】", NSLocalizedString(@"配伍", nil)];

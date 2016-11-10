@@ -12,6 +12,13 @@
 		7B2C4F381D92941A001F0D30 /* AcupointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C4F361D92941A001F0D30 /* AcupointViewController.m */; };
 		7B2C4F391D92941A001F0D30 /* AcupointViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B2C4F371D92941A001F0D30 /* AcupointViewController.xib */; };
 		7B3C1A961D5EB26F008E784B /* HLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C1A951D5EB26F008E784B /* HLTableViewCell.m */; };
+		7B4E90251DD4165000CDCA67 /* PositionListSceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4E901E1DD4165000CDCA67 /* PositionListSceneModel.m */; };
+		7B4E90261DD4165000CDCA67 /* PositionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4E90201DD4165000CDCA67 /* PositionListViewController.m */; };
+		7B4E90271DD4165000CDCA67 /* PositionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B4E90211DD4165000CDCA67 /* PositionListViewController.xib */; };
+		7B4E90281DD4165000CDCA67 /* PositionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4E90231DD4165000CDCA67 /* PositionTableViewCell.m */; };
+		7B4E90291DD4165000CDCA67 /* PositionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B4E90241DD4165000CDCA67 /* PositionTableViewCell.xib */; };
+		7B4E902C1DD4176800CDCA67 /* PositionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4E902B1DD4176800CDCA67 /* PositionModel.m */; };
+		7B4E902E1DD47D9400CDCA67 /* Aspect-URL.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4E902D1DD47D9400CDCA67 /* Aspect-URL.m */; };
 		7B51D5311DC86B20009D23A9 /* XYListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B51D52E1DC86B20009D23A9 /* XYListView.m */; };
 		7B51D5321DC86B20009D23A9 /* XYListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B51D5301DC86B20009D23A9 /* XYListViewCell.m */; };
 		7B51D5501DC889D9009D23A9 /* HLNavigationSelectAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B51D54A1DC889D9009D23A9 /* HLNavigationSelectAction.m */; };
@@ -84,6 +91,17 @@
 		7B2C4F371D92941A001F0D30 /* AcupointViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AcupointViewController.xib; sourceTree = "<group>"; };
 		7B3C1A941D5EB26F008E784B /* HLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTableViewCell.h; sourceTree = "<group>"; };
 		7B3C1A951D5EB26F008E784B /* HLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTableViewCell.m; sourceTree = "<group>"; };
+		7B4E901D1DD4165000CDCA67 /* PositionListSceneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionListSceneModel.h; sourceTree = "<group>"; };
+		7B4E901E1DD4165000CDCA67 /* PositionListSceneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionListSceneModel.m; sourceTree = "<group>"; };
+		7B4E901F1DD4165000CDCA67 /* PositionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionListViewController.h; sourceTree = "<group>"; };
+		7B4E90201DD4165000CDCA67 /* PositionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionListViewController.m; sourceTree = "<group>"; };
+		7B4E90211DD4165000CDCA67 /* PositionListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PositionListViewController.xib; sourceTree = "<group>"; };
+		7B4E90221DD4165000CDCA67 /* PositionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionTableViewCell.h; sourceTree = "<group>"; };
+		7B4E90231DD4165000CDCA67 /* PositionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionTableViewCell.m; sourceTree = "<group>"; };
+		7B4E90241DD4165000CDCA67 /* PositionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PositionTableViewCell.xib; sourceTree = "<group>"; };
+		7B4E902A1DD4176800CDCA67 /* PositionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionModel.h; sourceTree = "<group>"; };
+		7B4E902B1DD4176800CDCA67 /* PositionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionModel.m; sourceTree = "<group>"; };
+		7B4E902D1DD47D9400CDCA67 /* Aspect-URL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Aspect-URL.m"; sourceTree = "<group>"; };
 		7B51D52D1DC86B20009D23A9 /* XYListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYListView.h; sourceTree = "<group>"; };
 		7B51D52E1DC86B20009D23A9 /* XYListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYListView.m; sourceTree = "<group>"; };
 		7B51D52F1DC86B20009D23A9 /* XYListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYListViewCell.h; sourceTree = "<group>"; };
@@ -215,6 +233,21 @@
 				7B2C4F371D92941A001F0D30 /* AcupointViewController.xib */,
 			);
 			path = "穴位详情";
+			sourceTree = "<group>";
+		};
+		7B4E901C1DD4165000CDCA67 /* 位置列表 */ = {
+			isa = PBXGroup;
+			children = (
+				7B4E901D1DD4165000CDCA67 /* PositionListSceneModel.h */,
+				7B4E901E1DD4165000CDCA67 /* PositionListSceneModel.m */,
+				7B4E901F1DD4165000CDCA67 /* PositionListViewController.h */,
+				7B4E90201DD4165000CDCA67 /* PositionListViewController.m */,
+				7B4E90211DD4165000CDCA67 /* PositionListViewController.xib */,
+				7B4E90221DD4165000CDCA67 /* PositionTableViewCell.h */,
+				7B4E90231DD4165000CDCA67 /* PositionTableViewCell.m */,
+				7B4E90241DD4165000CDCA67 /* PositionTableViewCell.xib */,
+			);
+			path = "位置列表";
 			sourceTree = "<group>";
 		};
 		7B51D52B1DC86B20009D23A9 /* Views */ = {
@@ -357,6 +390,7 @@
 				7BCA58A31D5AC1C30064A20C /* AppDelegate.m */,
 				7BCA58C61D5ADA2E0064A20C /* Aspect-Window.m */,
 				7BCA592E1D5B0D220064A20C /* Aspect-Appearance.m */,
+				7B4E902D1DD47D9400CDCA67 /* Aspect-URL.m */,
 				7BCA58AB1D5AC1C30064A20C /* Assets.xcassets */,
 				7BCA58C21D5ADA1C0064A20C /* ViewControllers */,
 				7B51D52B1DC86B20009D23A9 /* Views */,
@@ -423,6 +457,8 @@
 				7BCA58D71D5AE25F0064A20C /* FunctionModel.m */,
 				7BCA58D81D5AE25F0064A20C /* MeridianModel.h */,
 				7BCA58D91D5AE25F0064A20C /* MeridianModel.m */,
+				7B4E902A1DD4176800CDCA67 /* PositionModel.h */,
+				7B4E902B1DD4176800CDCA67 /* PositionModel.m */,
 				7B2C4F2F1D92761F001F0D30 /* AcupointModel.h */,
 				7B2C4F301D92761F001F0D30 /* AcupointModel.m */,
 			);
@@ -444,6 +480,7 @@
 			children = (
 				7BCA58E71D5AE27A0064A20C /* 分类列表 */,
 				7BCA58FC1D5AE27B0064A20C /* 经脉列表 */,
+				7B4E901C1DD4165000CDCA67 /* 位置列表 */,
 				7B58C30B1DC74CC20061E46D /* 功能列表 */,
 				7BCA58F51D5AE27B0064A20C /* 穴位列表 */,
 				7B2C4F341D9293FE001F0D30 /* 穴位详情 */,
@@ -589,12 +626,14 @@
 				7B51D55C1DC89C87009D23A9 /* SearchViewController.xib in Resources */,
 				7B6DF4C71DC996C5009B5840 /* MeTableViewCell.xib in Resources */,
 				7BCA59151D5AE27B0064A20C /* MeridianListScene.xib in Resources */,
+				7B4E90291DD4165000CDCA67 /* PositionTableViewCell.xib in Resources */,
 				7BCA59171D5AE27B0064A20C /* MeridianTableViewCell.xib in Resources */,
 				7B6DF4CA1DC996C5009B5840 /* FavoriteTableViewCell.xib in Resources */,
 				7BCA591C1D5AFA5E0064A20C /* Localizable.strings in Resources */,
 				7B58C3151DC74CC20061E46D /* FunctionListScene.xib in Resources */,
 				7B58C3181DC74CC20061E46D /* FunctionTableViewCell.xib in Resources */,
 				7BCA58AC1D5AC1C30064A20C /* Assets.xcassets in Resources */,
+				7B4E90271DD4165000CDCA67 /* PositionListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,8 +697,10 @@
 				7B51D5311DC86B20009D23A9 /* XYListView.m in Sources */,
 				7B51D5521DC889D9009D23A9 /* HLNavigationSelectViewCell.m in Sources */,
 				7B51D5511DC889D9009D23A9 /* HLNavigationSelectView.m in Sources */,
+				7B4E90281DD4165000CDCA67 /* PositionTableViewCell.m in Sources */,
 				7B6DF4D31DC9C26E009B5840 /* SearchTableViewCell.m in Sources */,
 				7BCA592F1D5B0D220064A20C /* Aspect-Appearance.m in Sources */,
+				7B4E90261DD4165000CDCA67 /* PositionListViewController.m in Sources */,
 				7B3C1A961D5EB26F008E784B /* HLTableViewCell.m in Sources */,
 				7B6DF4991DC9826E009B5840 /* ControllerModel.m in Sources */,
 				7BCA58A41D5AC1C30064A20C /* AppDelegate.m in Sources */,
@@ -683,10 +724,13 @@
 				7B51D55B1DC89C87009D23A9 /* SearchViewController.m in Sources */,
 				7B58C3171DC74CC20061E46D /* FunctionTableViewCell.m in Sources */,
 				7B2C4F381D92941A001F0D30 /* AcupointViewController.m in Sources */,
+				7B4E902C1DD4176800CDCA67 /* PositionModel.m in Sources */,
 				7B51D5601DC89E21009D23A9 /* XYEnum.m in Sources */,
 				7B6DF4C31DC996C5009B5840 /* MeScene.m in Sources */,
 				7BCA58DB1D5AE25F0064A20C /* MeridianModel.m in Sources */,
 				7B6DF4C61DC996C5009B5840 /* MeTableViewCell.m in Sources */,
+				7B4E90251DD4165000CDCA67 /* PositionListSceneModel.m in Sources */,
+				7B4E902E1DD47D9400CDCA67 /* Aspect-URL.m in Sources */,
 				7B51D5321DC86B20009D23A9 /* XYListViewCell.m in Sources */,
 				7B58C30A1DC733D90061E46D /* HLNavigationController.m in Sources */,
 				7BCA59261D5B019B0064A20C /* HLSceneModel.m in Sources */,
@@ -755,7 +799,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -796,7 +840,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
