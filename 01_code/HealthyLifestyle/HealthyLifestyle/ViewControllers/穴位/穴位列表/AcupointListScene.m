@@ -78,7 +78,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     AcupointModel * model = self.sceneModel.acupointList[indexPath.row];
     AcupointViewController * controller = [[AcupointViewController alloc] initWithNibName:@"AcupointViewController" bundle:nil];
-    controller.acupointModel = model;
+    controller.acupointID = model.acupointID;
     [self.navigationController pushViewController:controller animated:YES];
 }
 

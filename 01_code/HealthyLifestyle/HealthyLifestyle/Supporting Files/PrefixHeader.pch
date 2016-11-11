@@ -131,6 +131,7 @@ static NSString * const PushSceneNotification = @"PushScene";
 
 // Notification
 static NSString * const DidSearchAcupointNotification = @"DidSearchAcupointNotification";           // 已搜索穴位
+//static NSString * const DidReceiveURLNotification = @"DidReceiveURLNotification";                   // 已接收链接
 
 #define MERIDIAN_TABLE_NAME     @"Meridian"
 #define MERIDIAN_COLUMN_ID      @"id"

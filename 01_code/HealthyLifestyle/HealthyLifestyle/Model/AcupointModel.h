@@ -21,9 +21,13 @@
 @property (nonatomic, copy) NSString * pinyin;
 @property (nonatomic, copy) NSString * code;
 @property (nonatomic, copy) NSString * position;
+@property (nonatomic, copy) NSString * plainPosition;
 @property (nonatomic, copy) NSString * indication;
+@property (nonatomic, copy) NSString * plainIndication;
 @property (nonatomic, copy) NSString * compatibility;
+@property (nonatomic, copy) NSString * plainCompatibility;
 @property (nonatomic, copy) NSString * acupuncture;
+@property (nonatomic, copy) NSString * plainAcupuncture;
 
 + (instancetype)modelWithDict:(NSDictionary *)dict;
 - (void)setupWithDict:(NSDictionary *)dict;

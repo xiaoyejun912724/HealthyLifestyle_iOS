@@ -18,6 +18,9 @@
 AspectPatch(-, BOOL, application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions) {
     NSLog(@"Aspect Appearance");
 
+    NSString * plistPath = [[NSBundle mainBundle] pathForResource:@"URLManager" ofType:@"plist"];
+    [URLManager loadConfigFromPlist:plistPath];
+    
     [UINavigationBar appearance].translucent = NO;
     
     return XAMessageForward(application:application didFinishLaunchingWithOptions:launchOptions);

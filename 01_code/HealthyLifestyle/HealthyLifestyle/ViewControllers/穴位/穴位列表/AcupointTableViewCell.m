@@ -7,6 +7,7 @@
 //
 
 #import "AcupointTableViewCell.h"
+#import "NSString+HL.h"
 #import "AcupointModel.h"
 
 @interface AcupointTableViewCell ()
@@ -44,10 +45,30 @@
         self.titleLabel.text = [NSString stringWithFormat:@"%@ %@", model.code ?: @"", model.pinyin ?: @""];
     }
     
-    self.positionLabel.text = [NSString stringWithFormat:@"［定位］%@", model.position ?: @""];
-    self.indicationLabel.text = [NSString stringWithFormat:@"［主治］%@", model.indication ?: @""];
-    self.cooperationLabel.text = [NSString stringWithFormat:@"［配伍］%@", model.compatibility ?: @""];
-    self.acupunctureLabel.text = [NSString stringWithFormat:@"［针灸］%@", model.acupuncture ?: @""];
+    if (!model.plainPosition) {
+        if (model.position) {
+            model.plainPosition = [NSString stringWithHTML:model.position];
+        }
+    }
+    self.positionLabel.text = [NSString stringWithFormat:@"［定位］%@", model.plainPosition ?: @""];
+    if (!model.plainIndication) {
+        if (model.indication) {
+            model.plainIndication = [NSString stringWithHTML:model.indication];
+        }
+    }
+    self.indicationLabel.text = [NSString stringWithFormat:@"［主治］%@", model.plainIndication ?: @""];
+    if (!model.plainCompatibility) {
+        if (model.compatibility) {
+            model.plainCompatibility = [NSString stringWithHTML:model.compatibility];
+        }
+    }
+    self.cooperationLabel.text = [NSString stringWithFormat:@"［配伍］%@", model.plainCompatibility ?: @""];
+    if (!model.plainAcupuncture) {
+        if (model.acupuncture) {
+            model.plainAcupuncture = [NSString stringWithHTML:model.acupuncture];
+        }
+    }
+    self.acupunctureLabel.text = [NSString stringWithFormat:@"［针灸］%@", model.plainAcupuncture ?: @""];
 }
 
 @end

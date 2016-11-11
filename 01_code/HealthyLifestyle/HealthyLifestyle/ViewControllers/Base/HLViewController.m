@@ -11,9 +11,11 @@
 #import "AcupointViewController.h"
 #import "NavigationController.h"
 #import "HLNavigationView.h"
+#import "HLURLManager.h"
 #import "AcupointModel.h"
 
-@interface HLViewController () <HLNavigationViewDelegate>
+
+@interface HLViewController () <HLNavigationViewDelegate, HLURLManagerDelegate>
 
 @property (nonatomic, strong) NSArray * actionTypes;
 
@@ -39,6 +41,12 @@
 
     // 自定义后退按钮
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [HLURLManager sharedManager].delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -78,7 +86,7 @@
     if (viewController == self) {
         AcupointModel * model = sender.userInfo[@"acupoint"];
         AcupointViewController * controller = [[AcupointViewController alloc] initWithNibName:@"AcupointViewController" bundle:nil];
-        controller.acupointModel = model;
+        controller.acupointID = model.acupointID;
         [self.navigationController pushViewController:controller animated:YES];        
     }
 }
@@ -118,6 +126,21 @@
     controller.viewController = self;
     NavigationController * navigationController = [[NavigationController alloc] initWithRootViewController:controller];
     [self.navigationController presentViewController:navigationController animated:YES completion:nil];
+}
+
+#pragma mark - HLURLManagerDelegate
+
+- (void)urlManagerDidRecvURL:(NSURL *)url {
+        NSLog(@"%@", url.host);
+        NSLog(@"%@", url.params);
+        NSLog(@"%@", [URLManager manager].config);
+    
+    NSString * controller = [URLManager manager].config[url.host];
+    UIViewController * viewController = [[NSClassFromString(controller) alloc] initWithNibName:controller bundle:nil];
+    [url.params enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        [viewController setValue:obj forKey:key];
+    }];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 /*
