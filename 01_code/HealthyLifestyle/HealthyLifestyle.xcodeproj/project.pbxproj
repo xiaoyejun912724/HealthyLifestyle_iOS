@@ -80,6 +80,8 @@
 		7BCA592A1D5B02DC0064A20C /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA59291D5B02DC0064A20C /* NavigationController.m */; };
 		7BCA592F1D5B0D220064A20C /* Aspect-Appearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA592E1D5B0D220064A20C /* Aspect-Appearance.m */; };
 		7BD144641DD5BD0F00545872 /* NSString+HL.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD144631DD5BD0F00545872 /* NSString+HL.m */; };
+		7BDF51041DEED053004B8848 /* NSData+Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDF51001DEED053004B8848 /* NSData+Encrypt.m */; };
+		7BDF51051DEED053004B8848 /* NSString+Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDF51031DEED053004B8848 /* NSString+Encrypt.m */; };
 		FC77CB333847027DB6E08FEF /* libPods-HealthyLifestyle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D016E3D882AC6862B454A1F /* libPods-HealthyLifestyle.a */; };
 /* End PBXBuildFile section */
 
@@ -210,6 +212,10 @@
 		7BCA592E1D5B0D220064A20C /* Aspect-Appearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Aspect-Appearance.m"; sourceTree = "<group>"; };
 		7BD144621DD5BD0F00545872 /* NSString+HL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HL.h"; sourceTree = "<group>"; };
 		7BD144631DD5BD0F00545872 /* NSString+HL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HL.m"; sourceTree = "<group>"; };
+		7BDF50FF1DEED053004B8848 /* NSData+Encrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Encrypt.h"; sourceTree = "<group>"; };
+		7BDF51001DEED053004B8848 /* NSData+Encrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encrypt.m"; sourceTree = "<group>"; };
+		7BDF51021DEED053004B8848 /* NSString+Encrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Encrypt.h"; sourceTree = "<group>"; };
+		7BDF51031DEED053004B8848 /* NSString+Encrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encrypt.m"; sourceTree = "<group>"; };
 		F301703D858F82859DDED8E5 /* Pods-HealthyLifestyle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyLifestyle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthyLifestyle/Pods-HealthyLifestyle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -270,6 +276,8 @@
 		7B51D52B1DC86B20009D23A9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7BDF50FE1DEED053004B8848 /* NSData+Encrypt */,
+				7BDF51011DEED053004B8848 /* NSString+Encrypt */,
 				7BD144611DD5BC7B00545872 /* NSString+HL */,
 				7B4DF42F1DD5650F00D30544 /* HLURLManager */,
 				7B51D55D1DC89E21009D23A9 /* XYEnum */,
@@ -572,6 +580,24 @@
 			path = "NSString+HL";
 			sourceTree = "<group>";
 		};
+		7BDF50FE1DEED053004B8848 /* NSData+Encrypt */ = {
+			isa = PBXGroup;
+			children = (
+				7BDF50FF1DEED053004B8848 /* NSData+Encrypt.h */,
+				7BDF51001DEED053004B8848 /* NSData+Encrypt.m */,
+			);
+			path = "NSData+Encrypt";
+			sourceTree = "<group>";
+		};
+		7BDF51011DEED053004B8848 /* NSString+Encrypt */ = {
+			isa = PBXGroup;
+			children = (
+				7BDF51021DEED053004B8848 /* NSString+Encrypt.h */,
+				7BDF51031DEED053004B8848 /* NSString+Encrypt.m */,
+			);
+			path = "NSString+Encrypt";
+			sourceTree = "<group>";
+		};
 		B77BE05F5631C8129047452F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -752,6 +778,7 @@
 				7BCA59121D5AE27B0064A20C /* AcupointTableViewCell.m in Sources */,
 				7BCA59231D5B01590064A20C /* AcupointCategoryListSceneModel.m in Sources */,
 				7B6DF4C51DC996C5009B5840 /* MeSceneModel.m in Sources */,
+				7BDF51041DEED053004B8848 /* NSData+Encrypt.m in Sources */,
 				7B51D55B1DC89C87009D23A9 /* SearchViewController.m in Sources */,
 				7B58C3171DC74CC20061E46D /* FunctionTableViewCell.m in Sources */,
 				7B2C4F381D92941A001F0D30 /* AcupointViewController.m in Sources */,
@@ -767,6 +794,7 @@
 				7BCA59261D5B019B0064A20C /* HLSceneModel.m in Sources */,
 				7B51D5561DC889EA009D23A9 /* HLNavigationView.m in Sources */,
 				7B6DF4C91DC996C5009B5840 /* FavoriteTableViewCell.m in Sources */,
+				7BDF51051DEED053004B8848 /* NSString+Encrypt.m in Sources */,
 				7BCA58DA1D5AE25F0064A20C /* FunctionModel.m in Sources */,
 				7BCA59101D5AE27B0064A20C /* AcupointListScene.m in Sources */,
 				7BCA59081D5AE27B0064A20C /* AcupointCategoryListScene.m in Sources */,

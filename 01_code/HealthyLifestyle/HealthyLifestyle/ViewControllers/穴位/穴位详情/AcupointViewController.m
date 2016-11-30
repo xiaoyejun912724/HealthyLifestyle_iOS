@@ -18,13 +18,13 @@
 @property (weak, nonatomic) IBOutlet UITextView * function_text_view;
 
 @property (weak, nonatomic) IBOutlet UILabel * indicationTitleLabel;
-@property (weak, nonatomic) IBOutlet UILabel * indicationLabel;
+@property (weak, nonatomic) IBOutlet UITextView * indicationTextView;
 @property (weak, nonatomic) IBOutlet UILabel * positionTitleLabel;
-@property (weak, nonatomic) IBOutlet UILabel * positionLabel;
+@property (weak, nonatomic) IBOutlet UITextView * positionTextView;
 @property (weak, nonatomic) IBOutlet UILabel * compatibilityTitleLabel;
 @property (weak, nonatomic) IBOutlet UITextView * compatibilityTextView;
 @property (weak, nonatomic) IBOutlet UILabel * acupunctureTitleLabel;
-@property (weak, nonatomic) IBOutlet UILabel * acupunctureLabel;
+@property (weak, nonatomic) IBOutlet UITextView * acupunctureTextView;
 
 @property (nonatomic, strong) AcupointModel * acupointModel;
 
@@ -107,12 +107,18 @@
     self.positionTitleLabel.text = [NSString stringWithFormat:@"【%@】", NSLocalizedString(@"位置", nil)];
     self.compatibilityTitleLabel.text = [NSString stringWithFormat:@"【%@】", NSLocalizedString(@"配伍", nil)];
     self.acupunctureTitleLabel.text = [NSString stringWithFormat:@"【%@】", NSLocalizedString(@"艾灸", nil)];
-    self.indicationLabel.text = self.acupointModel.indication;
-    self.positionLabel.text = self.acupointModel.position;
+    str = [NSString stringWithFormat:@"<font size=\"4\">%@</font>", self.acupointModel.indication ?: @""];
+    attrStr = [[NSAttributedString alloc] initWithData:[str dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType} documentAttributes:nil error:nil];
+    self.indicationTextView.attributedText = attrStr;
+    str = [NSString stringWithFormat:@"<font size=\"4\">%@</font>", self.acupointModel.position ?: @""];
+    attrStr = [[NSAttributedString alloc] initWithData:[str dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType} documentAttributes:nil error:nil];
+    self.positionTextView.attributedText = attrStr;
     str = [NSString stringWithFormat:@"<font size=\"4\">%@</font>", self.acupointModel.compatibility ?: @""];
     attrStr = [[NSAttributedString alloc] initWithData:[str dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType} documentAttributes:nil error:nil];
     self.compatibilityTextView.attributedText = attrStr;
-    self.acupunctureLabel.text = self.acupointModel.acupuncture;
+    str = [NSString stringWithFormat:@"<font size=\"4\">%@</font>", self.acupointModel.acupuncture ?: @""];
+    attrStr = [[NSAttributedString alloc] initWithData:[str dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType} documentAttributes:nil error:nil];
+    self.acupunctureTextView.attributedText = attrStr;
 }
 
 #pragma mark - HLNavigationViewDelegate

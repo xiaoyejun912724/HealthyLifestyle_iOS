@@ -46,6 +46,9 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    // 设置导航栏文字颜色
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+    
     [HLURLManager sharedManager].delegate = self;
 }
 
@@ -131,9 +134,9 @@
 #pragma mark - HLURLManagerDelegate
 
 - (void)urlManagerDidRecvURL:(NSURL *)url {
-        NSLog(@"%@", url.host);
-        NSLog(@"%@", url.params);
-        NSLog(@"%@", [URLManager manager].config);
+//        NSLog(@"%@", url.host);
+//        NSLog(@"%@", url.params);
+//        NSLog(@"%@", [URLManager manager].config);
     
     NSString * controller = [URLManager manager].config[url.host];
     UIViewController * viewController = [[NSClassFromString(controller) alloc] initWithNibName:controller bundle:nil];

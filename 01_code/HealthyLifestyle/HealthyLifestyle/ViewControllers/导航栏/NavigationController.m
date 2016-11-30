@@ -24,8 +24,7 @@
     // 设置导航栏背景颜色
 //    self.navigationBar.barTintColor = THEME_LIGHTBLUE;
     
-    // 设置导航栏文字颜色
-    self.navigationBar.tintColor = [UIColor blackColor];
+
     
     // 设置导航栏标题样式
 //    NSDictionary * dict = @{NSFontAttributeName:[UIFont boldSystemFontOfSize:18],
