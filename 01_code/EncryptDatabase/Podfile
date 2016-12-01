@@ -1,0 +1,7 @@
+
+target "EncryptDatabase" do
+
+pod 'FMDB'
+#pod 'RNCryptor'
+
+end

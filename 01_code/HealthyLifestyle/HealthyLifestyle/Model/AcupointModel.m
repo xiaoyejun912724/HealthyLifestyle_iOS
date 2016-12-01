@@ -7,6 +7,7 @@
 //
 
 #import "AcupointModel.h"
+#import "NSString+Encrypt.h"
 
 @implementation AcupointModel
 
@@ -17,6 +18,7 @@
 }
 
 - (void)setupWithDict:(NSDictionary *)dict {
+    NSString * key = @"0CAA40408EFCE2CB240CC99E943FB671";
     if (dict[ACUPOINT_COLUMN_ID] && dict[ACUPOINT_COLUMN_ID] != [NSNull null]) {
         self.acupointID = dict[ACUPOINT_COLUMN_ID];
     }
@@ -48,16 +50,20 @@
         self.code = dict[ACUPOINT_COLUMN_CODE];
     }
     if (dict[ACUPOINT_COLUMN_POSITION] && dict[ACUPOINT_COLUMN_POSITION] != [NSNull null]) {
-        self.position = dict[ACUPOINT_COLUMN_POSITION];
+        NSString * position = dict[ACUPOINT_COLUMN_POSITION];
+        self.position = [position AES256DecryptWithKey:key];
     }
     if (dict[ACUPOINT_COLUMN_INDICATION] && dict[ACUPOINT_COLUMN_INDICATION] != [NSNull null]) {
-        self.indication = dict[ACUPOINT_COLUMN_INDICATION];
+        NSString * indication = dict[ACUPOINT_COLUMN_INDICATION];
+        self.indication = [indication AES256DecryptWithKey:key];
     }
     if (dict[ACUPOINT_COLUMN_COMPATIBILITY] && dict[ACUPOINT_COLUMN_COMPATIBILITY] != [NSNull null]) {
-        self.compatibility = dict[ACUPOINT_COLUMN_COMPATIBILITY];
+        NSString * compatibility = dict[ACUPOINT_COLUMN_COMPATIBILITY];
+        self.compatibility = [compatibility AES256DecryptWithKey:key];
     }
     if (dict[ACUPOINT_COLUMN_ACUPUNCTURE] && dict[ACUPOINT_COLUMN_ACUPUNCTURE] != [NSNull null]) {
-        self.acupuncture = dict[ACUPOINT_COLUMN_ACUPUNCTURE];
+        NSString * acupuncture = dict[ACUPOINT_COLUMN_ACUPUNCTURE];
+        self.acupuncture = [acupuncture AES256DecryptWithKey:key];
     }
 }
 

@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7B2C4F311D92761F001F0D30 /* AcupointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C4F301D92761F001F0D30 /* AcupointModel.m */; };
-		7B2C4F331D927B4A001F0D30 /* Acupoint.db in Resources */ = {isa = PBXBuildFile; fileRef = 7B2C4F321D927B4A001F0D30 /* Acupoint.db */; };
 		7B2C4F381D92941A001F0D30 /* AcupointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C4F361D92941A001F0D30 /* AcupointViewController.m */; };
 		7B2C4F391D92941A001F0D30 /* AcupointViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B2C4F371D92941A001F0D30 /* AcupointViewController.xib */; };
 		7B3C1A961D5EB26F008E784B /* HLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C1A951D5EB26F008E784B /* HLTableViewCell.m */; };
+		7B4D7E1B1DF005FE00FB022A /* Aspect-Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4D7E1A1DF005FE00FB022A /* Aspect-Data.m */; };
+		7B4D7E1D1DF0097800FB022A /* Acupoint.data in Resources */ = {isa = PBXBuildFile; fileRef = 7B4D7E1C1DF0097800FB022A /* Acupoint.data */; };
 		7B4DF42E1DD55C5C00D30544 /* URLManager.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B4DF42D1DD55C5C00D30544 /* URLManager.plist */; };
 		7B4DF4321DD5653800D30544 /* HLURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4DF4311DD5653800D30544 /* HLURLManager.m */; };
 		7B4E90251DD4165000CDCA67 /* PositionListSceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4E901E1DD4165000CDCA67 /* PositionListSceneModel.m */; };
@@ -90,12 +91,13 @@
 		6283F4761CAB592CFAE710D6 /* Pods-HealthyLifestyle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyLifestyle.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthyLifestyle/Pods-HealthyLifestyle.release.xcconfig"; sourceTree = "<group>"; };
 		7B2C4F2F1D92761F001F0D30 /* AcupointModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcupointModel.h; sourceTree = "<group>"; };
 		7B2C4F301D92761F001F0D30 /* AcupointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcupointModel.m; sourceTree = "<group>"; };
-		7B2C4F321D927B4A001F0D30 /* Acupoint.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Acupoint.db; sourceTree = "<group>"; };
 		7B2C4F351D92941A001F0D30 /* AcupointViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcupointViewController.h; sourceTree = "<group>"; };
 		7B2C4F361D92941A001F0D30 /* AcupointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcupointViewController.m; sourceTree = "<group>"; };
 		7B2C4F371D92941A001F0D30 /* AcupointViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AcupointViewController.xib; sourceTree = "<group>"; };
 		7B3C1A941D5EB26F008E784B /* HLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTableViewCell.h; sourceTree = "<group>"; };
 		7B3C1A951D5EB26F008E784B /* HLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTableViewCell.m; sourceTree = "<group>"; };
+		7B4D7E1A1DF005FE00FB022A /* Aspect-Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Aspect-Data.m"; sourceTree = "<group>"; };
+		7B4D7E1C1DF0097800FB022A /* Acupoint.data */ = {isa = PBXFileReference; lastKnownFileType = file; path = Acupoint.data; sourceTree = "<group>"; };
 		7B4DF42D1DD55C5C00D30544 /* URLManager.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = URLManager.plist; sourceTree = "<group>"; };
 		7B4DF4301DD5653800D30544 /* HLURLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLURLManager.h; sourceTree = "<group>"; };
 		7B4DF4311DD5653800D30544 /* HLURLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLURLManager.m; sourceTree = "<group>"; };
@@ -418,6 +420,7 @@
 				7BCA58C61D5ADA2E0064A20C /* Aspect-Window.m */,
 				7BCA592E1D5B0D220064A20C /* Aspect-Appearance.m */,
 				7B4E902D1DD47D9400CDCA67 /* Aspect-URL.m */,
+				7B4D7E1A1DF005FE00FB022A /* Aspect-Data.m */,
 				7BCA58AB1D5AC1C30064A20C /* Assets.xcassets */,
 				7BCA58C21D5ADA1C0064A20C /* ViewControllers */,
 				7B51D52B1DC86B20009D23A9 /* Views */,
@@ -496,7 +499,7 @@
 		7BCA58DC1D5AE2670064A20C /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				7B2C4F321D927B4A001F0D30 /* Acupoint.db */,
+				7B4D7E1C1DF0097800FB022A /* Acupoint.data */,
 				7BCA58DE1D5AE2670064A20C /* AppData.h */,
 				7BCA58DF1D5AE2670064A20C /* AppData.m */,
 			);
@@ -676,7 +679,7 @@
 				7BCA590B1D5AE27B0064A20C /* AcupointCategoryTableViewCell.xib in Resources */,
 				7B2C4F391D92941A001F0D30 /* AcupointViewController.xib in Resources */,
 				7B6DF4C41DC996C5009B5840 /* MeScene.xib in Resources */,
-				7B2C4F331D927B4A001F0D30 /* Acupoint.db in Resources */,
+				7B4D7E1D1DF0097800FB022A /* Acupoint.data in Resources */,
 				7B6DF4D41DC9C26E009B5840 /* SearchTableViewCell.xib in Resources */,
 				7B6DF4CC1DC996C5009B5840 /* FavoriteViewController.xib in Resources */,
 				7B51D55C1DC89C87009D23A9 /* SearchViewController.xib in Resources */,
@@ -759,6 +762,7 @@
 				7BCA592F1D5B0D220064A20C /* Aspect-Appearance.m in Sources */,
 				7B4E90261DD4165000CDCA67 /* PositionListViewController.m in Sources */,
 				7B3C1A961D5EB26F008E784B /* HLTableViewCell.m in Sources */,
+				7B4D7E1B1DF005FE00FB022A /* Aspect-Data.m in Sources */,
 				7B6DF4991DC9826E009B5840 /* ControllerModel.m in Sources */,
 				7BCA58A41D5AC1C30064A20C /* AppDelegate.m in Sources */,
 				7B6DF4CF1DC9BE2F009B5840 /* SearchSceneModel.m in Sources */,
@@ -918,7 +922,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/HealthyLifestyle/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.HealthyLifestyle.HealthyLifestyle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HealthyLifestyle.Acupoint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -934,7 +938,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/HealthyLifestyle/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.HealthyLifestyle.HealthyLifestyle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HealthyLifestyle.Acupoint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

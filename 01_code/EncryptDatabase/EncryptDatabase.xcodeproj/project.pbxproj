@@ -1,0 +1,368 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C3F6E5061CE03D301F2D846 /* libPods-EncryptDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 899A0E81D2D2A67D83E18CEF /* libPods-EncryptDatabase.a */; };
+		7B4D7E061DEFC17700FB022A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4D7E051DEFC17700FB022A /* main.m */; };
+		7B4D7E161DEFC4B200FB022A /* AppData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4D7E0E1DEFC4B200FB022A /* AppData.m */; };
+		7B4D7E171DEFC4B200FB022A /* NSData+Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4D7E121DEFC4B200FB022A /* NSData+Encrypt.m */; };
+		7B4D7E181DEFC4B200FB022A /* NSString+Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4D7E151DEFC4B200FB022A /* NSString+Encrypt.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7B4D7E001DEFC17700FB022A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1669A625AA3785BCDC153197 /* Pods-EncryptDatabase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EncryptDatabase.release.xcconfig"; path = "Pods/Target Support Files/Pods-EncryptDatabase/Pods-EncryptDatabase.release.xcconfig"; sourceTree = "<group>"; };
+		6446C64C02D792990CB6465B /* Pods-EncryptDatabase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EncryptDatabase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EncryptDatabase/Pods-EncryptDatabase.debug.xcconfig"; sourceTree = "<group>"; };
+		7B4D7E021DEFC17700FB022A /* EncryptDatabase */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EncryptDatabase; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B4D7E051DEFC17700FB022A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7B4D7E0D1DEFC4B200FB022A /* AppData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppData.h; sourceTree = "<group>"; };
+		7B4D7E0E1DEFC4B200FB022A /* AppData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppData.m; sourceTree = "<group>"; };
+		7B4D7E111DEFC4B200FB022A /* NSData+Encrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Encrypt.h"; sourceTree = "<group>"; };
+		7B4D7E121DEFC4B200FB022A /* NSData+Encrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encrypt.m"; sourceTree = "<group>"; };
+		7B4D7E141DEFC4B200FB022A /* NSString+Encrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Encrypt.h"; sourceTree = "<group>"; };
+		7B4D7E151DEFC4B200FB022A /* NSString+Encrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encrypt.m"; sourceTree = "<group>"; };
+		899A0E81D2D2A67D83E18CEF /* libPods-EncryptDatabase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EncryptDatabase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7B4D7DFF1DEFC17700FB022A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C3F6E5061CE03D301F2D846 /* libPods-EncryptDatabase.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0536E9A7828777DB9CE133AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				899A0E81D2D2A67D83E18CEF /* libPods-EncryptDatabase.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B4D7DF91DEFC17700FB022A = {
+			isa = PBXGroup;
+			children = (
+				7B4D7E041DEFC17700FB022A /* EncryptDatabase */,
+				7B4D7E031DEFC17700FB022A /* Products */,
+				9BDFD896B80B1A3A9F58879A /* Pods */,
+				0536E9A7828777DB9CE133AB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7B4D7E031DEFC17700FB022A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B4D7E021DEFC17700FB022A /* EncryptDatabase */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B4D7E041DEFC17700FB022A /* EncryptDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				7B4D7E0C1DEFC4B200FB022A /* Data */,
+				7B4D7E0F1DEFC4B200FB022A /* Views */,
+				7B4D7E051DEFC17700FB022A /* main.m */,
+			);
+			path = EncryptDatabase;
+			sourceTree = "<group>";
+		};
+		7B4D7E0C1DEFC4B200FB022A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7B4D7E0D1DEFC4B200FB022A /* AppData.h */,
+				7B4D7E0E1DEFC4B200FB022A /* AppData.m */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		7B4D7E0F1DEFC4B200FB022A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7B4D7E101DEFC4B200FB022A /* NSData+Encrypt */,
+				7B4D7E131DEFC4B200FB022A /* NSString+Encrypt */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7B4D7E101DEFC4B200FB022A /* NSData+Encrypt */ = {
+			isa = PBXGroup;
+			children = (
+				7B4D7E111DEFC4B200FB022A /* NSData+Encrypt.h */,
+				7B4D7E121DEFC4B200FB022A /* NSData+Encrypt.m */,
+			);
+			path = "NSData+Encrypt";
+			sourceTree = "<group>";
+		};
+		7B4D7E131DEFC4B200FB022A /* NSString+Encrypt */ = {
+			isa = PBXGroup;
+			children = (
+				7B4D7E141DEFC4B200FB022A /* NSString+Encrypt.h */,
+				7B4D7E151DEFC4B200FB022A /* NSString+Encrypt.m */,
+			);
+			path = "NSString+Encrypt";
+			sourceTree = "<group>";
+		};
+		9BDFD896B80B1A3A9F58879A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6446C64C02D792990CB6465B /* Pods-EncryptDatabase.debug.xcconfig */,
+				1669A625AA3785BCDC153197 /* Pods-EncryptDatabase.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7B4D7E011DEFC17700FB022A /* EncryptDatabase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B4D7E091DEFC17700FB022A /* Build configuration list for PBXNativeTarget "EncryptDatabase" */;
+			buildPhases = (
+				D19C31CAE876941D6B4F3785 /* [CP] Check Pods Manifest.lock */,
+				7B4D7DFE1DEFC17700FB022A /* Sources */,
+				7B4D7DFF1DEFC17700FB022A /* Frameworks */,
+				7B4D7E001DEFC17700FB022A /* CopyFiles */,
+				C423B67AB9BA4E1B8FF92250 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EncryptDatabase;
+			productName = EncryptDatabase;
+			productReference = 7B4D7E021DEFC17700FB022A /* EncryptDatabase */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7B4D7DFA1DEFC17700FB022A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = HealthyLifestyle;
+				TargetAttributes = {
+					7B4D7E011DEFC17700FB022A = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = LSKJ46UNM6;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7B4D7DFD1DEFC17700FB022A /* Build configuration list for PBXProject "EncryptDatabase" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7B4D7DF91DEFC17700FB022A;
+			productRefGroup = 7B4D7E031DEFC17700FB022A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7B4D7E011DEFC17700FB022A /* EncryptDatabase */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C423B67AB9BA4E1B8FF92250 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EncryptDatabase/Pods-EncryptDatabase-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D19C31CAE876941D6B4F3785 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7B4D7DFE1DEFC17700FB022A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B4D7E061DEFC17700FB022A /* main.m in Sources */,
+				7B4D7E181DEFC4B200FB022A /* NSString+Encrypt.m in Sources */,
+				7B4D7E171DEFC4B200FB022A /* NSData+Encrypt.m in Sources */,
+				7B4D7E161DEFC4B200FB022A /* AppData.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7B4D7E071DEFC17700FB022A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7B4D7E081DEFC17700FB022A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7B4D7E0A1DEFC17700FB022A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6446C64C02D792990CB6465B /* Pods-EncryptDatabase.debug.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = LSKJ46UNM6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7B4D7E0B1DEFC17700FB022A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1669A625AA3785BCDC153197 /* Pods-EncryptDatabase.release.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = LSKJ46UNM6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7B4D7DFD1DEFC17700FB022A /* Build configuration list for PBXProject "EncryptDatabase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B4D7E071DEFC17700FB022A /* Debug */,
+				7B4D7E081DEFC17700FB022A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B4D7E091DEFC17700FB022A /* Build configuration list for PBXNativeTarget "EncryptDatabase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B4D7E0A1DEFC17700FB022A /* Debug */,
+				7B4D7E0B1DEFC17700FB022A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7B4D7DFA1DEFC17700FB022A /* Project object */;
+}

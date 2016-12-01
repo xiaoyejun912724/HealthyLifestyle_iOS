@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (Encrypt)
+@interface NSData (Encrypt)
 
 // 加密
-- (NSString *)AES256EncryptWithKey:(NSString *)key;
+- (NSData *)AES256EncryptWithKey:(NSString *)key;
 // 解密
-- (NSString *)AES256DecryptWithKey:(NSString *)key;
+- (NSData *)AES256DecryptWithKey:(NSString *)key;
 
 @end

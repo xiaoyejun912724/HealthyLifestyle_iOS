@@ -31,8 +31,10 @@ DEF_SINGLETON(AppData)
 }
 
 - (void)setupData {
-    NSString * filePath = [[NSBundle mainBundle] pathForResource:@"Acupoint" ofType:@"db"];
-    self.databaseQueue = [FMDatabaseQueue databaseQueueWithPath:filePath];
+    NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString * documentDirectory = [paths firstObject];
+    NSString * dbPath = [documentDirectory stringByAppendingPathComponent:@"Acupoint.db"];
+    self.databaseQueue = [FMDatabaseQueue databaseQueueWithPath:dbPath];
 }
 
 @end
