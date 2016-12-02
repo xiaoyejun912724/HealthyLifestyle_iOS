@@ -5,7 +5,7 @@
   "homepage": "http://easyios.iosx.me",
   "social_media_url": "http://www.iosx.me",
   "platforms": {
-    "ios": "6.0"
+    "ios": "8.0"
   },
   "license": {
     "type": "MIT",
@@ -63,7 +63,7 @@
         "TMCache": [
 
         ],
-        "UIActivityIndicator-for-SDWebImage": [
+        "SDWebImage": [
 
         ],
         "AFNetworking": [

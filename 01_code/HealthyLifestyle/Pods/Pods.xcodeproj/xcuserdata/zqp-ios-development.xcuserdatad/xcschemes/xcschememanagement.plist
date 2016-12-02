@@ -104,11 +104,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>UIActivityIndicator-for-SDWebImage.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>UIAlertController+Blocks.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -132,127 +127,122 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>080317F80A110EAD636F0D2484C10657</key>
+		<key>04CF549EBEEE7BC87AEAE35397184D94</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>09C69D60D475D954905849B5D238EDFE</key>
+		<key>12832CF5B98D090A91D8D68376A421FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0A016EBBF9DA8E14CB3DF954F8CDE33F</key>
+		<key>1731726961A67238941BE08460986314</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>32CF903CA2D976798A26AD48C08E0204</key>
+		<key>3BE791C29B8322682C46093CC035176A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>35648A30688AE3291CC345F191EB2079</key>
+		<key>455A0ACC599CE770C1E0E978C1A924C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3AA2BD3EB4A9D72C937B09B0D631726F</key>
+		<key>497550F75C598F29AF7E7BFD4C4B0B12</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4AA6FCD911832425DF26482171AB5A22</key>
+		<key>5FA4EE81B98E712F620B66E64D4FD634</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
+		<key>601AEEFCBBC5D28DE796A3CEDA7E3A86</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>55DBDD8B7D446F1D618F303A9FB53209</key>
+		<key>762C6E722209D9E4EE2B13B220C8A23E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>56FAAAA60EAE5C6B89765740102350D7</key>
+		<key>805B9CC7D801CC7134354ACE09B259D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6CF9E301E6BB6DAAE780C1CAA71C07D8</key>
+		<key>85A9909E8592DF779A271752717E1B24</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>70BC44266C6FFE30D2C57129458E070B</key>
+		<key>8642CC820CE8C5B88C113D7F47AF4BC3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>71805A6DA4A0FA3ECACC29E0094E9611</key>
+		<key>9650B5ADCE86F1A055FAFC635284BDB5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>914F350AF39D97BEDB0740FBB33D6720</key>
+		<key>98DF3AD90C50A86C2639436D0AAE25F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>928353533005A4198EBDA5B700D37B64</key>
+		<key>9DC8D9E02903E93BD0B2FEC9D846EA20</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>99F2944363BFE2E2D023709FD6CEE2F2</key>
+		<key>9E033EDB5EC0819481B0546434FA577B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9F12FB4A63E20F601CFB2E64A65B57C1</key>
+		<key>A94BAD001087E1B62C1C321B39A0E2DA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9F5478F8988BE414CC63A3FC5DB641D8</key>
+		<key>B3E6DC499DAB1B4236999D0464BBBE49</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A00282DC8DE887B6EF5F47B63FDBD8F6</key>
+		<key>B9E2E2872AF78187B1D875F361AF5E38</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A37DF2C1674E0944EA3B35BFA1FEFEAE</key>
+		<key>C693668A83DD9470C4CA5EF548F0D89B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AA050C6115C9CE19E9FAF7131FB6165F</key>
+		<key>C8CFFA66F84862E201AD308E71D9E824</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B0AF0662B54876F49BCAB6286D09C6C4</key>
+		<key>D3A81932CC0F668BA13976604EB67C19</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CCBEB7B548FCC76174DE4B33A5580096</key>
+		<key>F824E1D847E4EAFCB98908AB3851AB7E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F447169F7C6F8F2028AC6A85DE6CDBAF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F8AF0C73B4A38D257DDD60BEAE2DAEF4</key>
+		<key>FEF403AA5BB1222614A72B430FD0D4AE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

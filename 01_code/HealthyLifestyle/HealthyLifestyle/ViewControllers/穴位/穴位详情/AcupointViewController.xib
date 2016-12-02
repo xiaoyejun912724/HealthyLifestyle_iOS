@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="acupunctureTextView" destination="4ds-k2-gi8" id="VwW-25-T6S"/>
                 <outlet property="acupunctureTitleLabel" destination="o4S-wB-Cjc" id="7zu-YL-kcG"/>
+                <outlet property="bannerView" destination="i4m-tX-6iL" id="PJD-uK-84h"/>
                 <outlet property="compatibilityTextView" destination="QKT-jR-tDx" id="TgL-A6-JQB"/>
                 <outlet property="compatibilityTitleLabel" destination="dlu-MD-t3W" id="JKB-FZ-qsX"/>
                 <outlet property="function_text_view" destination="tQm-fV-KFF" id="1Yo-mG-qxY"/>
@@ -31,7 +32,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUy-Sk-OSD">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mRD-KY-4V7" userLabel="Content View">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
@@ -204,13 +205,23 @@
                         <constraint firstAttribute="bottom" secondItem="mRD-KY-4V7" secondAttribute="bottom" id="Wqz-Fx-yvR"/>
                     </constraints>
                 </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4m-tX-6iL" customClass="GADBannerView">
+                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="S3I-04-Bpt"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="KUy-Sk-OSD" secondAttribute="trailing" id="EAu-Au-zZd"/>
-                <constraint firstAttribute="bottom" secondItem="KUy-Sk-OSD" secondAttribute="bottom" id="asP-uU-ebZ"/>
+                <constraint firstItem="i4m-tX-6iL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Foo-r0-uCM"/>
+                <constraint firstAttribute="bottom" secondItem="i4m-tX-6iL" secondAttribute="bottom" id="Gsl-Uk-Z2t"/>
+                <constraint firstAttribute="bottom" secondItem="KUy-Sk-OSD" secondAttribute="bottom" constant="50" id="asP-uU-ebZ"/>
                 <constraint firstItem="KUy-Sk-OSD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="l0Q-qj-saU"/>
                 <constraint firstItem="KUy-Sk-OSD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lSz-Dq-VM2"/>
+                <constraint firstAttribute="trailing" secondItem="i4m-tX-6iL" secondAttribute="trailing" id="wZn-hd-Jhy"/>
             </constraints>
             <point key="canvasLocation" x="35.5" y="53.5"/>
         </view>

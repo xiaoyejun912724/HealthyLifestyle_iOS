@@ -33,18 +33,19 @@ PODS:
     - JSONModel
     - MBProgressHUD
     - ReactiveCocoa (= 2.4.4)
+    - SDWebImage
     - SharkORM
     - TMCache
-    - UIActivityIndicator-for-SDWebImage
   - FLKAutoLayout (0.1.1)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
   - FontIcon (1.0)
   - GCDObjC (0.3.0)
-  - IQKeyboardManager (3.3.7)
-  - JSONModel (1.4.0)
-  - Masonry (1.0.1)
+  - Google-Mobile-Ads-SDK (7.15.0)
+  - IQKeyboardManager (4.0.7)
+  - JSONModel (1.7.0)
+  - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.12)
   - ReactiveCocoa (2.4.4):
@@ -55,22 +56,20 @@ PODS:
   - ReactiveCocoa/UI (2.4.4):
     - ReactiveCocoa/Core
   - RegExCategories (1.0)
-  - RMUniversalAlert (0.7):
-    - RMUniversalAlert/Core (= 0.7)
-  - RMUniversalAlert/Core (0.7):
+  - RMUniversalAlert (0.8.1):
+    - RMUniversalAlert/Core (= 0.8.1)
+  - RMUniversalAlert/Core (0.8.1):
     - UIActionSheet+Blocks (>= 0.9)
     - UIAlertController+Blocks (>= 0.9)
     - UIAlertView+Blocks (>= 0.9)
-  - SDWebImage (3.8.1):
-    - SDWebImage/Core (= 3.8.1)
-  - SDWebImage/Core (3.8.1)
-  - SharkORM (2.0.8)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - SharkORM (2.0.9)
   - TMCache (2.1.0)
-  - TTTAttributedLabel (1.13.4)
+  - TTTAttributedLabel (2.0.0)
   - UIActionSheet+Blocks (0.9)
-  - UIActivityIndicator-for-SDWebImage (1.2):
-    - SDWebImage (~> 3.7)
-  - UIAlertController+Blocks (0.9)
+  - UIAlertController+Blocks (0.9.2)
   - UIAlertView+Blocks (0.9)
   - UICKeyChainStore (2.1.0)
   - XAspect (1.0.5):
@@ -85,6 +84,7 @@ DEPENDENCIES:
   - EasyIOS (from `https://github.com/zhuchaowe/EasyIOS.git`)
   - EasyIOS-Extention
   - FMDB
+  - Google-Mobile-Ads-SDK
   - Masonry
   - MJRefresh
 
@@ -94,36 +94,36 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   EasyIOS:
-    :commit: 21c5755a035868dd1459ab5b652887608c57c770
+    :commit: 9057d2fc12efeb4a3d89fe39a3a6dac170b464cc
     :git: https://github.com/zhuchaowe/EasyIOS.git
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  EasyIOS: 169bb35c45bd329fd9620946aee6a5526d246d85
+  EasyIOS: 9fdcb7b036b685a729d56d8f8232061dd62f8696
   EasyIOS-Extention: c7e402e8b2497760955510228771512c37110aa2
   FLKAutoLayout: 95b12c5cd9652100235140b68652f063f7437851
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   FontIcon: 24a07541244227b865e689217efd7d049ba7cc43
   GCDObjC: 0c31898f34d8605196ac0343c65b496609d7dee6
-  IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
-  JSONModel: 58fe3f8c29ff95ed94e7ee7dde87e807f5da5371
-  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  Google-Mobile-Ads-SDK: 75d41dfcf06f7666ab211573d212768b0f766c5d
+  IQKeyboardManager: 69002bb4fea60596b710e57d426abc00e5063630
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   ReactiveCocoa: cbe3b5eae464aa72a348a7323996b171728a9e71
   RegExCategories: e68befacacd5bda853c88f70ec745cb2d0cfb89c
-  RMUniversalAlert: bce2ca406c24065b76665725c83e48006e8f65f8
-  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
-  SharkORM: fb34973ab26eb1c0ef8a8cb1be376be7712aa253
+  RMUniversalAlert: ce7118101a19fa41b9adedf907b66a8cc3bd32c8
+  SDWebImage: '098e97e6176540799c27e804c96653ee0833d13c'
+  SharkORM: 4a7702d6b4deee7ac4454ff5c092141a05cdcebf
   TMCache: 95ebcc9b3c7e90fb5fd8fc3036cba3aa781c9bed
-  TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
+  TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   UIActionSheet+Blocks: e180b7dad0a721ab7f212ac9742af799008bb358
-  UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
-  UIAlertController+Blocks: b48c673ff60726da468b32ab21bbc7683512d45b
+  UIAlertController+Blocks: 80e28b92523fb58aba4d1bccec013d5a0b0bddb2
   UIAlertView+Blocks: a46c99c5144f6c5dbc7d62fd2a0678daceec89a3
   UICKeyChainStore: f1cbd42216a113f0165de1e733e62905b8823432
   XAspect: db50bf487f92dbb8557a7a5365556966c8493af8
 
-PODFILE CHECKSUM: c141f42a203c1c2affc209dc59915f4f80c80d24
+PODFILE CHECKSUM: 1e7edb17b15dc04b8eb088337dc4121ed883e3f4
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.1

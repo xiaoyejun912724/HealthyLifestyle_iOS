@@ -11,6 +11,8 @@
 #import "XYEnum.h"
 #import "HLNavigationView.h"
 
+@import GoogleMobileAds;
+
 @interface AcupointViewController () <HLNavigationViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView * meridian_text_view;
@@ -25,6 +27,8 @@
 @property (weak, nonatomic) IBOutlet UITextView * compatibilityTextView;
 @property (weak, nonatomic) IBOutlet UILabel * acupunctureTitleLabel;
 @property (weak, nonatomic) IBOutlet UITextView * acupunctureTextView;
+
+@property (weak, nonatomic) IBOutlet GADBannerView * bannerView;
 
 @property (nonatomic, strong) AcupointModel * acupointModel;
 
@@ -83,7 +87,9 @@
 }
 
 - (void)setupView {
-    
+    self.bannerView.adUnitID = @"ca-app-pub-3940256099942544/2934735716";
+    self.bannerView.rootViewController = self;
+    [self.bannerView loadRequest:[GADRequest request]];
 }
 
 - (void)setupData {

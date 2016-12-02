@@ -1,9 +1,26 @@
+//    MIT License
 //
-//  SRKTransactionGroup.m
-//  SharkORM
+//    Copyright (c) 2016 SharkSync
 //
-//  Copyright © 2016 SharkSync. All rights reserved.
+//    Permission is hereby granted, free of charge, to any person obtaining a copy
+//    of this software and associated documentation files (the "Software"), to deal
+//    in the Software without restriction, including without limitation the rights
+//    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//    copies of the Software, and to permit persons to whom the Software is
+//    furnished to do so, subject to the following conditions:
 //
+//    The above copyright notice and this permission notice shall be included in all
+//    copies or substantial portions of the Software.
+//
+//    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//    SOFTWARE.
+
+
 
 #import "SRKTransactionGroup.h"
 #import "SRKObject+Private.h"
@@ -11,6 +28,7 @@
 #import "SharkORM+Private.h"
 #import "sqlite3.h"
 #import "SRKRegistry.h"
+#import "SRKGlobals.h"
 
 static NSMutableDictionary* transactionForThread = nil;
 
@@ -96,7 +114,7 @@ static NSMutableDictionary* transactionForThread = nil;
 		
 		
 		/* loop the transactions per database file */
-		@synchronized(SRK_LOCK_WRITE) {
+		@synchronized([[SRKGlobals sharedObject] writeLockObject]) {
 			
 			for (NSString* databaseNameForClass in self.usedDatabases) {
 				if (succeded) {
@@ -122,7 +140,9 @@ static NSMutableDictionary* transactionForThread = nil;
 														sqlite3_bind_double(statement, idx, [(NSNumber*)value doubleValue]);
 													}
 													
-												} else if ([value isKindOfClass:[NSString class]]) {
+                                                } else if ([value isKindOfClass:[NSDate class]]) {
+                                                    sqlite3_bind_double(statement, idx, [@(((NSDate*)value).timeIntervalSince1970) doubleValue]);
+                                                } else if ([value isKindOfClass:[NSString class]]) {
 													sqlite3_bind_text16(statement, idx, [(NSString*)value cStringUsingEncoding:NSUTF16StringEncoding],@([(NSString*)value lengthOfBytesUsingEncoding:NSUTF16StringEncoding]).intValue , SQLITE_TRANSIENT);
 												} else if ([value isKindOfClass:[NSData class]]) {
 													NSData* d = (NSData*)value;
@@ -157,12 +177,12 @@ static NSMutableDictionary* transactionForThread = nil;
 												default:
 												{
 													/* error in upsert statement */
-													if (delegate && [delegate respondsToSelector:@selector(databaseError:)]) {
+													if ([[SRKGlobals sharedObject] delegate] && [[[SRKGlobals sharedObject] delegate] respondsToSelector:@selector(databaseError:)]) {
 														
 														SRKError* e = [SRKError new];
 														e.sqlQuery = item.statementSQL;
 														e.errorMessage = [NSString stringWithUTF8String:sqlite3_errmsg(databaseHandle)];
-														[delegate databaseError:e];
+														[[[SRKGlobals sharedObject] delegate] databaseError:e];
 														
 													}
 													succeded = NO;
@@ -171,12 +191,12 @@ static NSMutableDictionary* transactionForThread = nil;
 											}
 										} else {
 											/* error in prepare statement */
-											if (delegate && [delegate respondsToSelector:@selector(databaseError:)]) {
+											if ([[SRKGlobals sharedObject] delegate] && [[[SRKGlobals sharedObject] delegate] respondsToSelector:@selector(databaseError:)]) {
 												
 												SRKError* e = [SRKError new];
 												e.sqlQuery = item.statementSQL;
 												e.errorMessage = [NSString stringWithUTF8String:sqlite3_errmsg(databaseHandle)];
-												[delegate databaseError:e];
+												[[[SRKGlobals sharedObject] delegate] databaseError:e];
 												
 											}
 										}

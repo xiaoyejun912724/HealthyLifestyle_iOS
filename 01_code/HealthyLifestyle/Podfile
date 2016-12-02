@@ -1,6 +1,8 @@
-platform :ios, "7.0"
+source 'https://github.com/CocoaPods/Specs.git'
 
-target "HealthyLifestyle" do
+platform :ios, '8.0'
+
+target 'HealthyLifestyle' do
 
 pod 'EasyIOS', :git=>'https://github.com/zhuchaowe/EasyIOS.git' #必须得这样写才能更新2.2.3版本，如果仅仅写[pod 'EasyIOS']，那么将更新2.2.2版本
 pod 'EasyIOS-Extention'
@@ -8,6 +10,7 @@ pod 'AFNetworking'
 pod 'Masonry'                       #自动布局框架
 pod 'MJRefresh'
 pod 'FMDB'
+pod 'Google-Mobile-Ads-SDK'
 #pod 'HMSegmentedControl'
 #pod 'MZTimerLabel'
 #pod 'EAIntroView'

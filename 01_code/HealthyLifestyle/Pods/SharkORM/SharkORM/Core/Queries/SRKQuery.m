@@ -1,9 +1,26 @@
+//    MIT License
 //
-//  SRKQuery.m
-//  SharkORM
+//    Copyright (c) 2016 SharkSync
 //
-//  Copyright © 2016 SharkSync. All rights reserved.
+//    Permission is hereby granted, free of charge, to any person obtaining a copy
+//    of this software and associated documentation files (the "Software"), to deal
+//    in the Software without restriction, including without limitation the rights
+//    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//    copies of the Software, and to permit persons to whom the Software is
+//    furnished to do so, subject to the following conditions:
 //
+//    The above copyright notice and this permission notice shall be included in all
+//    copies or substantial portions of the Software.
+//
+//    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//    SOFTWARE.
+
+
 
 #import <Foundation/Foundation.h>
 #import "SharkORM.h"
@@ -16,6 +33,7 @@
 #import "SRKJoinObject.h"
 #import "SRKRegistry.h"
 #import "SRKObject+Private.h"
+#import "SRKGlobals.h"
 
 @implementation SRKQuery
 
@@ -406,8 +424,8 @@
 			SRKError* err = [SRKError new];
 			err.errorMessage = [NSString stringWithFormat:@"You have attempted to query the class '%@' using the fts (Full Text Search) query object.  But this class does not implement the 'FTSParametersForEntity' method, so the query returned no results.", self.classDecl];
 			
-			if ([delegate respondsToSelector:@selector(databaseError:)]) {
-				[delegate performSelector:@selector(databaseError:) withObject:err];
+			if ([[[SRKGlobals sharedObject] delegate] respondsToSelector:@selector(databaseError:)]) {
+				[[[SRKGlobals sharedObject] delegate] performSelector:@selector(databaseError:) withObject:err];
 			}
 			return [SRKResultSet new]; /* no results, as no FTS objects to query */
 		}
