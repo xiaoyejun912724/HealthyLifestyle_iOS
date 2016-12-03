@@ -100,9 +100,9 @@
     self.bannerView.rootViewController = self;
     self.bannerView.delegate = self;
     GADRequest * request = [GADRequest request];
-    if (DEBUG) {
+#ifdef DEBUG
         request.testDevices = @[@"960ecce3af9959491fe0f88620372036"];
-    }
+#endif
     [self.bannerView loadRequest:request];
 }
 

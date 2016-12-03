@@ -657,7 +657,7 @@
 				TargetAttributes = {
 					7BCA589B1D5AC1C30064A20C = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = LSKJ46UNM6;
+						DevelopmentTeam = F2HNAW2WFA;
 					};
 				};
 			};
@@ -932,7 +932,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "compiler-default";
-				DEVELOPMENT_TEAM = LSKJ46UNM6;
+				DEVELOPMENT_TEAM = F2HNAW2WFA;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HealthyLifestyle/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/HealthyLifestyle/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -949,7 +949,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "compiler-default";
-				DEVELOPMENT_TEAM = LSKJ46UNM6;
+				DEVELOPMENT_TEAM = F2HNAW2WFA;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HealthyLifestyle/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/HealthyLifestyle/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
