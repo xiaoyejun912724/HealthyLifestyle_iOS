@@ -29,7 +29,7 @@
     [[AppData sharedInstance].databaseQueue inDatabase:^(FMDatabase *db) {
         if ([db open]) {
             self.acupointList = [NSMutableArray array];
-            NSString * query = [NSString stringWithFormat:@"SELECT * FROM `%@` WHERE `cn_name` LIKE '%%%@%%'", ACUPOINT_TABLE_NAME, keyword];
+            NSString * query = [NSString stringWithFormat:@"SELECT * FROM `%@` WHERE `name` LIKE '%%%@%%' OR `cn_name` LIKE '%%%@%%' OR `pinyin` LIKE '%%%@%%' OR `code` LIKE '%%%@%%'", ACUPOINT_TABLE_NAME, keyword, keyword, keyword, keyword];
             FMResultSet * rs = [db executeQuery:query];
             while ([rs next]) {
                 AcupointModel * model = [AcupointModel modelWithDict:@{ACUPOINT_COLUMN_ID:[rs stringForColumn:ACUPOINT_COLUMN_ID],

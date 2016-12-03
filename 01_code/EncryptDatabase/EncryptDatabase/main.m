@@ -21,7 +21,7 @@ int main(int argc, const char * argv[]) {
         
         
         [[AppData sharedInstance].databaseQueue inDatabase:^(FMDatabase *db) {
-            /*
+            
             if ([db open]) {
                 NSInteger start = 0;
                 while (YES) {
@@ -92,7 +92,7 @@ int main(int argc, const char * argv[]) {
                 }
             };
             [db close];
-            */
+            
             
             NSString * key = @"EAB01680929CC37E1A8A71A6C1C13AAB";
             NSString * filePath = @"/Users/zqp-ios-development/Desktop/HealthyLifestyle/HealthyLifestyle_iOS/04_database/Acupoint_encrypt.db";

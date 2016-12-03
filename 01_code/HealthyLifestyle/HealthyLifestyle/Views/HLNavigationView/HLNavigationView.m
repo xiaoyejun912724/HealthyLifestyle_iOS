@@ -28,7 +28,7 @@
 
 - (HLNavigationSelectAction *)actionWithType:(HLNavigationSelectActionType)type {
     if (type == HLNavigationSelectActionTypeSearch) {
-        HLNavigationSelectAction * action = [HLNavigationSelectAction actionWithTitle:@"搜索" handler:^(HLNavigationSelectAction * action) {
+        HLNavigationSelectAction * action = [HLNavigationSelectAction actionWithTitle:NSLocalizedString(@"搜索", nil) handler:^(HLNavigationSelectAction * action) {
             [self hideButtonTouchUpInside];
             if (self.delegate && [self.delegate respondsToSelector:@selector(navigationViewDidSearch)]) {
                 [self.delegate navigationViewDidSearch];
@@ -36,7 +36,7 @@
         }];
         return action;
     } else if (type == HLNavigationSelectActionTypeCollect) {
-        HLNavigationSelectAction * action = [HLNavigationSelectAction actionWithTitle:@"收藏" handler:^(HLNavigationSelectAction * action) {
+        HLNavigationSelectAction * action = [HLNavigationSelectAction actionWithTitle:NSLocalizedString(@"收藏", nil) handler:^(HLNavigationSelectAction * action) {
             [self hideButtonTouchUpInside];
             if (self.delegate && [self.delegate respondsToSelector:@selector(navigationViewDidCollect)]) {
                 [self.delegate navigationViewDidCollect];

@@ -54,6 +54,7 @@
 		7B6DF4CF1DC9BE2F009B5840 /* SearchSceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6DF4CE1DC9BE2F009B5840 /* SearchSceneModel.m */; };
 		7B6DF4D31DC9C26E009B5840 /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6DF4D11DC9C26E009B5840 /* SearchTableViewCell.m */; };
 		7B6DF4D41DC9C26E009B5840 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6DF4D21DC9C26E009B5840 /* SearchTableViewCell.xib */; };
+		7B8FB3371DF29091003EA465 /* HLTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8FB3361DF29091003EA465 /* HLTextView.m */; };
 		7BCA58A41D5AC1C30064A20C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58A31D5AC1C30064A20C /* AppDelegate.m */; };
 		7BCA58AC1D5AC1C30064A20C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BCA58AB1D5AC1C30064A20C /* Assets.xcassets */; };
 		7BCA58BA1D5AC20F0064A20C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCA58B81D5AC20F0064A20C /* main.m */; };
@@ -167,6 +168,8 @@
 		7B6DF4D01DC9C26E009B5840 /* SearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
 		7B6DF4D11DC9C26E009B5840 /* SearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
 		7B6DF4D21DC9C26E009B5840 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		7B8FB3351DF29091003EA465 /* HLTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTextView.h; sourceTree = "<group>"; };
+		7B8FB3361DF29091003EA465 /* HLTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTextView.m; sourceTree = "<group>"; };
 		7BCA589C1D5AC1C30064A20C /* HealthyLifestyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthyLifestyle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCA58A21D5AC1C30064A20C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7BCA58A31D5AC1C30064A20C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -278,6 +281,7 @@
 		7B51D52B1DC86B20009D23A9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7B8FB3341DF29091003EA465 /* HLTextView */,
 				7BDF50FE1DEED053004B8848 /* NSData+Encrypt */,
 				7BDF51011DEED053004B8848 /* NSString+Encrypt */,
 				7BD144611DD5BC7B00545872 /* NSString+HL */,
@@ -392,6 +396,15 @@
 				7B6DF4C21DC996C5009B5840 /* FavoriteViewController.xib */,
 			);
 			path = "收藏";
+			sourceTree = "<group>";
+		};
+		7B8FB3341DF29091003EA465 /* HLTextView */ = {
+			isa = PBXGroup;
+			children = (
+				7B8FB3351DF29091003EA465 /* HLTextView.h */,
+				7B8FB3361DF29091003EA465 /* HLTextView.m */,
+			);
+			path = HLTextView;
 			sourceTree = "<group>";
 		};
 		7BCA58931D5AC1C30064A20C = {
@@ -763,6 +776,7 @@
 				7B4E90261DD4165000CDCA67 /* PositionListViewController.m in Sources */,
 				7B3C1A961D5EB26F008E784B /* HLTableViewCell.m in Sources */,
 				7B4D7E1B1DF005FE00FB022A /* Aspect-Data.m in Sources */,
+				7B8FB3371DF29091003EA465 /* HLTextView.m in Sources */,
 				7B6DF4991DC9826E009B5840 /* ControllerModel.m in Sources */,
 				7BCA58A41D5AC1C30064A20C /* AppDelegate.m in Sources */,
 				7B6DF4CF1DC9BE2F009B5840 /* SearchSceneModel.m in Sources */,
@@ -916,6 +930,7 @@
 			baseConfigurationReference = F301703D858F82859DDED8E5 /* Pods-HealthyLifestyle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "compiler-default";
 				DEVELOPMENT_TEAM = LSKJ46UNM6;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HealthyLifestyle/Supporting Files/PrefixHeader.pch";
@@ -932,6 +947,7 @@
 			baseConfigurationReference = 6283F4761CAB592CFAE710D6 /* Pods-HealthyLifestyle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "compiler-default";
 				DEVELOPMENT_TEAM = LSKJ46UNM6;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HealthyLifestyle/Supporting Files/PrefixHeader.pch";

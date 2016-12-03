@@ -14,6 +14,7 @@
                 <outlet property="acupunctureTextView" destination="4ds-k2-gi8" id="VwW-25-T6S"/>
                 <outlet property="acupunctureTitleLabel" destination="o4S-wB-Cjc" id="7zu-YL-kcG"/>
                 <outlet property="bannerView" destination="i4m-tX-6iL" id="PJD-uK-84h"/>
+                <outlet property="bannerViewConstraint" destination="S3I-04-Bpt" id="I1c-Ih-fXt"/>
                 <outlet property="compatibilityTextView" destination="QKT-jR-tDx" id="TgL-A6-JQB"/>
                 <outlet property="compatibilityTitleLabel" destination="dlu-MD-t3W" id="JKB-FZ-qsX"/>
                 <outlet property="function_text_view" destination="tQm-fV-KFF" id="1Yo-mG-qxY"/>
@@ -23,6 +24,8 @@
                 <outlet property="positionTextView" destination="90I-2I-VjM" id="ruf-XD-OIN"/>
                 <outlet property="positionTitleLabel" destination="eGj-lz-Gc3" id="TJT-kw-fzF"/>
                 <outlet property="position_text_view" destination="KFm-Dx-uIE" id="aOh-mq-RPw"/>
+                <outlet property="scrollView" destination="KUy-Sk-OSD" id="7qG-SW-51h"/>
+                <outlet property="scrollViewConstraint" destination="asP-uU-ebZ" id="2mS-VY-8p7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,31 +35,28 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUy-Sk-OSD">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mRD-KY-4V7" userLabel="Content View">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                             <subviews>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sBx-rP-LtT" userLabel="Meridian Text View">
+                                <textView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sBx-rP-LtT" userLabel="Meridian Text View" customClass="HLTextView">
                                     <rect key="frame" x="5" y="5" width="365" height="33"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                 </textView>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KFm-Dx-uIE" userLabel="Position Text View">
+                                <textView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KFm-Dx-uIE" userLabel="Position Text View" customClass="HLTextView">
                                     <rect key="frame" x="5" y="38" width="365" height="33"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                 </textView>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tQm-fV-KFF" userLabel="Function Text View">
+                                <textView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tQm-fV-KFF" userLabel="Function Text View" customClass="HLTextView">
                                     <rect key="frame" x="5" y="71" width="365" height="33"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                 </textView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="But-EQ-1M6" userLabel="Line View">
                                     <rect key="frame" x="10" y="109" width="355" height="1"/>
@@ -71,12 +71,11 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gS2-MJ-JaJ" userLabel="Indication Text View">
+                                <textView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gS2-MJ-JaJ" userLabel="Indication Text View" customClass="HLTextView">
                                     <rect key="frame" x="5" y="142" width="365" height="33"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                 </textView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gur-hO-WaC" userLabel="Line View">
                                     <rect key="frame" x="10" y="180" width="355" height="0.0"/>
@@ -91,12 +90,11 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="90I-2I-VjM" userLabel="Position Text View">
+                                <textView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="90I-2I-VjM" userLabel="Position Text View" customClass="HLTextView">
                                     <rect key="frame" x="5" y="212" width="365" height="33"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                 </textView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oAr-Io-Pif" userLabel="Line View">
                                     <rect key="frame" x="10" y="250" width="355" height="0.0"/>
@@ -111,12 +109,11 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QKT-jR-tDx" userLabel="Cooperation Text View">
+                                <textView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QKT-jR-tDx" userLabel="Cooperation Text View" customClass="HLTextView">
                                     <rect key="frame" x="5" y="282" width="365" height="33"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                 </textView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lr0-BU-BAr" userLabel="Line View">
                                     <rect key="frame" x="10" y="320" width="355" height="0.0"/>
@@ -131,12 +128,11 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4ds-k2-gi8" userLabel="Acupuncture Text View">
+                                <textView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4ds-k2-gi8" userLabel="Acupuncture Text View" customClass="HLTextView">
                                     <rect key="frame" x="5" y="352" width="365" height="33"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                 </textView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCc-la-IT6" userLabel="Line View">
                                     <rect key="frame" x="10" y="390" width="355" height="0.0"/>
@@ -206,7 +202,7 @@
                     </constraints>
                 </scrollView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4m-tX-6iL" customClass="GADBannerView">
-                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <rect key="frame" x="0.0" y="667" width="375" height="50"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="S3I-04-Bpt"/>
@@ -215,10 +211,10 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="i4m-tX-6iL" firstAttribute="top" secondItem="KUy-Sk-OSD" secondAttribute="bottom" id="7TI-5C-SGI"/>
                 <constraint firstAttribute="trailing" secondItem="KUy-Sk-OSD" secondAttribute="trailing" id="EAu-Au-zZd"/>
                 <constraint firstItem="i4m-tX-6iL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Foo-r0-uCM"/>
-                <constraint firstAttribute="bottom" secondItem="i4m-tX-6iL" secondAttribute="bottom" id="Gsl-Uk-Z2t"/>
-                <constraint firstAttribute="bottom" secondItem="KUy-Sk-OSD" secondAttribute="bottom" constant="50" id="asP-uU-ebZ"/>
+                <constraint firstAttribute="bottom" secondItem="KUy-Sk-OSD" secondAttribute="bottom" id="asP-uU-ebZ"/>
                 <constraint firstItem="KUy-Sk-OSD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="l0Q-qj-saU"/>
                 <constraint firstItem="KUy-Sk-OSD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lSz-Dq-VM2"/>
                 <constraint firstAttribute="trailing" secondItem="i4m-tX-6iL" secondAttribute="trailing" id="wZn-hd-Jhy"/>

@@ -10,25 +10,30 @@
 #import "AcupointModel.h"
 #import "XYEnum.h"
 #import "HLNavigationView.h"
+#import "HLTextView.h"
 
 @import GoogleMobileAds;
 
-@interface AcupointViewController () <HLNavigationViewDelegate>
+@interface AcupointViewController () <HLNavigationViewDelegate, GADBannerViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextView * meridian_text_view;
-@property (weak, nonatomic) IBOutlet UITextView * position_text_view;
-@property (weak, nonatomic) IBOutlet UITextView * function_text_view;
+@property (weak, nonatomic) IBOutlet HLTextView * meridian_text_view;
+@property (weak, nonatomic) IBOutlet HLTextView * position_text_view;
+@property (weak, nonatomic) IBOutlet HLTextView * function_text_view;
 
 @property (weak, nonatomic) IBOutlet UILabel * indicationTitleLabel;
-@property (weak, nonatomic) IBOutlet UITextView * indicationTextView;
+@property (weak, nonatomic) IBOutlet HLTextView * indicationTextView;
 @property (weak, nonatomic) IBOutlet UILabel * positionTitleLabel;
-@property (weak, nonatomic) IBOutlet UITextView * positionTextView;
+@property (weak, nonatomic) IBOutlet HLTextView * positionTextView;
 @property (weak, nonatomic) IBOutlet UILabel * compatibilityTitleLabel;
-@property (weak, nonatomic) IBOutlet UITextView * compatibilityTextView;
+@property (weak, nonatomic) IBOutlet HLTextView * compatibilityTextView;
 @property (weak, nonatomic) IBOutlet UILabel * acupunctureTitleLabel;
-@property (weak, nonatomic) IBOutlet UITextView * acupunctureTextView;
+@property (weak, nonatomic) IBOutlet HLTextView * acupunctureTextView;
 
+@property (weak, nonatomic) IBOutlet UIScrollView * scrollView;
 @property (weak, nonatomic) IBOutlet GADBannerView * bannerView;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint * scrollViewConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint * bannerViewConstraint;
 
 @property (nonatomic, strong) AcupointModel * acupointModel;
 
@@ -80,6 +85,10 @@
     }];
 }
 
+#pragma mark - Button Action
+
+
+
 #pragma mark - Setup
 
 - (void)setupNavigationItem {
@@ -89,7 +98,12 @@
 - (void)setupView {
     self.bannerView.adUnitID = @"ca-app-pub-9811383660483979/4459647249";
     self.bannerView.rootViewController = self;
-    [self.bannerView loadRequest:[GADRequest request]];
+    self.bannerView.delegate = self;
+    GADRequest * request = [GADRequest request];
+    if (DEBUG) {
+        request.testDevices = @[@"960ecce3af9959491fe0f88620372036"];
+    }
+    [self.bannerView loadRequest:request];
 }
 
 - (void)setupData {
@@ -100,13 +114,13 @@
         self.title = [NSString stringWithFormat:@"%@ %@", self.acupointModel.code, self.acupointModel.pinyin];
     }
     NSDictionary * options = @{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType};
-    NSString * str = [NSString stringWithFormat:@"<font size=\"4\">经脉：<a href=\"HealthyLifestyle://acupoint_list?type=%ld&meridianID=%@&title=%@\" style=\"text-decoration:none;\">%@</a></font>", AcupointListTypeMeridian, self.acupointModel.meridianID ?: @"", self.acupointModel.meridianName ?: @"", self.acupointModel.meridianName ?: @""];
+    NSString * str = [NSString stringWithFormat:@"<font size=\"4\">%@：<a href=\"HealthyLifestyle://acupoint_list?type=%ld&meridianID=%@&title=%@\" style=\"text-decoration:none;\">%@</a></font>", NSLocalizedString(@"经脉", nil), AcupointListTypeMeridian, self.acupointModel.meridianID ?: @"", self.acupointModel.meridianName ?: @"", self.acupointModel.meridianName ?: @""];
     NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:[str dataUsingEncoding:NSUnicodeStringEncoding] options:options documentAttributes:nil error:nil];
     self.meridian_text_view.attributedText = attrStr;
-    str = [NSString stringWithFormat:@"<font size=\"4\">位置：<a href=\"HealthyLifestyle://acupoint_list?type=%ld&positionID=%@&title=%@\" style=\"text-decoration:none;\">%@</a></font>", AcupointListTypePosition, self.acupointModel.positionID ?: @"", self.acupointModel.positionName ?: @"", self.acupointModel.positionName ?: @""];
+    str = [NSString stringWithFormat:@"<font size=\"4\">%@：<a href=\"HealthyLifestyle://acupoint_list?type=%ld&positionID=%@&title=%@\" style=\"text-decoration:none;\">%@</a></font>", NSLocalizedString(@"位置", nil), AcupointListTypePosition, self.acupointModel.positionID ?: @"", self.acupointModel.positionName ?: @"", self.acupointModel.positionName ?: @""];
     attrStr = [[NSAttributedString alloc] initWithData:[str dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType} documentAttributes:nil error:nil];
     self.position_text_view.attributedText = attrStr;
-    str = [NSString stringWithFormat:@"<font size=\"4\">功效：<a href=\"HealthyLifestyle://acupoint_list?type=%ld&functionID=%@&title=%@\" style=\"text-decoration:none;\">%@</a></font>", AcupointListTypeFunction, self.acupointModel.functionID ?: @"", self.acupointModel.functionName ?: @"", self.acupointModel.functionName ?: @""];
+    str = [NSString stringWithFormat:@"<font size=\"4\">%@：<a href=\"HealthyLifestyle://acupoint_list?type=%ld&functionID=%@&title=%@\" style=\"text-decoration:none;\">%@</a></font>", NSLocalizedString(@"功能", nil), AcupointListTypeFunction, self.acupointModel.functionID ?: @"", self.acupointModel.functionName ?: @"", self.acupointModel.functionName ?: @""];
     attrStr = [[NSAttributedString alloc] initWithData:[str dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType} documentAttributes:nil error:nil];
     self.function_text_view.attributedText = attrStr;
     self.indicationTitleLabel.text = [NSString stringWithFormat:@"【%@】", NSLocalizedString(@"主治", nil)];
@@ -145,6 +159,19 @@
     } else {
         [self presentAlertWithTitle:@"该穴位已收藏" message:nil dismissAfterDelay:PRESENT_DELAY completion:nil];
     }
+}
+
+#pragma mark - GADBannerViewDelegate
+
+- (void)adViewDidReceiveAd:(GADBannerView *)bannerView {
+    [self.view removeConstraint:self.scrollViewConstraint];
+    NSLayoutConstraint * scrollViewConstraint = [NSLayoutConstraint constraintWithItem:self.scrollView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.scrollView.superview attribute:NSLayoutAttributeBottom multiplier:1 constant:-50];
+    self.scrollViewConstraint = scrollViewConstraint;
+    [self.view addConstraint:scrollViewConstraint];
+    [self.view setNeedsUpdateConstraints];
+    [UIView animateWithDuration:0.2 animations:^{
+        [self.view layoutIfNeeded];
+    }];
 }
 
 /*

@@ -13,8 +13,8 @@
 - (void)loadSceneModel {
     [super loadSceneModel];
 
-    self.controllerList = @[[ControllerModel modelWithDict:@{@"title":NSLocalizedString(@"收藏", nil),
-                                                           @"controller":@"FavoriteViewController"}]];
+    self.controllerList = @[[ControllerModel modelWithDict:@{@"title":NSLocalizedString(@"收藏夹", nil),
+                                                             @"controller":@"FavoriteViewController"}]];
 }
 
 @end

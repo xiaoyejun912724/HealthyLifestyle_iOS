@@ -32,8 +32,8 @@
             NSString * query = [NSString stringWithFormat:@"SELECT * FROM `%@`", FUNCTION_TABLE_NAME];
             FMResultSet * rs = [db executeQuery:query];
             while ([rs next]) {
-                FunctionModel * model = [FunctionModel modelWithDict:@{FUNCTION_COLUMN_ID:[rs stringForColumn:FUNCTION_COLUMN_ID],
-                                                                       FUNCTION_COLUMN_NAME:[rs stringForColumn:FUNCTION_COLUMN_NAME]}];
+                FunctionModel * model = [FunctionModel modelWithDict:@{FUNCTION_COLUMN_ID:[rs stringForColumn:FUNCTION_COLUMN_ID] ?: [NSNull null],
+                                                                       FUNCTION_COLUMN_NAME:[rs stringForColumn:FUNCTION_COLUMN_NAME] ?: [NSNull null]}];
                 [self.functionList addObject:model];
             }
             if (self.delegate && [self.delegate respondsToSelector:@selector(functionListSceneModelDidQueryFunctions)]) {

@@ -32,8 +32,8 @@
             NSString * query = [NSString stringWithFormat:@"SELECT * FROM `%@`", POSITION_TABLE_NAME];
             FMResultSet * rs = [db executeQuery:query];
             while ([rs next]) {
-                PositionModel * model = [PositionModel modelWithDict:@{POSITION_COLUMN_ID:[rs stringForColumn:POSITION_COLUMN_ID],
-                                                                       POSITION_COLUMN_NAME:[rs stringForColumn:POSITION_COLUMN_NAME]}];
+                PositionModel * model = [PositionModel modelWithDict:@{POSITION_COLUMN_ID:[rs stringForColumn:POSITION_COLUMN_ID] ?: [NSNull null],
+                                                                       POSITION_COLUMN_NAME:[rs stringForColumn:POSITION_COLUMN_NAME] ?: [NSNull null]}];
                 [self.positionList addObject:model];
             }
             if (self.delegate && [self.delegate respondsToSelector:@selector(positionListSceneModelDidQueryPositions)]) {

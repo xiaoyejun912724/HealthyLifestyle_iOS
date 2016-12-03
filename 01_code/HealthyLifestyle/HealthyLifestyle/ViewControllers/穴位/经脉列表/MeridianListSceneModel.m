@@ -32,8 +32,8 @@
             NSString * query = [NSString stringWithFormat:@"SELECT * FROM `%@`", MERIDIAN_TABLE_NAME];
             FMResultSet * rs = [db executeQuery:query];
             while ([rs next]) {
-                MeridianModel * model = [MeridianModel modelWithDict:@{MERIDIAN_COLUMN_ID:[rs stringForColumn:MERIDIAN_COLUMN_ID],
-                                                                       MERIDIAN_COLUMN_NAME:[rs stringForColumn:MERIDIAN_COLUMN_NAME]}];
+                MeridianModel * model = [MeridianModel modelWithDict:@{MERIDIAN_COLUMN_ID:[rs stringForColumn:MERIDIAN_COLUMN_ID] ?: [NSNull null],
+                                                                       MERIDIAN_COLUMN_NAME:[rs stringForColumn:MERIDIAN_COLUMN_NAME] ?: [NSNull null]}];
                 [self.meridianList addObject:model];
             }
             if (self.delegate && [self.delegate respondsToSelector:@selector(meridianListSceneModelDidQueryMeridians)]) {

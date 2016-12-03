@@ -30,7 +30,13 @@
 
 - (void)reloadData:(id)entity {
     AcupointModel * model = entity;
-    self.titleLabel.text = model.cnName;
+    
+    NSArray * languages = [NSLocale preferredLanguages];
+    if ([[languages firstObject] rangeOfString:@"zh-Hans"].location != NSNotFound) {
+        self.titleLabel.text = model.cnName;
+    } else {
+        self.titleLabel.text = [NSString stringWithFormat:@"%@ %@", model.code ?: @"", model.pinyin ?: @""];
+    }
 }
 
 @end

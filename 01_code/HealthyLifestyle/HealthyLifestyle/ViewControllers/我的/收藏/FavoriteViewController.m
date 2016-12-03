@@ -25,7 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.title = @"收藏";
+    self.title = NSLocalizedString(@"收藏夹", nil);
     self.sceneModel = [FavoriteSceneModel SceneModel];
     
     [self setupView];
