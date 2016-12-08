@@ -114,13 +114,13 @@
         self.title = [NSString stringWithFormat:@"%@ %@", self.acupointModel.code, self.acupointModel.pinyin];
     }
     NSDictionary * options = @{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType};
-    NSString * str = [NSString stringWithFormat:@"<font size=\"4\">%@：<a href=\"HealthyLifestyle://acupoint_list?type=%ld&meridianID=%@&title=%@\" style=\"text-decoration:none;\">%@</a></font>", NSLocalizedString(@"经脉", nil), AcupointListTypeMeridian, self.acupointModel.meridianID ?: @"", self.acupointModel.meridianName ?: @"", self.acupointModel.meridianName ?: @""];
+    NSString * str = [NSString stringWithFormat:@"<font size=\"4\">%@：<a href=\"HealthyLifestyle://acupoint_list?type=%ld&meridianID=%@&title=%@\" style=\"text-decoration:none;\">%@</a></font>", NSLocalizedString(@"经脉", nil), (long)AcupointListTypeMeridian, self.acupointModel.meridianID ?: @"", self.acupointModel.meridianName ?: @"", self.acupointModel.meridianName ?: @""];
     NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:[str dataUsingEncoding:NSUnicodeStringEncoding] options:options documentAttributes:nil error:nil];
     self.meridian_text_view.attributedText = attrStr;
-    str = [NSString stringWithFormat:@"<font size=\"4\">%@：<a href=\"HealthyLifestyle://acupoint_list?type=%ld&positionID=%@&title=%@\" style=\"text-decoration:none;\">%@</a></font>", NSLocalizedString(@"位置", nil), AcupointListTypePosition, self.acupointModel.positionID ?: @"", self.acupointModel.positionName ?: @"", self.acupointModel.positionName ?: @""];
+    str = [NSString stringWithFormat:@"<font size=\"4\">%@：<a href=\"HealthyLifestyle://acupoint_list?type=%ld&positionID=%@&title=%@\" style=\"text-decoration:none;\">%@</a></font>", NSLocalizedString(@"位置", nil), (long)AcupointListTypePosition, self.acupointModel.positionID ?: @"", self.acupointModel.positionName ?: @"", self.acupointModel.positionName ?: @""];
     attrStr = [[NSAttributedString alloc] initWithData:[str dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType} documentAttributes:nil error:nil];
     self.position_text_view.attributedText = attrStr;
-    str = [NSString stringWithFormat:@"<font size=\"4\">%@：<a href=\"HealthyLifestyle://acupoint_list?type=%ld&functionID=%@&title=%@\" style=\"text-decoration:none;\">%@</a></font>", NSLocalizedString(@"功能", nil), AcupointListTypeFunction, self.acupointModel.functionID ?: @"", self.acupointModel.functionName ?: @"", self.acupointModel.functionName ?: @""];
+    str = [NSString stringWithFormat:@"<font size=\"4\">%@：<a href=\"HealthyLifestyle://acupoint_list?type=%ld&functionID=%@&title=%@\" style=\"text-decoration:none;\">%@</a></font>", NSLocalizedString(@"功能", nil), (long)AcupointListTypeFunction, self.acupointModel.functionID ?: @"", self.acupointModel.functionName ?: @"", self.acupointModel.functionName ?: @""];
     attrStr = [[NSAttributedString alloc] initWithData:[str dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType} documentAttributes:nil error:nil];
     self.function_text_view.attributedText = attrStr;
     self.indicationTitleLabel.text = [NSString stringWithFormat:@"【%@】", NSLocalizedString(@"主治", nil)];
